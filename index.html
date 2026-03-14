@@ -155,7 +155,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed">チームの総合力が試される３ミックス団体戦です。日頃の練習の成果を仲間と共にコートで発揮しましょう。</p>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <button onclick="openPdfModal('https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/preview', '第58回江村杯３ミックス団体戦 要項')" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm focus:outline-none"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項を見る</button>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-secondary text-white px-4 py-3.5 rounded-xl font-bold hover:bg-orange-600 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed">男女ペアによる混合ダブルス団体戦です。チームで団結して、日頃の練習の成果を発揮しましょう。</p>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="#" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <button onclick="openPdfModal('https://drive.google.com/file/d/1ad8JpmPoknaYs404_tnWAdKEq3_30Dho/preview', '第59回江村杯混合ダブルス団体戦 要項')" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm focus:outline-none"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項を見る</button>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-blue-600 text-white px-4 py-3.5 rounded-xl font-bold hover:bg-blue-700 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
@@ -792,6 +792,26 @@
         </div>
     </div>
 
+    <!-- ==========================================
+         PDFプレビュー モーダル
+    =========================================== -->
+    <div id="pdf-modal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePdfModal()"></div>
+        <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-hidden shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="pdf-modal-content">
+            <!-- Header -->
+            <div class="bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 flex justify-between items-center z-20 shrink-0">
+                <h2 id="pdf-modal-title" class="text-lg md:text-xl font-black text-primary truncate pr-4">大会要項</h2>
+                <button onclick="closePdfModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none shrink-0">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            <!-- Content (PDF iframe) -->
+            <div class="flex-grow w-full relative bg-gray-200">
+                <iframe id="pdf-iframe" src="" class="absolute inset-0 w-full h-full border-none" title="PDF Preview"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- モーダル制御用スクリプト -->
     <script>
         // 初めての方へ モーダル制御
@@ -880,6 +900,37 @@
             entryStatusModalContent.classList.add('translate-y-full');
             setTimeout(() => {
                 entryStatusModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // PDFプレビュー モーダル制御
+        const pdfModal = document.getElementById('pdf-modal');
+        const pdfModalContent = document.getElementById('pdf-modal-content');
+        const pdfIframe = document.getElementById('pdf-iframe');
+        const pdfModalTitle = document.getElementById('pdf-modal-title');
+
+        function openPdfModal(pdfUrl, title) {
+            // Googleドライブのリンクを埋め込み(プレビュー)用に変換してセット
+            pdfIframe.src = pdfUrl;
+            if (title) {
+                pdfModalTitle.innerText = title;
+            }
+            
+            pdfModal.classList.remove('hidden');
+            setTimeout(() => {
+                pdfModalContent.classList.remove('translate-y-full');
+                pdfModalContent.classList.add('translate-y-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePdfModal() {
+            pdfModalContent.classList.remove('translate-y-0');
+            pdfModalContent.classList.add('translate-y-full');
+            setTimeout(() => {
+                pdfModal.classList.add('hidden');
+                pdfIframe.src = ""; // 閉じた時に読み込みを解除
                 document.body.style.overflow = '';
             }, 300);
         }
