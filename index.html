@@ -257,7 +257,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- エントリー状況をボタンに変更 -->
+                <!-- エントリー状況 -->
                 <button onclick="openEntryStatusModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none">
                     <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-orange-50 text-secondary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clipboard-list"></i></div>
@@ -265,6 +265,7 @@
                     <p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
                 </button>
                 
+                <!-- 組み合わせ -->
                 <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div>
@@ -272,6 +273,7 @@
                     <p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
                 </a>
 
+                <!-- タイムテーブル -->
                 <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div>
@@ -279,6 +281,7 @@
                     <p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表です。集合時間の目安にご活用ください。</p>
                 </a>
 
+                <!-- 試合結果 -->
                 <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div>
@@ -286,7 +289,7 @@
                     <p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
                 </a>
 
-                <!-- ガット張替を追加 -->
+                <!-- ガット張替 -->
                 <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div>
@@ -831,7 +834,7 @@
     </div>
 
     <!-- ==========================================
-         ✨ AIバドミントンコーチ UI (API不要ダミーボット版 - 競技規則詳細化ver)
+         ✨ AIバドミントンコーチ UI (API不要ダミーボット版 - 完全版)
     =========================================== -->
     <button id="ai-chat-toggle" class="fixed bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-secondary to-orange-400 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center text-2xl z-50 focus:outline-none">
         <i class="fas fa-robot"></i>
@@ -845,7 +848,7 @@
         <div id="ai-chat-messages" class="h-80 p-4 overflow-y-auto bg-slate-50 flex flex-col gap-3 relative">
             <div class="bg-white border border-gray-200 text-gray-700 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm w-5/6 relative leading-relaxed">
                 こんにちは！江村杯のAIコーチ（FAQボット）です✨<br>
-                技術のことだけでなく、「サーブのルール」「デュースについて」「反則」「休憩時間」「主審」「線審」「サービスジャッジ」など、詳しい競技規則や審判のやり方についても聞いてみてね！
+                技術のことだけでなく、「サーブのルール」「反則」「休憩時間」「主審」「線審」「サービスジャッジ」「ガット張替」などについても聞いてみてね！
             </div>
         </div>
         <div class="p-3 border-t border-gray-100 bg-white relative z-10">
@@ -977,7 +980,7 @@
             }, 300);
         }
 
-        // ✨ ダミーAIコーチ機能（API不要版 - 競技規則詳細化アップデート）
+        // ✨ ダミーAIコーチ機能（API不要版 - 完全版）
         const aiChatToggle = document.getElementById('ai-chat-toggle');
         const aiChatWindow = document.getElementById('ai-chat-window');
         const aiChatClose = document.getElementById('ai-chat-close');
@@ -1000,7 +1003,7 @@
         function getDummyResponse(text) {
             const t = text.toLowerCase();
             
-            // === 競技規則・ルール系（大幅追加） ===
+            // === 競技規則・ルール系 ===
             if (t.includes("サーブ") && (t.includes("ルール") || t.includes("反則") || t.includes("フォルト") || t.includes("高さ"))) {
                 return "サーブの厳密なルールだね！大事なポイントは４つ。①打つ瞬間にシャトル全体が床から「1.15m以下」であること。②サーバーもレシーバーも、打ち終わるまで両足の一部が床についていること（足が浮いたり引きずったりはアウト！）。③ラケットを後ろに引いてから前に振る動きは、途中で止めずに「連続した動き」で打つこと。④2025年4月30日までは、指でシャトルに回転をかける「スピンサーブ」は禁止されているぞ！しっかり覚えよう！🔥";
             }
@@ -1020,7 +1023,7 @@
                 return "ライン際の判定だね！バドミントンのラインは「コートの一部」として扱われる。つまり、シャトルのコルク部分が少しでもライン（幅40mm）に触れていれば「イン」だ！きわどい球は自己判断せず、線審や主審のコールをしっかり確認しよう。自分が線審をやる時は、シャトルとラインの隙間をよく見て、自信を持ってジャッジするんだぞ！👀";
             }
 
-            // === 審判のやり方系（新規追加） ===
+            // === 審判のやり方系 ===
             else if (t.includes("主審")) {
                 return "主審のやり方だね！一番大切なのは「選手に聞こえる大きな声」でコールすることだ。試合開始時は「オンマイライト、〇〇(選手名)、オンマイレフト、△△(選手名)。〇〇 トゥ サーブ、ラブオール・プレー！」でスタート。ラリーが終わるごとに、必ず「ポイントが入った側」からスコアをコールするんだ。判定に迷った時は線審のジャッジを尊重しつつ、最終的な決定権は主審にあるから、自信を持って毅然と判定しよう！📣";
             }
@@ -1062,9 +1065,9 @@
 
             // === 道具・準備・トラブル系 ===
             else if (t.includes("シューズ") || t.includes("靴") || t.includes("滑る")) {
-                return "フットワークの要、シューズの選び方だね！かかとを合わせた時に、つま先に0.5cm〜1cm程度の余裕があるものがベストだ。体育館が滑りやすい時は、シューズの裏を濡れ雑巾で軽く拭くか、手でキュッと拭いてホコリを落とそう。試合前は、かかとをトントンと合わせてから下からしっかり紐を締め上げるんだぞ！👟";
+                return "フットワークの要、シューズの選び方だね！かかとを合わせた時に、つま先に0.5cm〜1cm程度の余裕があるものがベストだ。体育館が滑りやすい時は、シューズの裏を濡れ雑巾で軽く拭くか、手でキュッと拭いてホコリを落と0。試合前は、かかとをトントンと合わせてから下からしっかり紐を締め上げるんだぞ！👟";
             } else if (t.includes("ガット") || t.includes("切れた") || t.includes("折れた") || t.includes("張替") || t.includes("張り替え")) {
-                return "用具のトラブルだね！もし試合中にガットが切れたら、ラケットのフレームが歪まないように、すぐに持っているハサミで十字にガットを切り落とすんだ。そのためにも予備のラケット（できれば同じもの）は最低2本用意しておくのが安心だぞ！👍 大会当日の張替サービスや提携ショップについては、サイトの「大会管理・関連情報」にある「ガット張替」項目もチェックしてみてくれ！";
+                return "用具のトラブルだね！もし試合中にガットが切れたら、ラケットのフレームが歪まないように、すぐに持っているハサミで十字にガットを切り落とすんだ。そのためにも予備のラケット（できれば同じもの）は最低2本用意しておくのが安心だぞ！👍 大会当日の張替サービスについては、サイトの「大会管理・関連情報」にある「ガット張替」項目をチェックしてみてくれ！";
             } else if (t.includes("ラケット") || t.includes("テンション") || t.includes("選び方")) {
                 return "用具の準備も立派な戦術だ！ガットのテンション（張りの強さ）は、初心者は18〜20ポンド、中級者は22〜24ポンドあたりが飛びやすくておすすめ。ラケットはプレースタイルに合わせて、重さやシャフトの硬さを選ぼう。";
             } else if (t.includes("持ち物") || t.includes("準備") || t.includes("忘れ物")) {
@@ -1102,7 +1105,7 @@
 
             // === その他（該当なし） ===
             else {
-                return "質問ありがとう！君のバドミントンへの情熱は伝わってきたぞ！具体的な競技規則や技術、練習方法のことならもっと詳しく答えられるから、「主審のやり方」「サービスジャッジ」「ミックスダブルスのコツ」「疲れた時の食事」などのキーワードを含めてもう一度聞いてみてくれ！🔥";
+                return "質問ありがとう！君のバドミントンへの情熱は伝わってきたぞ！具体的な競技規則や技術、練習方法のことならもっと詳しく答えられるから、「主審のやり方」「ガット張替」「反則について」「シューズの選び方」などのキーワードを含めてもう一度聞いてみてくれ！🔥";
             }
         }
 
