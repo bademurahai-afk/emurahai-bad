@@ -57,8 +57,12 @@
             <div class="flex justify-between items-center h-20">
                 <!-- ロゴ -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-black text-primary flex items-center tracking-tight hover:text-secondary transition-colors">
-                        江村杯Badminton Portal
+                    <a href="index.html" class="group flex items-center gap-3 focus:outline-none">
+                        <img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-12 h-12 rounded-full object-cover shadow-sm group-hover:shadow-md transition-all duration-300" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'">
+                        <div class="flex flex-col justify-center">
+                            <span class="text-xl md:text-2xl font-black text-primary leading-none tracking-tight group-hover:text-secondary transition-colors">江村杯</span>
+                            <span class="text-[0.65rem] font-bold text-gray-500 uppercase tracking-[0.2em] mt-1 leading-none group-hover:text-primary transition-colors">Badminton Portal</span>
+                        </div>
                     </a>
                 </div>
                 <!-- PC向けナビゲーション -->
@@ -252,7 +256,7 @@
                 <p class="text-gray-500 mt-4">エントリー状況の確認、組み合わせ、試合結果などの重要情報はこちらから。</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- エントリー状況をボタンに変更 -->
                 <button onclick="openEntryStatusModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none">
                     <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
@@ -280,6 +284,14 @@
                     <div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-primary transition-colors">試合結果</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
+                </a>
+
+                <!-- ガット張替を追加 -->
+                <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div>
+                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-purple-500 transition-colors">ガット張替</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">最短で当日渡し、張替本数3本以上であれば張替後お届け。価格（ガット込み）2,000円～2,400円。その他割引あり。</p>
                 </a>
             </div>
         </div>
@@ -386,7 +398,13 @@
     <footer class="bg-slate-900 text-gray-400 py-16 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
             <div class="md:col-span-1">
-                <a href="#" class="text-xl font-black text-white flex items-center mb-6">江村杯Badminton Portal</a>
+                <a href="#" class="text-xl font-black text-white flex items-center gap-3 mb-6 group">
+                    <img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-10 h-10 rounded-full object-cover bg-white/10 group-hover:scale-110 transition-transform" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'">
+                    <div class="flex flex-col">
+                        <span class="leading-none mb-1">江村杯</span>
+                        <span class="text-xs text-gray-400 leading-none">Badminton Portal</span>
+                    </div>
+                </a>
                 <p class="leading-relaxed">皆様のバドミントンライフを応援する、大会情報・エントリーの総合ポータルサイトです。</p>
             </div>
             <div>
@@ -402,6 +420,7 @@
                     <li><button onclick="openEntryStatusModal()" class="hover:text-secondary transition-colors focus:outline-none">エントリー状況確認</button></li>
                     <li><a href="#management" class="hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
                     <li><a href="#management" class="hover:text-secondary transition-colors">試合結果</a></li>
+                    <li><a href="#management" class="hover:text-secondary transition-colors">ガット張替</a></li>
                 </ul>
             </div>
             <div>
@@ -1044,8 +1063,8 @@
             // === 道具・準備・トラブル系 ===
             else if (t.includes("シューズ") || t.includes("靴") || t.includes("滑る")) {
                 return "フットワークの要、シューズの選び方だね！かかとを合わせた時に、つま先に0.5cm〜1cm程度の余裕があるものがベストだ。体育館が滑りやすい時は、シューズの裏を濡れ雑巾で軽く拭くか、手でキュッと拭いてホコリを落とそう。試合前は、かかとをトントンと合わせてから下からしっかり紐を締め上げるんだぞ！👟";
-            } else if (t.includes("ガット") || t.includes("切れた") || t.includes("折れた")) {
-                return "用具のトラブルだね！もし試合中にガットが切れたら、ラケットのフレームが歪まないように、すぐに持っているハサミで十字にガットを切り落とすんだ。そのためにも予備のラケット（できれば同じもの）は最低2本用意しておくのが安心だぞ！👍";
+            } else if (t.includes("ガット") || t.includes("切れた") || t.includes("折れた") || t.includes("張替") || t.includes("張り替え")) {
+                return "用具のトラブルだね！もし試合中にガットが切れたら、ラケットのフレームが歪まないように、すぐに持っているハサミで十字にガットを切り落とすんだ。そのためにも予備のラケット（できれば同じもの）は最低2本用意しておくのが安心だぞ！👍 大会当日の張替サービスや提携ショップについては、サイトの「大会管理・関連情報」にある「ガット張替」項目もチェックしてみてくれ！";
             } else if (t.includes("ラケット") || t.includes("テンション") || t.includes("選び方")) {
                 return "用具の準備も立派な戦術だ！ガットのテンション（張りの強さ）は、初心者は18〜20ポンド、中級者は22〜24ポンドあたりが飛びやすくておすすめ。ラケットはプレースタイルに合わせて、重さやシャフトの硬さを選ぼう。";
             } else if (t.includes("持ち物") || t.includes("準備") || t.includes("忘れ物")) {
