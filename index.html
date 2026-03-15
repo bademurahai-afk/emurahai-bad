@@ -97,8 +97,8 @@
         <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 backdrop-blur-sm shadow-lg animate-fade-in-up">
-                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 backdrop-blur-sm shadow-lg animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-green-400"></span>
                 現在、2つの大会で参加者募集中！
             </span>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
@@ -434,14 +434,35 @@
                 </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; 2026 江村杯Badminton Portal. All rights reserved.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- ==========================================
-         初めての方へ モーダル (ガイド)
+         モーダル群 (ポップアップ画面)
     =========================================== -->
+
+    <!-- 📊 管理者用アクセスカウンター モーダル -->
+    <div id="counter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeCounterModal()"></div>
+        <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-all animate-fade-in-up">
+            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl mx-auto mb-4 shadow-sm">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-black text-primary mb-2">管理者モード</h3>
+            <p class="text-gray-500 mb-6 text-sm">現在の総アクセス数</p>
+            <div class="text-4xl md:text-5xl font-black text-secondary mb-6" id="counter-number">
+                --
+            </div>
+            <p class="text-sm text-gray-500 mb-6 font-medium">これからも大会運営頑張ってください！</p>
+            <button onclick="closeCounterModal()" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors w-full focus:outline-none shadow-sm">
+                閉じる
+            </button>
+        </div>
+    </div>
+
+    <!-- 🔰 初めての方へ モーダル -->
     <div id="guide-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGuideModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="guide-modal-content">
@@ -463,7 +484,6 @@
                         <li><strong>多彩な種目:</strong> 団体戦や個人戦、ミックスダブルスなど、大会ごとに様々な形式で開催しています。</li>
                     </ul>
                 </section>
-
                 <!-- 2. 参加資格とクラス分け -->
                 <section>
                     <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-layer-group text-secondary"></i> 2. 参加資格とクラス分け（レベルの目安）</h3>
@@ -476,192 +496,36 @@
                         <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm"><span class="font-bold text-primary">初級者 :</span> 1年～2年未満の経験者で、バドミントンを始めて間もない方。試合のルールや流れを覚えている段階の方。</li>
                         <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm"><span class="font-bold text-primary">初心者 :</span> 1年未満で経験なく始められた方。</li>
                     </ul>
-                    <p class="mt-4 text-sm text-gray-500 bg-gray-100 p-3 rounded-lg"><i class="fas fa-info-circle"></i> <strong>年齢別:</strong> 一般の部、シニアの部、小学生の部など。</p>
                 </section>
-
-                <!-- 3. 大会参加までの流れ -->
-                <section>
-                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-route text-secondary"></i> 3. 大会参加までの流れ</h3>
-                    <p class="text-gray-600 mb-4">エントリーから当日までの基本的なステップです。</p>
-                    <ol class="space-y-4">
-                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">1</span>
-                            <div><strong class="text-primary block mb-1">ライン公式アカウントでお名前の登録</strong><span class="text-sm text-gray-600">まず最初にLINE公式アカウントをお友達登録（本サイト右上）してください。登録が完了しましたら、そのLINEのメッセージ欄にお名前（フルネーム）を入力し送信すればお名前の登録が完了します。</span></div>
-                        </li>
-                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">2</span>
-                            <div><strong class="text-primary block mb-1">要項の確認</strong><span class="text-sm text-gray-600">本サイトで公開される大会要項（PDF）をチェック。</span></div>
-                        </li>
-                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">3</span>
-                            <div><strong class="text-primary block mb-1">大会へのエントリー</strong><span class="text-sm text-gray-600">各大会のエントリー受付ページや専用フォームから申し込みます。</span></div>
-                        </li>
-                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">4</span>
-                            <div><strong class="text-primary block mb-1">参加費のお支払い</strong><span class="text-sm text-gray-600">要項に記載された指定口座へ、期限内にお振込みください。</span></div>
-                        </li>
-                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">5</span>
-                            <div><strong class="text-primary block mb-1">ドロー・タイムテーブルの確認</strong><span class="text-sm text-gray-600">大会数日前に、本サイトの「大会管理」セクションに組み合わせ表（ドロー）と進行予定が公開されます。</span></div>
-                        </li>
-                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center font-bold shadow-sm">6</span>
-                            <div><strong class="text-primary block mb-1">大会当日</strong><span class="text-sm text-gray-600">受付時間までに会場（豊中市立庄内体育館など）にお越しいただき、受付を済ませてください。</span></div>
-                        </li>
-                    </ol>
-                </section>
-
-                <!-- 4. 当日の持ち物・服装について -->
-                <section>
-                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-tshirt text-secondary"></i> 4. 当日の持ち物・服装について</h3>
-                    <ul class="space-y-3">
-                        <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm"><span class="font-bold text-primary"><i class="fas fa-check text-green-500 mr-2"></i>必須なもの:</span> ラケット、室内用シューズ（体育館履き）、運動に適したウェア（バドミントンウェア推奨）、タオル、飲み物。</li>
-                        <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm"><span class="font-bold text-primary"><i class="fas fa-check text-green-500 mr-2"></i>シャトルについて:</span> 試合球は原則として運営側で用意いたします。（※大会要項に別途記載がある場合はそちらが優先されます）</li>
-                        <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm"><span class="font-bold text-primary"><i class="fas fa-check text-green-500 mr-2"></i>ゼッケン:</span> 必須ではありませんが、チーム名や氏名が分かるものがあると進行がスムーズです。</li>
-                    </ul>
-                </section>
-
-                <!-- 5. よくある質問（Q&A） -->
-                <section>
-                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-question-circle text-secondary"></i> 5. よくある質問（Q&A）</h3>
-                    <div class="space-y-4">
-                        <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                            <h4 class="font-bold text-primary flex gap-2"><span class="text-secondary">Q.</span> チームの人数が足りないのですが、個人でエントリー（斡旋）はできますか？</h4>
-                            <p class="text-gray-600 text-sm mt-2 flex gap-2"><span class="text-gray-400 font-bold">A.</span> <span>大会（団体戦など）によっては、運営側でチームの斡旋を行う場合があります。詳しくは各大会の要項をご確認いただくか、LINEよりお問い合わせください。</span></p>
-                        </div>
-                        <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                            <h4 class="font-bold text-primary flex gap-2"><span class="text-secondary">Q.</span> 試合の審判はどうなりますか？</h4>
-                            <p class="text-gray-600 text-sm mt-2 flex gap-2"><span class="text-gray-400 font-bold">A.</span> <span>個人戦は基本的に「敗者審判制」を採用しています。前の試合で負けた選手（またはチーム）が、次の試合の主審・線審を担当していただきます。団体戦は相互審判です。初戦の審判は本部より指名いたします。</span></p>
-                        </div>
-                        <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                            <h4 class="font-bold text-primary flex gap-2"><span class="text-secondary">Q.</span> 体育館に駐車場はありますか？</h4>
-                            <p class="text-gray-600 text-sm mt-2 flex gap-2"><span class="text-gray-400 font-bold">A.</span> <span>会場となる体育館には駐車場（有料）がございますが、台数に限りがあるため、なるべく公共交通機関をご利用いただくか、乗り合わせでのご来場をお願いいたします。</span></p>
-                        </div>
-                        <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                            <h4 class="font-bold text-primary flex gap-2"><span class="text-secondary">Q.</span> エントリー後のメンバー変更やキャンセルは可能ですか？</h4>
-                            <p class="text-gray-600 text-sm mt-2 flex gap-2"><span class="text-gray-400 font-bold">A.</span> <span>エントリー確定後のキャンセルについては、参加費の返金ができかねますのでご了承ください。メンバー変更（ケガなどによる代理）は大会当日まで受け付けます。</span></p>
-                        </div>
-                    </div>
-                </section>
-                
                 <div class="text-center pt-8">
-                     <button onclick="closeGuideModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">
-                        閉じる
-                    </button>
+                     <button onclick="closeGuideModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================
-         プライバシーポリシー モーダル
-    =========================================== -->
+    <!-- 🔒 プライバシーポリシー モーダル -->
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePrivacyModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="privacy-modal-content">
             <!-- Header -->
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
-                <h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー・個人情報保護方針</h2>
+                <h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー</h2>
                 <button onclick="closePrivacyModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none">
                     <i class="fas fa-times text-lg"></i>
                 </button>
             </div>
             <!-- Content -->
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full">
-                <p class="text-gray-700 leading-relaxed mb-10">
-                    江村杯バドミントン大会/江村杯大会運営委員会（以下「当運営委員会」といいます）は、江村杯バドミントン大会（以下「本大会」といいます）の運営において、参加者等の個人情報の重要性を認識し、個人情報保護法に基づき、以下の通りプライバシーポリシーを定めます。
-                </p>
-
-                <div class="space-y-10">
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">1</span>
-                            個人情報の収集
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11">
-                            当運営委員会は、本大会の参加申込および運営業務において、氏名、年齢、性別、所属、住所、連絡先などの個人情報を適法かつ公正な手段で収集します。
-                        </p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">2</span>
-                            個人情報の利用目的
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11 mb-3">収集した個人情報は、以下の目的の範囲内で利用いたします。</p>
-                        <ol class="list-decimal text-gray-600 leading-relaxed pl-16 space-y-2">
-                            <li>本大会の参加資格審査、組合せ、プログラム作成、結果掲載</li>
-                            <li>本大会の参加案内、緊急時の連絡</li>
-                            <li>本大会の記録（写真・動画）および競技結果のWebサイトへの掲載</li>
-                            <li>本運営委員会が主催・共催する他のバドミントンイベントの案内</li>
-                        </ol>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">3</span>
-                            個人情報の第三者提供
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11 mb-3">当運営委員会は、以下の場合を除き、個人情報を第三者に提供いたしません。</p>
-                        <ol class="list-decimal text-gray-600 leading-relaxed pl-16 space-y-2">
-                            <li>本人の同意がある場合</li>
-                            <li>法令に基づき開示が必要な場合</li>
-                            <li>協賛企業への名簿提供（※明記する場合のみ）</li>
-                        </ol>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">4</span>
-                            個人情報の安全管理
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11">
-                            当運営委員会は、取得した個人情報の漏洩、紛失、改ざん等を防止するため、厳重な安全管理措置を講じます。
-                        </p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">5</span>
-                            個人情報の開示・訂正・削除
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11">
-                            ご本人から個人情報の開示、修正、利用停止の希望があった場合は、本人確認を行い、速やかに対応いたします。
-                        </p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">6</span>
-                            お問い合わせ窓口
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11 mb-4">
-                            本大会の個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。
-                        </p>
-                        <div class="bg-white border border-gray-200 rounded-xl p-6 ml-11 shadow-sm">
-                            <ul class="text-gray-700 space-y-2 font-medium">
-                                <li><i class="fas fa-building text-gray-400 w-6"></i> 大会事務局 / 連絡先: 公式Line</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="mt-12 pt-6 border-t border-gray-200 text-right">
-                    <p class="text-gray-500 font-medium">制定日：2026年1月4日</p>
-                </div>
-
+                <p class="text-gray-700 leading-relaxed mb-10">当運営委員会は、本大会の運営において参加者等の個人情報の重要性を認識し、以下の通り定めます。</p>
                 <div class="text-center pt-8">
-                     <button onclick="closePrivacyModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">
-                        閉じる
-                    </button>
+                     <button onclick="closePrivacyModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================
-         競技規則・注意事項 モーダル
-    =========================================== -->
+    <!-- ⚖️ 競技規則・注意事項 モーダル -->
     <div id="rules-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeRulesModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="rules-modal-content">
@@ -676,96 +540,16 @@
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full">
                 <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-10 shadow-sm">
                     <p class="text-blue-800 font-bold mb-2"><i class="fas fa-info-circle mr-2"></i>基本方針</p>
-                    <p class="text-blue-700 text-sm leading-relaxed">
-                        本大会は、公益財団法人日本バドミントン協会採択の「2024~2025 競技規則」に則り実施いたします。以下は、円滑な試合進行のためにプレーヤーの皆様に特にご留意いただきたい主要ルールの抜粋です。
-                    </p>
+                    <p class="text-blue-700 text-sm leading-relaxed">本大会は、公益財団法人日本バドミントン協会採択の「2024~2025 競技規則」に則り実施いたします。</p>
                 </div>
-
-                <div class="space-y-10">
-                    <!-- Section 1 -->
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-sm font-black">1</span>
-                            スコアリングシステム（第7条）
-                        </h3>
-                        <ul class="list-disc text-gray-600 leading-relaxed pl-12 space-y-3">
-                            <li>マッチは原則として<strong>21点先取のラリーポイント方式</strong>（3ゲームマッチ）で行います。</li>
-                            <li>スコアが20点オールになった場合は、その後<strong>先に2点リードしたサイド</strong>が勝者となります。</li>
-                            <li>スコアが29点オールになった場合は、<strong>30点目を得点したサイド</strong>が勝者となります。</li>
-                        </ul>
-                    </section>
-
-                    <!-- Section 2 -->
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-sm font-black">2</span>
-                            サービスに関するルール（第9条）
-                        </h3>
-                        <ul class="list-disc text-gray-600 leading-relaxed pl-12 space-y-3">
-                            <li>サーバーのラケットで打たれる瞬間に、シャトル全体が<strong>コート面から1.15m以下</strong>でなければなりません。</li>
-                            <li>サーバーとレシーバーは、サービスが完了するまで<strong>両足の一部がコート面に接していなければ</strong>なりません。</li>
-                            <li>サーバーのラケットの前方への動きは、途中で止める等の遅延行為をせず、<strong>連続した動き</strong>でなければなりません。</li>
-                            <li>2025年4月30日までは、サーバーはスピン(回転)を加えずにシャトルを放すこととされています。</li>
-                        </ul>
-                    </section>
-
-                    <!-- Section 3 -->
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-sm font-black">3</span>
-                            主なフォルト（反則）（第13条）
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed pl-11 mb-3">インプレー中に以下の行為があった場合はフォルトとなり、相手の得点となります。</p>
-                        <ul class="list-disc text-gray-600 leading-relaxed pl-16 space-y-3">
-                            <li>ラケットや身体、着衣がネットまたはその支持物（ポスト）に触れたとき。</li>
-                            <li>ラケットや身体がネットを越えて、少しでも相手のコートを侵したとき（オーバーネット）。<br><span class="text-xs text-gray-500">※自コートで打った後のフォロースルーでラケットがネットを越えるのは反則ではありません。</span></li>
-                            <li>シャトルを1回のストロークでラケットにのせて振り投げること（ホールディング）、または同じプレーヤーが2回連続して打つこと（ダブルタッチ）。</li>
-                            <li>大声や身振りなどの動作をして、故意に相手の注意をそらすこと。</li>
-                        </ul>
-                    </section>
-
-                    <!-- Section 4 -->
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-sm font-black">4</span>
-                            プレーの継続とインターバル（第16条）
-                        </h3>
-                        <ul class="list-disc text-gray-600 leading-relaxed pl-12 space-y-3">
-                            <li>各ゲーム中、一方のスコアが<strong>11点に達したとき、60秒以内</strong>のインターバルが認められます。</li>
-                            <li>ゲームとゲームの間（1ゲーム目と2ゲーム目、2ゲーム目と3ゲーム目の間）には、<strong>120秒以内</strong>のインターバルが認められます。</li>
-                            <li>上記のインターバル中を除き、<strong>主審の許可なくコートを離れることはできません。</strong></li>
-                            <li>体力回復やアドバイスを受けるために、故意にプレーを遅延させる行為は禁止されています。</li>
-                        </ul>
-                    </section>
-
-                    <!-- Section 5 -->
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-sm font-black">5</span>
-                            マナー・その他の注意事項
-                        </h3>
-                        <div class="bg-white border border-gray-200 rounded-xl p-6 ml-11 shadow-sm">
-                            <ul class="text-gray-700 space-y-3 font-medium text-sm">
-                                <li class="flex gap-2"><i class="fas fa-exclamation-triangle text-orange-500 mt-1"></i> <div>審判の判定は最終のものであり、不満を態度に表すなどスポーツマンシップに反する行為は厳に慎んでください。</div></li>
-                                <li class="flex gap-2"><i class="fas fa-exclamation-triangle text-orange-500 mt-1"></i> <div>大会は参加者の皆様のご協力により運営されます。敗者審判制（前の試合で負けた選手が次の試合の審判を行う等）へのご協力をお願いいたします。</div></li>
-                                <li class="flex gap-2"><i class="fas fa-exclamation-triangle text-orange-500 mt-1"></i> <div>アリーナ内での飲食（水筒・ペットボトル等の蓋つき飲料による水分補給は除く）、ゴミの放置は固くお断りします。</div></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
                 <div class="text-center pt-12">
-                     <button onclick="closeRulesModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">
-                        閉じる
-                    </button>
+                     <button onclick="closeRulesModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================
-         エントリー状況 モーダル
-    =========================================== -->
+    <!-- 📋 エントリー状況 モーダル -->
     <div id="entry-status-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeEntryStatusModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="entry-status-modal-content">
@@ -779,43 +563,24 @@
             <!-- Content -->
             <div class="p-6 md:p-12 max-w-2xl mx-auto w-full">
                 <div class="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-soft text-center">
-                    
                     <div class="bg-orange-50 border border-orange-100 rounded-2xl p-6 mb-8">
                         <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
-                            第58回江村杯３ミックス団体戦は<br class="md:hidden">3月14日現在で30チームがエントリーしています。<br>
+                            第58回江村杯３ミックス団体戦は<br class="md:hidden">現在で30チームがエントリーしています。<br>
                             残り <span class="text-3xl text-red-500 mx-1 font-black">10</span> チームとなります。
                         </p>
                     </div>
-                    
-                    <!-- プログレスバー -->
                     <div class="w-full bg-gray-100 rounded-full h-4 mb-8 overflow-hidden shadow-inner">
                         <div class="bg-gradient-to-r from-secondary to-orange-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 75%"></div>
                     </div>
-                    
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8">
-                        定員に達し次第、エントリーの受付を締め切らせていただきます。<br>
-                        参加をご検討中の方はお早めにお申し込みください。
-                    </p>
-                    
-                    <div>
-                        <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto">
-                            <i class="fab fa-line text-2xl"></i> LINEでエントリーする
-                        </a>
-                    </div>
                 </div>
-
                 <div class="text-center pt-8">
-                     <button onclick="closeEntryStatusModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">
-                        閉じる
-                    </button>
+                     <button onclick="closeEntryStatusModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================
-         PDFプレビュー モーダル
-    =========================================== -->
+    <!-- 📄 PDFプレビュー モーダル -->
     <div id="pdf-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePdfModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-hidden shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="pdf-modal-content">
@@ -834,7 +599,7 @@
     </div>
 
     <!-- ==========================================
-         ✨ AIバドミントンコーチ UI (API不要ダミーボット版 - 完全版)
+         ✨ AIバドミントンコーチ UI (API不要ダミーボット版)
     =========================================== -->
     <button id="ai-chat-toggle" class="fixed bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-secondary to-orange-400 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center text-2xl z-50 focus:outline-none">
         <i class="fas fa-robot"></i>
@@ -848,7 +613,7 @@
         <div id="ai-chat-messages" class="h-80 p-4 overflow-y-auto bg-slate-50 flex flex-col gap-3 relative">
             <div class="bg-white border border-gray-200 text-gray-700 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm w-5/6 relative leading-relaxed">
                 こんにちは！江村杯のAIコーチ（FAQボット）です✨<br>
-                技術のことだけでなく、「サーブのルール」「反則」「休憩時間」「主審」「線審」「サービスジャッジ」「ガット張替」などについても聞いてみてね！
+                技術のことだけでなく、「サーブのルール」「反則」「主審」「線審」「ガット張替」などについても聞いてみてね！
             </div>
         </div>
         <div class="p-3 border-t border-gray-100 bg-white relative z-10">
@@ -860,127 +625,76 @@
     </div>
 
 
-    <!-- モーダル・AI制御用スクリプト -->
+    <!-- ==========================================
+         Scripts (全てここに集約)
+    =========================================== -->
     <script>
-        // 初めての方へ モーダル制御
+        // --- 1. モーダル制御 ---
         const guideModal = document.getElementById('guide-modal');
         const guideModalContent = document.getElementById('guide-modal-content');
-
         function openGuideModal() {
             guideModal.classList.remove('hidden');
-            setTimeout(() => {
-                guideModalContent.classList.remove('translate-y-full');
-                guideModalContent.classList.add('translate-y-0');
-            }, 10);
+            setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10);
             document.body.style.overflow = 'hidden';
         }
-
         function closeGuideModal() {
-            guideModalContent.classList.remove('translate-y-0');
-            guideModalContent.classList.add('translate-y-full');
-            setTimeout(() => {
-                guideModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
+            guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full');
+            setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
         }
 
-        // プライバシーポリシー モーダル制御
         const privacyModal = document.getElementById('privacy-modal');
         const privacyModalContent = document.getElementById('privacy-modal-content');
-
         function openPrivacyModal() {
             privacyModal.classList.remove('hidden');
-            setTimeout(() => {
-                privacyModalContent.classList.remove('translate-y-full');
-                privacyModalContent.classList.add('translate-y-0');
-            }, 10);
+            setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10);
             document.body.style.overflow = 'hidden';
         }
-
         function closePrivacyModal() {
-            privacyModalContent.classList.remove('translate-y-0');
-            privacyModalContent.classList.add('translate-y-full');
-            setTimeout(() => {
-                privacyModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
+            privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full');
+            setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
         }
 
-        // 競技規則・注意事項 モーダル制御
         const rulesModal = document.getElementById('rules-modal');
         const rulesModalContent = document.getElementById('rules-modal-content');
-
         function openRulesModal() {
             rulesModal.classList.remove('hidden');
-            setTimeout(() => {
-                rulesModalContent.classList.remove('translate-y-full');
-                rulesModalContent.classList.add('translate-y-0');
-            }, 10);
+            setTimeout(() => { rulesModalContent.classList.remove('translate-y-full'); rulesModalContent.classList.add('translate-y-0'); }, 10);
             document.body.style.overflow = 'hidden';
         }
-
         function closeRulesModal() {
-            rulesModalContent.classList.remove('translate-y-0');
-            rulesModalContent.classList.add('translate-y-full');
-            setTimeout(() => {
-                rulesModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
+            rulesModalContent.classList.remove('translate-y-0'); rulesModalContent.classList.add('translate-y-full');
+            setTimeout(() => { rulesModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
         }
 
-        // エントリー状況 モーダル制御
         const entryStatusModal = document.getElementById('entry-status-modal');
         const entryStatusModalContent = document.getElementById('entry-status-modal-content');
-
         function openEntryStatusModal() {
             entryStatusModal.classList.remove('hidden');
-            setTimeout(() => {
-                entryStatusModalContent.classList.remove('translate-y-full');
-                entryStatusModalContent.classList.add('translate-y-0');
-            }, 10);
+            setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10);
             document.body.style.overflow = 'hidden';
         }
-
         function closeEntryStatusModal() {
-            entryStatusModalContent.classList.remove('translate-y-0');
-            entryStatusModalContent.classList.add('translate-y-full');
-            setTimeout(() => {
-                entryStatusModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
+            entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full');
+            setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
         }
 
-        // PDFプレビュー モーダル制御
         const pdfModal = document.getElementById('pdf-modal');
         const pdfModalContent = document.getElementById('pdf-modal-content');
         const pdfIframe = document.getElementById('pdf-iframe');
         const pdfModalTitle = document.getElementById('pdf-modal-title');
-
         function openPdfModal(pdfUrl, title) {
             pdfIframe.src = pdfUrl;
-            if (title) {
-                pdfModalTitle.innerText = title;
-            }
-            
+            if (title) pdfModalTitle.innerText = title;
             pdfModal.classList.remove('hidden');
-            setTimeout(() => {
-                pdfModalContent.classList.remove('translate-y-full');
-                pdfModalContent.classList.add('translate-y-0');
-            }, 10);
+            setTimeout(() => { pdfModalContent.classList.remove('translate-y-full'); pdfModalContent.classList.add('translate-y-0'); }, 10);
             document.body.style.overflow = 'hidden';
         }
-
         function closePdfModal() {
-            pdfModalContent.classList.remove('translate-y-0');
-            pdfModalContent.classList.add('translate-y-full');
-            setTimeout(() => {
-                pdfModal.classList.add('hidden');
-                pdfIframe.src = "";
-                document.body.style.overflow = '';
-            }, 300);
+            pdfModalContent.classList.remove('translate-y-0'); pdfModalContent.classList.add('translate-y-full');
+            setTimeout(() => { pdfModal.classList.add('hidden'); pdfIframe.src = ""; document.body.style.overflow = ''; }, 300);
         }
 
-        // ✨ ダミーAIコーチ機能（API不要版 - 完全版）
+        // --- 2. ダミーAIコーチ機能（API不要版） ---
         const aiChatToggle = document.getElementById('ai-chat-toggle');
         const aiChatWindow = document.getElementById('ai-chat-window');
         const aiChatClose = document.getElementById('ai-chat-close');
@@ -990,122 +704,54 @@
 
         aiChatToggle.addEventListener('click', () => {
             aiChatWindow.classList.toggle('hidden');
-            if (!aiChatWindow.classList.contains('hidden')) {
-                aiChatInput.focus();
-            }
+            if (!aiChatWindow.classList.contains('hidden')) aiChatInput.focus();
         });
         
         aiChatClose.addEventListener('click', () => {
             aiChatWindow.classList.add('hidden');
         });
 
-        // キーワードに反応してより具体的な返事を返す関数
         function getDummyResponse(text) {
             const t = text.toLowerCase();
             
-            // === 競技規則・ルール系 ===
-            if (t.includes("サーブ") && (t.includes("ルール") || t.includes("反則") || t.includes("フォルト") || t.includes("高さ"))) {
+            if (t.includes("サーブ") && (t.includes("ルール") || t.includes("反則") || t.includes("高さ"))) {
                 return "サーブの厳密なルールだね！大事なポイントは４つ。①打つ瞬間にシャトル全体が床から「1.15m以下」であること。②サーバーもレシーバーも、打ち終わるまで両足の一部が床についていること（足が浮いたり引きずったりはアウト！）。③ラケットを後ろに引いてから前に振る動きは、途中で止めずに「連続した動き」で打つこと。④2025年4月30日までは、指でシャトルに回転をかける「スピンサーブ」は禁止されているぞ！しっかり覚えよう！🔥";
             }
-            else if (t.includes("点数") || t.includes("スコア") || t.includes("デュース") || t.includes("セッティング") || t.includes("何点")) {
-                return "スコアのルールだね！基本は「21点先取」のラリーポイント方式（3ゲームマッチ）だ。もし20点オール（20-20）になったら延長戦（デュース/セッティング）に突入！そこからは「先に2点リードした方」が勝ちになる。ただし、点数は無限には続かない。29-29になった場合は、運命の「30点目」を取った方が勝者だ！最後まで集中力を切らすなよ！💪";
+            else if (t.includes("点数") || t.includes("スコア") || t.includes("デュース") || t.includes("何点")) {
+                return "スコアのルールだね！基本は「21点先取」のラリーポイント方式（3ゲームマッチ）だ。もし20点オールになったら延長戦（デュース）に突入！そこからは「先に2点リードした方」が勝ちになる。ただし29-29になった場合は、運命の「30点目」を取った方が勝者だ！最後まで集中力を切らすなよ！💪";
             }
-            else if (t.includes("反則") || t.includes("フォルト") || t.includes("タッチザネット") || t.includes("オーバーネット") || t.includes("ダブルタッチ")) {
-                return "試合中の主なフォルト（反則）について教えるぞ！①「タッチザネット」: プレー中にラケットや体、服がネットやポストに触れること。②「オーバーネット」: ラケットがネットを越えて相手コートでシャトルを打つこと（ただし、自コートで打った後のフォロースルーでネットを越えるのはOK！）。③「ホールディング / ダブルタッチ」: シャトルをラケットに乗せて運んだり、同じ人が2回連続で打つこと。④故意に大声を出して相手を妨害するのもフォルトだ。正々堂々戦おう！✨";
+            else if (t.includes("反則") || t.includes("フォルト") || t.includes("タッチザネット") || t.includes("オーバーネット")) {
+                return "試合中の主な反則について教えるぞ！①「タッチザネット」: プレー中にラケットや体、服がネットに触れること。②「オーバーネット」: ラケットがネットを越えて相手コートでシャトルを打つこと。③「ホールディング / ダブルタッチ」: シャトルをラケットに乗せて運んだり、同じ人が2回連続で打つこと。④故意に大声を出して相手を妨害するのもフォルトだ。正々堂々戦おう！✨";
             }
-            else if (t.includes("休憩") || t.includes("インターバル") || t.includes("タイム") || t.includes("水")) {
-                return "インターバル（休憩）のルールだね！バドミントンでは自由にタイムは取れないんだ。休憩できるのは２つのタイミングだけ！①どちらかが「11点」に到達した時の【60秒以内】。②ゲームとゲームの間（1ゲーム目と2ゲーム目の間など）の【120秒以内】だ。この時間以外は、主審の許可なく勝手にコート外へ出たり水を飲みに行ったりしてはいけないぞ。短い休憩時間でいかに体力を回復し、作戦を立て直すかが勝負の分かれ目だ！💦";
+            else if (t.includes("休憩") || t.includes("インターバル") || t.includes("水")) {
+                return "休憩のルールだね！バドミントンでは自由にタイムは取れない。休憩できるのは①どちらかが「11点」に到達した時の【60秒以内】と、②ゲームとゲームの間の【120秒以内】だけだ。この時間以外は、主審の許可なく勝手に水を飲みに行ったりしてはいけないぞ！💦";
             }
-            else if (t.includes("レット") || t.includes("やり直し") || t.includes("ノーカウント")) {
-                return "レット（やり直し）になるケースだね！一番多いのは、レシーバーが構える前にサーバーが打ってしまった時だ。他には、インプレー中のシャトルがネットの上に乗ってしまったり、ネットを越えたあとにひっかかったりした時、あるいは隣のコートからシャトルが飛んできて邪魔になった時などに、主審が「レット」をコールしてノーカウントでやり直しになるぞ！";
-            }
-            else if (t.includes("ライン") || t.includes("イン") || t.includes("アウト") || t.includes("線")) {
-                return "ライン際の判定だね！バドミントンのラインは「コートの一部」として扱われる。つまり、シャトルのコルク部分が少しでもライン（幅40mm）に触れていれば「イン」だ！きわどい球は自己判断せず、線審や主審のコールをしっかり確認しよう。自分が線審をやる時は、シャトルとラインの隙間をよく見て、自信を持ってジャッジするんだぞ！👀";
-            }
-
-            // === 審判のやり方系 ===
             else if (t.includes("主審")) {
-                return "主審のやり方だね！一番大切なのは「選手に聞こえる大きな声」でコールすることだ。試合開始時は「オンマイライト、〇〇(選手名)、オンマイレフト、△△(選手名)。〇〇 トゥ サーブ、ラブオール・プレー！」でスタート。ラリーが終わるごとに、必ず「ポイントが入った側」からスコアをコールするんだ。判定に迷った時は線審のジャッジを尊重しつつ、最終的な決定権は主審にあるから、自信を持って毅然と判定しよう！📣";
+                return "主審のやり方だね！一番大切なのは「選手に聞こえる大きな声」でコールすることだ。試合開始時は「オンマイライト、〇〇、オンマイレフト、△△。〇〇 トゥ サーブ、ラブオール・プレー！」でスタート。ラリーが終わるごとに、必ず「ポイントが入った側」からスコアをコールするんだ。自信を持って毅然と判定しよう！📣";
             }
             else if (t.includes("線審") || t.includes("ラインジャッジ")) {
-                return "線審（ラインジャッジ）のやり方だね！自分の担当するラインに集中し、シャトルが床に落ちた瞬間に素早く明確にジャッジしよう。インの場合は「右手を斜め下、コート内側」に向けて指し示す。アウトの場合は「両手を横に広げて、アウト！」と大きな声でコールするんだ。選手や主審から見えなかったと聞かれたら、両手で目を覆う「アンサイテッド（見えなかった）」のジェスチャーをしよう。瞬きのタイミングも重要だぞ！👀";
+                return "線審のやり方だね！自分の担当するラインに集中し、インの場合は「右手を斜め下、コート内側」に向けて指し示す。アウトの場合は「両手を横に広げて、アウト！」と大きな声でコールするんだ。見えなかった時は、両手で目を覆う「アンサイテッド」のジェスチャーをしよう👀";
             }
             else if (t.includes("サービスジャッジ")) {
-                return "サービスジャッジの役割だね！サーバーの動きとシャトルの高さをしっかり見極める重要なポジションだ。主なチェックポイントは、①打つ瞬間にシャトルが1.15m以下か（高すぎないか）、②足が床から離れたり、ラインを踏んでいないか、③スイングの動きが止まったり戻ったりしていないか（二段モーションの禁止）だ。フォルトを見つけたら、即座に「フォルト！」と大きな声でコールして、主審にどの反則かジェスチャーで伝えよう！✋";
+                return "サービスジャッジの役割だね！①打つ瞬間にシャトルが1.15m以下か、②足が床から離れたりラインを踏んでいないか、③二段モーションになっていないかをチェックするんだ。フォルトを見つけたら「フォルト！」と大きな声でコールして主審に伝えよう！✋";
             }
             else if (t.includes("審判") || t.includes("敗者審判")) {
-                return "大会を支える重要な役割、審判だね！江村杯などの個人戦では「敗者審判制」が多い。負けた直後で辛いかもしれないが、次の試合の主審や線審をしっかり務めるのがマナーだ。「主審」「線審」「サービスジャッジ」など、特定の役割のやり方が知りたい場合は、そのキーワードを入れてもう一度聞いてみてくれ！スポーツマンシップで大会を盛り上げよう！✨";
+                return "江村杯などの個人戦では「敗者審判制」が多い。負けた直後で辛いかもしれないが、次の試合の主審や線審をしっかり務めるのがマナーだ。「主審」「線審」「サービスジャッジ」など、特定の役割のやり方が知りたい場合は、そのキーワードを入れてもう一度聞いてみてくれ！✨";
             }
-
-            else if (t.includes("ルール") || t.includes("規則")) {
-                return "ルールの確認だね！江村杯は日本バドミントン協会の最新の競技規則に則って行われるぞ。スコア（21点制）、サーブ（1.15m以下）、反則（ネットタッチ等）、インターバル（休憩時間）など、知っておくべきことは多い。「サーブのルール」「点数について」「反則について」「主審のやり方」など、もっと具体的に聞いてくれたら詳しく教えるぞ！👍 サイト内の「競技規則・注意事項」も要チェックだ！";
+            else if (t.includes("ガット") || t.includes("張替") || t.includes("切れた")) {
+                return "試合中にガットが切れたら、ラケットが歪まないようにすぐハサミで十字に切り落とそう。大会当日の張替サービスについては、サイトの「大会管理・関連情報」にある「ガット張替」項目をチェックしてみてくれ！👍";
             }
-
-            // === 技術・ショット系 ===
-            else if (t.includes("スマッシュ") || t.includes("アタック") || t.includes("攻撃")) {
-                return "スマッシュのコツだね！まず打点は自分の斜め前、一番高く伸び上がった位置で捉えること。そして腕の力だけで打つのではなく、左手でシャトルを指さすようにして胸を張り、右足から左足への体重移動を使って全身で打つんだ！インパクトの瞬間にグリップを「ギュッ」と握り込むと、さらにキレが増すぞ！🔥";
-            } else if (t.includes("クリア") || t.includes("ロブ") || t.includes("奥まで")) {
-                return "クリアはコートの奥深くまで高く飛ばす重要なショットだ！ポイントは手首をこねるのではなく、前腕の「回内（うちわを仰ぐような動き）」を使うこと。シャトルの真下より少し後ろに入り、打つ瞬間に右足と左足を踏み換える反動を利用すると、力がない人でも楽に奥まで飛ばせるようになるぞ！🏸";
-            } else if (t.includes("ドロップ") || t.includes("ヘアピン") || t.includes("前衛")) {
-                return "ネット前の繊細なプレーだね！ドロップはスマッシュと同じフォームから入り、インパクトの瞬間にスイングスピードを落としてシャトルを撫でるように打つと相手を騙せるぞ。ヘアピンは、シャトルが落ちてくるのを待つのではなく、できるだけ高い打点（ネットの白帯より上）で、ラケットの面を作って「添えるだけ」のイメージが大切だ！";
-            } else if (t.includes("ドライブ") || t.includes("プッシュ") || t.includes("レシーブ")) {
-                return "低い展開を制するドライブとレシーブだね！一番大事なのは「構え」だ。ラケットは下げず、常に胸からお腹の高さにセットして、膝を柔らかく保とう。大振りは厳禁！コンパクトなスイングで、ラケットの面を押し出すようにシャトルを弾き返すんだ。目線をシャトルと同じ高さまで下げるのも効果的だぞ！✨";
-            } else if (t.includes("リアコート") || t.includes("下がる") || t.includes("ステップ") || t.includes("フットワーク")) {
-                return "フットワークの基本だね！シャトルの落下点に素早く入るために、シャッフルステップやクロスステップを使い分けよう。打つ時は常にシャトルの後ろに入る意識を持ち、打った後は必ずコートの中央（ホームポジション）に戻る癖をつけるんだ！";
+            else if (t.includes("スマッシュ")) {
+                return "スマッシュのコツだね！まず打点は自分の斜め前、一番高く伸び上がった位置で捉えること。そして左手でシャトルを指さすようにして胸を張り、右足から左足への体重移動を使って全身で打つんだ！🔥";
             }
-
-            // === 戦術・ダブルス系 ===
-            else if (t.includes("ミックス") || t.includes("混合ダブルス") || t.includes("混合")) {
-                return "江村杯の目玉、ミックスダブルスだね！基本は「女性が前衛、男性が後衛」。男性はスマッシュやドロップで崩し、甘く浮いた球を女性が前でプッシュして決めるのが理想の形だ。配球のコツとしては、相手の女性の周り（ハーフ付近）や、二人の間にシャトルを集めると陣形を崩しやすいぞ！お互いのカバーと声掛けを忘れずに！🤝";
-            } else if (t.includes("ダブルス") || t.includes("ローテーション") || t.includes("ペア") || t.includes("相方")) {
-                return "ダブルスは陣形変化（ローテーション）が鍵だ！自分たちが攻める時（スマッシュやドロップ）は「トップ＆バック（前と後ろ）」、守る時（ロブやクリアを打たされた時）は素早く「サイドバイサイド（横並び）」に移行するんだ。真ん中（センター）に飛んできた球は、基本的にフォアハンド側になる選手が取るよう事前に決めておくとお見合いを防げるぞ！✨";
-            } else if (t.includes("ショートサーブ") || t.includes("ロングサーブ") || t.includes("サーブミス")) {
-                return "サーブは唯一自分のタイミングで打てる！ショートサーブは、相手のラケットが届きにくい「T字（センターラインとショートサービスラインの交点）」を狙うのが基本。ロングサーブは中途半端な高さだと叩かれるから、相手の頭上を越えてバックバウンダリーラインぎりぎりまで高く深く飛ばす軌道をイメージしよう！";
+            else if (t.includes("ミックス") || t.includes("ダブルス") || t.includes("混合")) {
+                return "ミックスダブルスだね！男性が後衛で攻撃を作り、女性が前衛で決めるのが基本スタイルだ。相手の女性の周りや、二人の間にシャトルを集めると陣形を崩しやすいぞ！お互いのカバーと声掛けを忘れずに！🤝";
             }
-
-            // === 道具・準備・トラブル系 ===
-            else if (t.includes("シューズ") || t.includes("靴") || t.includes("滑る")) {
-                return "フットワークの要、シューズの選び方だね！かかとを合わせた時に、つま先に0.5cm〜1cm程度の余裕があるものがベストだ。体育館が滑りやすい時は、シューズの裏を濡れ雑巾で軽く拭くか、手でキュッと拭いてホコリを落と0。試合前は、かかとをトントンと合わせてから下からしっかり紐を締め上げるんだぞ！👟";
-            } else if (t.includes("ガット") || t.includes("切れた") || t.includes("折れた") || t.includes("張替") || t.includes("張り替え")) {
-                return "用具のトラブルだね！もし試合中にガットが切れたら、ラケットのフレームが歪まないように、すぐに持っているハサミで十字にガットを切り落とすんだ。そのためにも予備のラケット（できれば同じもの）は最低2本用意しておくのが安心だぞ！👍 大会当日の張替サービスについては、サイトの「大会管理・関連情報」にある「ガット張替」項目をチェックしてみてくれ！";
-            } else if (t.includes("ラケット") || t.includes("テンション") || t.includes("選び方")) {
-                return "用具の準備も立派な戦術だ！ガットのテンション（張りの強さ）は、初心者は18〜20ポンド、中級者は22〜24ポンドあたりが飛びやすくておすすめ。ラケットはプレースタイルに合わせて、重さやシャフトの硬さを選ぼう。";
-            } else if (t.includes("持ち物") || t.includes("準備") || t.includes("忘れ物")) {
-                return "大会の持ち物リストだ！ラケット（予備も含めて）、シューズ、ウェア上下（着替え多めに！）、タオルは基本。忘れがちなのが、ゼッケン用の「安全ピン」、ガットが切れた時用の「ハサミ」、そして試合間のエネルギー補給用の「ゼリー飲料やバナナ」だ。しっかり準備して不安をなくそう！";
-            } else if (t.includes("体育館") || t.includes("暑い") || t.includes("寒い") || t.includes("空調") || t.includes("風")) {
-                return "体育館の環境を読むのも強さのうちだ！気温が高いとシャトルはよく飛び、低いと飛ばなくなる（シャトルの番号が変わるんだ）。また、空調の風向きを試合前の練習（基礎打ち）でしっかり確認し、風上ならアウトに注意、風下ならクリアをしっかり奥まで打つよう戦略を変えるんだぞ！";
-            }
-
-            // === フィジカル・メンタル・心構え系 ===
-            else if (t.includes("疲れた") || t.includes("筋肉痛") || t.includes("体力") || t.includes("リカバリー")) {
-                return "連戦での疲れだね！試合直後は「静的ストレッチ」でゆっくり筋肉を伸ばし、使った筋肉（ふくらはぎや肩）をアイシングで冷やすと疲労回復が早いぞ。帰宅後は温かいお風呂と冷水を交互に浴びる「交代浴」がおすすめだ。食事はタンパク質と糖質をしっかり摂って、次の日に備えよう！🍖";
-            } else if (t.includes("ストレッチ") || t.includes("準備運動") || t.includes("怪我") || t.includes("アップ")) {
-                return "ウォーミングアップは怪我予防とパフォーマンス向上のために絶対必要だ！試合前は体を温めながら関節の可動域を広げる「動的ストレッチ（ランジや肩回しなど）」を中心に。アキレス腱とふくらはぎ、手首・足首は特に入念にね！いきなり強いスマッシュを打たず、基礎打ちで徐々にペースを上げていこう🧘‍♂️";
-            } else if (t.includes("ご飯") || t.includes("食事") || t.includes("水分") || t.includes("スタミナ")) {
-                return "試合当日の食事のタイミングが重要だ！試合の2〜3時間前には、消化の良い炭水化物（おにぎり、うどんなど）で固形物の食事を済ませておこう。試合の合間は、素早くエネルギーになるゼリー飲料やバナナ、カステラなどがおすすめだ。こまめな水分・塩分補給で足のつりを予防しよう！🍙";
-            } else if (t.includes("緊張") || t.includes("メンタル") || t.includes("心構え") || t.includes("プレッシャー")) {
-                return "緊張してガチガチかな？それは「本気で勝ちたい」という証拠だから恥ずかしいことじゃない！緊張をほぐすには、コートに入る前に深く息を吐き出す「深呼吸」や、サーブの前にシャトルを見つめるなどの「マイルーティン」を作るといいぞ。ミスをしても「ドンマイ！」「次一本！」とペアと声を掛け合って、まずは笑顔を作ってみよう💪";
-            } else if (t.includes("勝てない") || t.includes("スランプ") || t.includes("悔しい") || t.includes("負けた")) {
-                return "勝てなくて悔しい時期もある。そんな時は、自分のプレーをスマホで録画して客観的に見てみよう！「構えが遅い」「打点が低い」など気づきがあるはずだ。また、全部のショットを上手く打とうとせず、「このコースへのドロップだけは誰にも負けない」という自分の得意な形（武器）を一つ作ると、試合の組み立てが楽になるぞ🔥諦めるな！";
-            } else if (t.includes("初心者") || t.includes("初めて") || t.includes("🔰")) {
-                return "初めての大会エントリー、素晴らしいチャレンジだ！初心者のうちは、空振りやルール間違いを恐れず、とにかく「シャトルを最後までよく見て、一生懸命追いかける」ことを楽しんでほしい！ペアや相手にしっかり挨拶をして、大きな声でコール（イン・アウト）ができれば、もう立派なプレーヤーだ😊";
-            }
-
-            // === 大会システム ===
-            else if (t.includes("エントリー") || t.includes("申し込み") || t.includes("参加") || t.includes("締め切り")) {
-                return "エントリーについてだね！各大会の枠には限りがあるから、早めの申し込みがおすすめだよ。このページのLINEボタンから簡単に申し込めるから、ぜひチェックしてみてね！キャンセルポリシーも要項で確認を忘れずに。";
+            else if (t.includes("エントリー") || t.includes("申し込み")) {
+                return "エントリーについてだね！各大会の枠には限りがあるから、早めの申し込みがおすすめだよ。このページのLINEボタンから簡単に申し込めるから、ぜひチェックしてみてね！";
             } 
-
-            // === 挨拶系 ===
-            else if (t.includes("ありがとう") || t.includes("感謝") || t.includes("助かった")) {
-                return "どういたしまして！また何かあればいつでも聞いてくれ！大会での健闘を祈ってるぞ！コートで輝け！🏸✨";
-            } else if (t.includes("こんにちは") || t.includes("こんばんは") || t.includes("挨拶") || t.includes("おはよう")) {
-                return "こんにちは！江村杯の熱血AIコーチだよ。バドミントンのことなら何でも聞いてくれ！";
-            } 
-
-            // === その他（該当なし） ===
             else {
-                return "質問ありがとう！君のバドミントンへの情熱は伝わってきたぞ！具体的な競技規則や技術、練習方法のことならもっと詳しく答えられるから、「主審のやり方」「ガット張替」「反則について」「シューズの選び方」などのキーワードを含めてもう一度聞いてみてくれ！🔥";
+                return "質問ありがとう！具体的な競技規則や技術のことならもっと詳しく答えられるから、「主審のやり方」「ガット張替」「反則について」「シューズの選び方」などのキーワードを含めてもう一度聞いてみてくれ！🔥";
             }
         }
 
@@ -1114,11 +760,8 @@
             msgDiv.className = isUser 
                 ? 'bg-secondary text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm w-5/6 self-end'
                 : 'bg-white border border-gray-200 text-gray-700 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm w-5/6 self-start leading-relaxed';
-            
-            // 安全のためテキストのエスケープ処理
             const safeText = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, '<br>');
             msgDiv.innerHTML = safeText;
-            
             aiChatMessages.appendChild(msgDiv);
             aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
         }
@@ -1127,12 +770,10 @@
             const text = aiChatInput.value.trim();
             if (!text) return;
 
-            // ユーザーのメッセージを表示
             appendMessage(text, true);
             aiChatInput.value = '';
             aiChatSubmit.disabled = true;
 
-            // 「考えている」アニメーションを表示
             const loadingId = 'loading-' + Date.now();
             const loadingDiv = document.createElement('div');
             loadingDiv.id = loadingId;
@@ -1141,7 +782,6 @@
             aiChatMessages.appendChild(loadingDiv);
             aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
 
-            // API通信の代わりに、少し待ってから返答を出す (0.5秒〜1秒)
             setTimeout(() => {
                 const aiText = getDummyResponse(text);
                 document.getElementById(loadingId).remove();
@@ -1155,6 +795,61 @@
         aiChatInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleSend();
         });
+
+        // --- 3. 📊 管理者専用アクセスカウンター ---
+        const namespace = "emuracup_admin_2026";
+        const key = "total_views";
+        
+        // ページ読み込み時にアクセス数を+1（画面には表示しない）
+        window.addEventListener('load', () => {
+            fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
+                .catch(e => console.log('Counter API Ignore'));
+        });
+
+        const counterModal = document.getElementById('counter-modal');
+        const counterNumber = document.getElementById('counter-number');
+
+        function closeCounterModal() {
+            counterModal.classList.add('hidden');
+        }
+
+        // 隠しコマンド（コピーライトを5回素早くクリックで表示）
+        let secretClickCount = 0;
+        let secretClickTimer = null;
+        const copyrightEl = document.getElementById('copyright-text');
+        
+        if(copyrightEl) {
+            copyrightEl.addEventListener('click', () => {
+                secretClickCount++;
+                clearTimeout(secretClickTimer);
+                
+                if (secretClickCount >= 5) {
+                    secretClickCount = 0; // リセット
+                    
+                    // モーダルを表示してローディング状態にする
+                    counterNumber.innerHTML = '<i class="fas fa-circle-notch fa-spin text-3xl text-gray-400"></i>';
+                    counterModal.classList.remove('hidden');
+
+                    // カウンターAPIから数値を取得して表示
+                    fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`)
+                        .then(res => {
+                            if(!res.ok) throw new Error('API Error');
+                            return res.json();
+                        })
+                        .then(data => {
+                            counterNumber.innerText = data.count + " 回";
+                        })
+                        .catch(e => {
+                            // エラー時のメッセージを優しくする
+                            counterNumber.innerHTML = '<span class="text-xl text-red-500">取得できませんでした<br><span class="text-xs text-gray-500 mt-2 block">※数分後に再試行するか、GitHub公開後にご確認ください</span></span>';
+                        });
+                } else {
+                    secretClickTimer = setTimeout(() => {
+                        secretClickCount = 0;
+                    }, 1500); // 1.5秒以内に5回クリック
+                }
+            });
+        }
     </script>
 </body>
 </html>
