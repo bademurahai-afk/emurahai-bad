@@ -89,8 +89,15 @@
          Hero Section
     =========================================== -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary to-slate-800"></div>
-        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <!-- ▼▼ バドミントンの背景画像（より見やすく調整） ▼▼ -->
+        <div class="absolute inset-0 z-0">
+            <!-- 扱いやすいように画像ファイル名を hero_bg.jpg に変更しています -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('hero_bg.jpg');"></div>
+            <!-- 文字が読めるように上から半透明のグラデーションを重ねる -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-primary/70 to-slate-800/90"></div>
+        </div>
+        <div class="absolute inset-0 opacity-20 z-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <!-- ▲▲ ここまで ▲▲ -->
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 backdrop-blur-sm shadow-lg animate-pulse">
@@ -218,7 +225,7 @@
                         <span class="text-gray-500 text-sm font-bold font-mono">2026.04.28</span>
                         <span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-green-200">結果速報</span>
                     </div>
-                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦の最終試合結果</a>
+                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦の最終試合結果（4/28掲載予定）</a>
                 </li>
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
                     <div class="flex items-center gap-4 sm:w-48 shrink-0">
@@ -235,7 +242,7 @@
                         <span class="text-gray-500 text-sm font-bold font-mono">2026.02.01</span>
                         <span class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-blue-200">大会情報</span>
                     </div>
-                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦の要項を公開し、エントリー受付を開始しました。</a>
+                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦の要項を公開し、エントリー受付中<span class="text-red-500 font-black">（残りわずか）</span></a>
                 </li>
             </ul>
         </div>
@@ -308,9 +315,11 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+                <!-- 差し替えた画像（1枚目） -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800" alt="バドミントンのシャトルとラケット" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" alt="バドミントンのシャトルとラケット" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+                <!-- 2枚目の画像 -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="バドミントンの試合風景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
@@ -465,64 +474,67 @@
                 <!-- 料金表 -->
                 <h3 class="text-xl font-bold text-primary mb-4 border-b-2 border-gray-200 pb-2">基本料金表 (税込)</h3>
                 
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-10">
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse min-w-[1000px]">
-                            <thead>
-                                <tr class="bg-slate-100 text-primary text-sm">
-                                    <th class="p-4 font-bold border-b border-gray-200">種類</th>
-                                    <th class="p-4 font-bold border-b border-gray-200 text-center">①ガット代＋工賃<br><span class="text-xs font-normal text-gray-500">(中学生以下)</span></th>
-                                    <th class="p-4 font-bold border-b border-gray-200 text-center">②ガット持込＋工賃<br><span class="text-xs font-normal text-gray-500">(中学生以下)</span></th>
-                                    <th class="p-4 font-bold border-b border-gray-200 text-center">③本数まとめ<br>3本以上(持込)</th>
-                                    <th class="p-4 font-bold border-b border-gray-200 text-center">④本数まとめ<br>3本以上(引取かお届け)</th>
-                                    <th class="p-4 font-bold border-b border-gray-200 text-center">引取・お届け区域</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-sm">
-                                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                    <td class="p-4 font-medium text-gray-700 leading-relaxed">
-                                        AEROSONIC / SKYARC / AEROBITE / AEROBITE BOOST
-                                    </td>
-                                    <td class="p-4 text-center font-bold text-lg text-primary whitespace-nowrap">2,400円<br><span class="text-sm font-normal text-gray-500">(2,300円)</span></td>
-                                    <td class="p-4 text-center font-bold text-lg text-primary whitespace-nowrap border-l border-gray-100" rowspan="4">
-                                        1,500円<br><span class="text-sm font-normal text-gray-500">(1,500円)</span>
-                                    </td>
-                                    <td class="p-4 text-center font-bold text-gray-700 whitespace-nowrap border-l border-gray-100" rowspan="4">
-                                        1本当たり左記<br>①金額より<br><span class="text-red-500 text-lg">200円引き</span>
-                                    </td>
-                                    <td class="p-4 text-center font-bold text-gray-700 whitespace-nowrap border-l border-gray-100" rowspan="4">
-                                        1本当たり左記<br>①金額より<br><span class="text-red-500 text-lg">100円引き</span>
-                                    </td>
-                                    <td class="p-4 text-center text-sm text-gray-600 whitespace-nowrap border-l border-gray-100 leading-relaxed" rowspan="4">
-                                        淀川区<br>東淀川区<br>西淀川区<br>豊中市<br>吹田市<br>箕面市
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                    <td class="p-4 font-medium text-gray-700 leading-relaxed">
-                                        EXBOLT 68 / EXBOLT 65 / EXBOLT 63 / BG66 FORCE / BG66 ULTIMAX
-                                    </td>
-                                    <td class="p-4 text-center font-bold text-lg text-primary whitespace-nowrap">2,300円<br><span class="text-sm font-normal text-gray-500">(2,200円)</span></td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                    <td class="p-4 font-medium text-gray-700 leading-relaxed">
-                                        BG80 POWER / NANOGY 95 / NANOGY 98 / BG80
-                                    </td>
-                                    <td class="p-4 text-center font-bold text-lg text-primary whitespace-nowrap">2,200円<br><span class="text-sm font-normal text-gray-500">(2,100円)</span></td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="p-4 font-medium text-gray-700 leading-relaxed">
-                                        強チタン / BG65
-                                    </td>
-                                    <td class="p-4 text-center font-bold text-lg text-primary whitespace-nowrap">2,100円<br><span class="text-sm font-normal text-gray-500">(2,000円)</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden mb-10 w-full">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm border-2 border-gray-200">
+                        <thead>
+                            <tr class="bg-slate-100 text-primary">
+                                <th class="p-3 sm:p-4 font-bold border border-gray-200 w-[28%]">種類</th>
+                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">①ガット代<br>＋工賃<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(中学生以下)</span></th>
+                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">②ガット持込<br>＋工賃<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(中学生以下)</span></th>
+                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">③まとめ<br>3本以上<br>(持込)</th>
+                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">④まとめ<br>3本以上<br>(引取かお届け)</th>
+                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">引取・お届け<br>区域</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">
+                                    AEROSONIC / SKYARC<br>
+                                    AEROBITE / AEROBITE BOOST
+                                </td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,400円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,300円)</span></td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200" rowspan="4">
+                                    1,500円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(1,500円)</span>
+                                </td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-gray-700 border border-gray-200 leading-relaxed" rowspan="4">
+                                    左記①より<br><span class="text-red-500 text-base sm:text-lg">200円引</span>
+                                </td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-gray-700 border border-gray-200 leading-relaxed" rowspan="4">
+                                    左記①より<br><span class="text-red-500 text-base sm:text-lg">100円引</span>
+                                </td>
+                                <td class="p-2 sm:p-4 text-center text-[10px] sm:text-xs text-gray-600 border border-gray-200 leading-relaxed" rowspan="4">
+                                    淀川区<br>東淀川区<br>西淀川区<br>豊中市<br>吹田市<br>箕面市
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">
+                                    <span class="inline-flex items-center bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 shadow-sm animate-pulse"><i class="fas fa-star text-yellow-300 mr-1"></i>おすすめ</span><br>
+                                    EXBOLT 68 / EXBOLT 65 / EXBOLT 63<br>
+                                    BG66 FORCE / BG66 ULTIMAX
+                                </td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,300円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,200円)</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">
+                                    BG80 POWER / NANOGY 95<br>
+                                    NANOGY 98 / BG80
+                                </td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,200円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,100円)</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">
+                                    強チタン<br>
+                                    BG65
+                                </td>
+                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,100円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,000円)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <!-- オプション -->
                 <h3 class="text-xl font-bold text-primary mb-4 border-b-2 border-gray-200 pb-2">ガット張替えオプション</h3>
-                <p class="text-xs text-gray-500 mb-4">※上記①金額にプラス、事前連絡必要 (税込)</p>
+                <p class="text-xs text-gray-500 mb-4">※上記価格表金額にプラス、事前連絡必要 (税込)</p>
 
                 <div class="space-y-3 mb-10">
                     <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col sm:flex-row justify-between gap-4">
