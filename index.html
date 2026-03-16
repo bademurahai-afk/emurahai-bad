@@ -993,6 +993,31 @@
         </div>
     </div>
 
+    <!-- 📊 管理者用アクセスカウンター モーダル -->
+    <div id="counter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeCounterModal()"></div>
+        <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-all animate-fade-in-up z-10">
+            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl mx-auto mb-4 shadow-sm">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-black text-primary mb-4">管理者モード</h3>
+            <p class="text-gray-500 mb-4 text-sm">現在の総アクセス数</p>
+            
+            <div id="counter-number" class="flex justify-center mb-6 min-h-[40px] w-full">
+                <!-- 初期ローディングアイコン -->
+            </div>
+            
+            <p class="text-sm text-gray-500 mb-6 font-medium">これからも大会運営頑張ってください！</p>
+            <button onclick="closeCounterModal()" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors w-full focus:outline-none shadow-sm">
+                閉じる
+            </button>
+        </div>
+    </div>
+
+    <!-- アクセスカウンター用隠しピクセル -->
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
+    <img src="https://komarev.com/ghpvc/?username=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
+
     <script>
         // --- モーダル制御 ---
         const guideModal = document.getElementById('guide-modal');
@@ -1057,6 +1082,56 @@
         function closePdfModal() {
             pdfModalContent.classList.remove('translate-y-0'); pdfModalContent.classList.add('translate-y-full');
             setTimeout(() => { pdfModal.classList.add('hidden'); pdfIframe.src = ""; document.body.style.overflow = ''; }, 300);
+        }
+
+        // --- ガット張替モーダル制御 ---
+        const gutPriceModal = document.getElementById('gut-price-modal');
+        const gutPriceModalContent = document.getElementById('gut-price-modal-content');
+        function openGutPriceModal() {
+            gutPriceModal.classList.remove('hidden');
+            setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGutPriceModal() {
+            gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full');
+            setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
+        }
+
+        // --- 📊 管理者専用アクセスカウンター ---
+        const counterModal = document.getElementById('counter-modal');
+        const counterNumber = document.getElementById('counter-number');
+
+        function closeCounterModal() {
+            counterModal.classList.add('hidden');
+        }
+
+        let secretClickCount = 0;
+        let secretClickTimer = null;
+        const copyrightEl = document.getElementById('copyright-text');
+        
+        if(copyrightEl) {
+            copyrightEl.addEventListener('click', () => {
+                secretClickCount++;
+                clearTimeout(secretClickTimer);
+                
+                if (secretClickCount >= 5) {
+                    secretClickCount = 0;
+                    counterModal.classList.remove('hidden');
+
+                    counterNumber.innerHTML = `
+                        <div class="flex flex-col items-center justify-center gap-4">
+                            <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site&left_color=gray&right_color=orange" alt="Access Counter 1" class="h-8 shadow-sm">
+                            <img src="https://komarev.com/ghpvc/?username=emuracup_2026_main_site&color=orange&style=flat-square" alt="Access Counter 2" class="h-8 shadow-sm">
+                        </div>
+                        <p class="text-xs text-gray-400 mt-4 leading-relaxed font-normal">※2種類の異なるシステムで計測しています。<br>AdBlock等の影響で片方が見えない場合があります。</p>
+                    `;
+                    
+                } else {
+                    secretClickTimer = setTimeout(() => {
+                        secretClickCount = 0;
+                    }, 1500);
+                }
+            });
         }
     </script>
 </body>
