@@ -53,7 +53,6 @@
                 <!-- ロゴ -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="group flex items-center gap-3 focus:outline-none">
-                        <!-- ロゴ画像のファイル名を指定しています -->
                         <img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-12 h-12 rounded-full object-cover shadow-sm group-hover:shadow-md transition-all duration-300" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'">
                         <div class="flex flex-col justify-center">
                             <span class="text-xl md:text-2xl font-black text-primary leading-none tracking-tight group-hover:text-secondary transition-colors">江村杯</span>
@@ -88,34 +87,39 @@
     <!-- ==========================================
          Hero Section
     =========================================== -->
-    <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
-        <!-- ▼▼ バドミントンの背景画像（より見やすく調整） ▼▼ -->
-        <div class="absolute inset-0 z-0">
-            <!-- 扱いやすいように画像ファイル名を hero_bg.jpg に変更しています -->
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('hero_bg.jpg');"></div>
-            <!-- 文字が読めるように上から半透明のグラデーションを重ねる -->
-            <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-primary/70 to-slate-800/90"></div>
+    <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-50">
+        <!-- ▼▼ バドミントンの背景画像（白基調に合わせた設定） ▼▼ -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center">
+            <!-- プレビューでも確認できるようにonerrorを設定しています -->
+            <img src="hero_bg.jpg" 
+                 onerror="this.src='Gemini_Generated_Image_dwjz1adwjz1adwjz.jpg'"
+                 alt="背景" 
+                 class="w-full h-full object-cover object-center opacity-80 mix-blend-multiply">
+            <!-- 文字を読みやすくするための極薄い白のフィルター -->
+            <div class="absolute inset-0 bg-white/30"></div>
         </div>
-        <div class="absolute inset-0 opacity-20 z-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
         <!-- ▲▲ ここまで ▲▲ -->
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 backdrop-blur-sm shadow-lg animate-pulse">
-                <span class="w-2 h-2 rounded-full bg-green-400"></span>
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/90 border border-gray-200 text-primary text-sm font-bold mb-6 backdrop-blur-sm shadow-sm animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
                 現在、2つの大会で参加者募集中！
             </span>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
+            <!-- 文字色を白からダークグレー(text-primary)に変更 -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-primary mb-6 leading-tight tracking-tight">
                 本気のスマッシュも、<br class="hidden md:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">初めての挑戦も。</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-orange-400">初めての挑戦も。</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-sm">
                 小学生から大人まで、誰もが主役になれるバドミントン大会。<br class="hidden md:block">日頃の練習の成果をこのコートで発揮しよう。
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#entry-list" class="bg-gradient-to-r from-secondary to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">
+                <!-- 募集中の大会を見るボタン -->
+                <a href="#entry-list" class="bg-gradient-to-r from-secondary to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2 shadow-md">
                     募集中の大会を見る <i class="fas fa-arrow-down"></i>
                 </a>
-                <a href="#management" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all w-full sm:w-auto flex items-center justify-center gap-2">
+                <!-- ドロー・結果を見るボタン（白背景用にデザイン変更） -->
+                <a href="#management" class="bg-white text-primary border-2 border-gray-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 hover:border-gray-300 transition-all w-full sm:w-auto flex items-center justify-center gap-2 shadow-sm">
                     ドロー・結果を見る
                 </a>
             </div>
@@ -316,8 +320,11 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
                 <!-- 差し替えた画像（1枚目） -->
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" alt="バドミントンのシャトルとラケット" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100">
+                    <!-- ▼ 短いファイル名「gallery1.jpg」に変更しました ▼ -->
+                    <img src="gallery1.jpg" 
+                         alt="バドミントンのシャトルとラケット" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <!-- 2枚目の画像 -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
@@ -407,7 +414,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
             <div class="md:col-span-1">
                 <a href="#" class="text-xl font-black text-white flex items-center gap-3 mb-6 group">
-                    <!-- フッター側のロゴ -->
                     <img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-10 h-10 rounded-full object-cover bg-white/10 group-hover:scale-110 transition-transform" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'">
                     <div class="flex flex-col">
                         <span class="leading-none mb-1">江村杯</span>
@@ -987,41 +993,8 @@
         </div>
     </div>
 
-    <!-- ==========================================
-         ✨ AIバドミントンコーチ UI (API不要ダミーボット版)
-    =========================================== -->
-    <button id="ai-chat-toggle" class="fixed bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-secondary to-orange-400 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center text-2xl z-50 focus:outline-none">
-        <i class="fas fa-robot"></i>
-    </button>
-
-    <div id="ai-chat-window" class="fixed bottom-24 right-4 md:right-6 w-[calc(100%-2rem)] md:w-96 bg-white rounded-3xl shadow-2xl border border-gray-100 hidden z-50 flex-col overflow-hidden transition-all duration-300">
-        <div class="bg-gradient-to-r from-secondary to-orange-400 p-4 flex justify-between items-center text-white shadow-sm z-10">
-            <h3 class="font-bold flex items-center gap-2"><i class="fas fa-robot text-xl"></i> ✨ AI江村コーチ</h3>
-            <button id="ai-chat-close" class="hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times"></i></button>
-        </div>
-        <div id="ai-chat-messages" class="h-80 p-4 overflow-y-auto bg-slate-50 flex flex-col gap-3 relative">
-            <div class="bg-white border border-gray-200 text-gray-700 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm w-5/6 relative leading-relaxed">
-                こんにちは！江村杯のAIコーチ（FAQボット）です✨<br>
-                技術のことだけでなく、「サーブのルール」「反則」「主審」「線審」「サービスジャッジ」「ガット張替」などについても聞いてみてね！
-            </div>
-        </div>
-        <div class="p-3 border-t border-gray-100 bg-white relative z-10">
-            <div class="flex gap-2">
-                <input type="text" id="ai-chat-input" placeholder="キーワード（例：主審 やり方）..." class="flex-1 border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary bg-gray-50">
-                <button id="ai-chat-submit" class="bg-secondary text-white w-10 h-10 rounded-xl flex items-center justify-center hover:bg-orange-600 transition-colors shadow-sm focus:outline-none"><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
-
-    <!-- アクセスカウンター用隠しピクセル -->
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
-    <img src="https://komarev.com/ghpvc/?username=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
-
-    <!-- ==========================================
-         Scripts (全てここに集約)
-    =========================================== -->
     <script>
-        // --- 1. モーダル制御 ---
+        // --- モーダル制御 ---
         const guideModal = document.getElementById('guide-modal');
         const guideModalContent = document.getElementById('guide-modal-content');
         function openGuideModal() {
@@ -1084,160 +1057,6 @@
         function closePdfModal() {
             pdfModalContent.classList.remove('translate-y-0'); pdfModalContent.classList.add('translate-y-full');
             setTimeout(() => { pdfModal.classList.add('hidden'); pdfIframe.src = ""; document.body.style.overflow = ''; }, 300);
-        }
-
-        // --- ★ガット張替モーダル制御 ---
-        const gutPriceModal = document.getElementById('gut-price-modal');
-        const gutPriceModalContent = document.getElementById('gut-price-modal-content');
-        function openGutPriceModal() {
-            gutPriceModal.classList.remove('hidden');
-            setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-        function closeGutPriceModal() {
-            gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full');
-            setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
-        }
-
-        // --- 2. ダミーAIコーチ機能（API不要版） ---
-        const aiChatToggle = document.getElementById('ai-chat-toggle');
-        const aiChatWindow = document.getElementById('ai-chat-window');
-        const aiChatClose = document.getElementById('ai-chat-close');
-        const aiChatInput = document.getElementById('ai-chat-input');
-        const aiChatSubmit = document.getElementById('ai-chat-submit');
-        const aiChatMessages = document.getElementById('ai-chat-messages');
-
-        aiChatToggle.addEventListener('click', () => {
-            aiChatWindow.classList.toggle('hidden');
-            if (!aiChatWindow.classList.contains('hidden')) aiChatInput.focus();
-        });
-        
-        aiChatClose.addEventListener('click', () => {
-            aiChatWindow.classList.add('hidden');
-        });
-
-        function getDummyResponse(text) {
-            const t = text.toLowerCase();
-            
-            if (t.includes("サーブ") && (t.includes("ルール") || t.includes("反則") || t.includes("フォルト") || t.includes("高さ"))) {
-                return "サーブの厳密なルールだね！大事なポイントは４つ。①打つ瞬間にシャトル全体が床から「1.15m以下」であること。②サーバーもレシーバーも、打ち終わるまで両足の一部が床についていること。③ラケットを後ろに引いてから前に振る動きは、途中で止めずに「連続した動き」で打つこと。④2025年4月30日までは、指でシャトルに回転をかける「スピンサーブ」は禁止されているぞ！🔥";
-            }
-            else if (t.includes("点数") || t.includes("スコア") || t.includes("デュース") || t.includes("セッティング") || t.includes("何点")) {
-                return "スコアのルールだね！基本は「21点先取」のラリーポイント方式（3ゲームマッチ）だ。もし20点オールになったら延長戦（デュース）に突入！そこからは「先に2点リードした方」が勝ちになる。ただし29-29になった場合は、運命の「30点目」を取った方が勝者だ！💪";
-            }
-            else if (t.includes("反則") || t.includes("フォルト") || t.includes("タッチザネット") || t.includes("オーバーネット") || t.includes("ダブルタッチ")) {
-                return "試合中の主なフォルト（反則）について教えるぞ！①「タッチザネット」: プレー中にラケットや体、服がネットに触れること。②「オーバーネット」: ラケットがネットを越えて相手コートでシャトルを打つこと。③「ホールディング / ダブルタッチ」: シャトルをラケットに乗せて運んだり、同じ人が2回連続で打つこと。④故意の大声での妨害もフォルトだ！✨";
-            }
-            else if (t.includes("休憩") || t.includes("インターバル") || t.includes("水")) {
-                return "休憩のルールだね！休憩できるのは①どちらかが「11点」に到達した時の【60秒以内】と、②ゲームとゲームの間の【120秒以内】だけだ。この時間以外は、主審の許可なく勝手にコート外へ出たり水を飲みに行ったりしてはいけないぞ！💦";
-            }
-            else if (t.includes("主審")) {
-                return "主審のやり方だね！一番大切なのは「選手に聞こえる大きな声」でコールすることだ。試合開始時は「オンマイライト、〇〇、オンマイレフト、△△。〇〇 トゥ サーブ、ラブオール・プレー！」でスタート。ラリーが終わるごとに、必ず「ポイントが入った側」からスコアをコールするんだ！📣";
-            }
-            else if (t.includes("線審") || t.includes("ラインジャッジ")) {
-                return "線審のやり方だね！自分の担当するラインに集中し、インの場合は「右手を斜め下、コート内側」に向けて指し示す。アウトの場合は「両手を横に広げて、アウト！」と大きな声でコールするんだ。見えなかった時は、両手で目を覆う「アンサイテッド」のジェスチャーをしよう👀";
-            }
-            else if (t.includes("サービスジャッジ")) {
-                return "サービスジャッジの役割だね！①打つ瞬間にシャトルが1.15m以下か、②足が床から離れたりラインを踏んでいないか、③二段モーションになっていないかをチェックするんだ。フォルトを見つけたら「フォルト！」とコールして主審に伝えよう！✋";
-            }
-            else if (t.includes("審判") || t.includes("敗者審判")) {
-                return "江村杯などの個人戦では「敗者審判制」が多い。負けた直後で辛いかもしれないが、次の試合の主審や線審をしっかり務めるのがマナーだ。「主審」「線審」「サービスジャッジ」など、特定の役割のやり方が知りたい場合は聞いてくれ！✨";
-            }
-            else if (t.includes("ガット") || t.includes("張替") || t.includes("切れた")) {
-                return "試合中にガットが切れたら、ラケットが歪まないようにすぐハサミで十字に切り落とそう。大会当日の張替サービスについては、サイトの「大会管理・関連情報」にある「ガット張替」項目をチェックしてみてくれ！👍";
-            }
-            else if (t.includes("スマッシュ")) {
-                return "スマッシュのコツだね！まず打点は自分の斜め前、一番高く伸び上がった位置で捉えること。そして左手でシャトルを指さすようにして胸を張り、右足から左足への体重移動を使って全身で打つんだ！🔥";
-            }
-            else if (t.includes("ミックス") || t.includes("ダブルス") || t.includes("混合")) {
-                return "ダブルスの基本だね！自分たちが攻める時は「トップ＆バック（縦）」、守る時は「サイドバイサイド（横）」に陣形を変えるんだ。ミックスの場合は女性が前衛で決めるのが理想の形だぞ！🤝";
-            }
-            else if (t.includes("エントリー") || t.includes("申し込み")) {
-                return "エントリーについてだね！各大会の枠には限りがあるから、早めの申し込みがおすすめだよ。このページのLINEボタンから簡単に申し込めるから、ぜひチェックしてみてね！";
-            } 
-            else {
-                return "質問ありがとう！具体的な競技規則や技術のことならもっと詳しく答えられるから、「主審のやり方」「ガット張替」「反則について」「シューズの選び方」などのキーワードを含めてもう一度聞いてみてくれ！🔥";
-            }
-        }
-
-        function appendMessage(text, isUser) {
-            const msgDiv = document.createElement('div');
-            msgDiv.className = isUser 
-                ? 'bg-secondary text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm w-5/6 self-end'
-                : 'bg-white border border-gray-200 text-gray-700 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm w-5/6 self-start leading-relaxed';
-            
-            const safeText = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, '<br>');
-            msgDiv.innerHTML = safeText;
-            
-            aiChatMessages.appendChild(msgDiv);
-            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-        }
-
-        function handleSend() {
-            const text = aiChatInput.value.trim();
-            if (!text) return;
-
-            appendMessage(text, true);
-            aiChatInput.value = '';
-            aiChatSubmit.disabled = true;
-
-            const loadingId = 'loading-' + Date.now();
-            const loadingDiv = document.createElement('div');
-            loadingDiv.id = loadingId;
-            loadingDiv.className = 'bg-white border border-gray-200 text-gray-500 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm w-max self-start';
-            loadingDiv.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> コーチが考えています...';
-            aiChatMessages.appendChild(loadingDiv);
-            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-
-            setTimeout(() => {
-                const aiText = getDummyResponse(text);
-                document.getElementById(loadingId).remove();
-                appendMessage(aiText, false);
-                aiChatSubmit.disabled = false;
-                aiChatInput.focus();
-            }, 500 + Math.random() * 500);
-        }
-
-        aiChatSubmit.addEventListener('click', handleSend);
-        aiChatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSend();
-        });
-        
-        // --- 3. 📊 管理者専用アクセスカウンター ---
-        const counterModal = document.getElementById('counter-modal');
-        const counterNumber = document.getElementById('counter-number');
-
-        function closeCounterModal() {
-            counterModal.classList.add('hidden');
-        }
-
-        let secretClickCount = 0;
-        let secretClickTimer = null;
-        const copyrightEl = document.getElementById('copyright-text');
-        
-        if(copyrightEl) {
-            copyrightEl.addEventListener('click', () => {
-                secretClickCount++;
-                clearTimeout(secretClickTimer);
-                
-                if (secretClickCount >= 5) {
-                    secretClickCount = 0;
-                    counterModal.classList.remove('hidden');
-
-                    counterNumber.innerHTML = `
-                        <div class="flex flex-col items-center justify-center gap-4">
-                            <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site&left_color=gray&right_color=orange" alt="Access Counter 1" class="h-8 shadow-sm">
-                            <img src="https://komarev.com/ghpvc/?username=emuracup_2026_main_site&color=orange&style=flat-square" alt="Access Counter 2" class="h-8 shadow-sm">
-                        </div>
-                        <p class="text-xs text-gray-400 mt-4 leading-relaxed font-normal">※2種類の異なるシステムで計測しています。<br>AdBlock等の影響で片方が見えない場合があります。</p>
-                    `;
-                    
-                } else {
-                    secretClickTimer = setTimeout(() => {
-                        secretClickCount = 0;
-                    }, 1500);
-                }
-            });
         }
     </script>
 </body>
