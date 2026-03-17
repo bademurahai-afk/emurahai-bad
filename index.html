@@ -334,6 +334,32 @@
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1591006634283-d831025217b2?auto=format&fit=crop&q=80&w=800" alt="バドミントンコート" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1611251127384-23fb88f01f05?auto=format&fit=crop&q=80&w=800" alt="試合中の選手" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1628271536750-71328eb9265f?auto=format&fit=crop&q=80&w=800" alt="大会の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
+                    <!-- 新しい画像を追加 -->
+                    <img src="february mozaiku.jpg" 
+                         onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=運営役員'"
+                         alt="大会運営役員の様子" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <!-- キャプション -->
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4 flex items-end justify-start">
+                        <span class="text-white font-bold text-sm md:text-base">運営役員</span>
+                    </div>
+                </div>
+                <!-- もっと見る -->
+                <a href="#" class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer bg-slate-50 border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors md:col-span-3 lg:col-span-1">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 text-primary shadow-sm group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <span class="text-sm font-bold text-gray-600">もっと見る</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -603,7 +629,7 @@
     <!-- 📊 管理者用アクセスカウンター モーダル -->
     <div id="counter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeCounterModal()"></div>
-        <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-all animate-fade-in-up">
+        <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-all animate-fade-in-up z-10">
             <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl mx-auto mb-4 shadow-sm">
                 <i class="fas fa-chart-line"></i>
             </div>
@@ -1004,27 +1030,6 @@
             <div class="flex-grow w-full relative bg-gray-200">
                 <iframe id="pdf-iframe" src="" class="absolute inset-0 w-full h-full border-none" title="PDF Preview"></iframe>
             </div>
-        </div>
-    </div>
-
-    <!-- 📊 管理者用アクセスカウンター モーダル -->
-    <div id="counter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeCounterModal()"></div>
-        <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-all animate-fade-in-up z-10">
-            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl mx-auto mb-4 shadow-sm">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="text-xl font-black text-primary mb-4">管理者モード</h3>
-            <p class="text-gray-500 mb-4 text-sm">現在の総アクセス数</p>
-            
-            <div id="counter-number" class="flex justify-center mb-6 min-h-[40px] w-full">
-                <!-- 初期ローディングアイコン -->
-            </div>
-            
-            <p class="text-sm text-gray-500 mb-6 font-medium">これからも大会運営頑張ってください！</p>
-            <button onclick="closeCounterModal()" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors w-full focus:outline-none shadow-sm">
-                閉じる
-            </button>
         </div>
     </div>
 
