@@ -179,7 +179,7 @@
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <button onclick="openPdfModal('youkou58.pdf', '第58回江村杯３ミックス団体戦 要項')" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm focus:outline-none"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</button>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-secondary text-white px-4 py-3.5 rounded-xl font-bold hover:bg-orange-600 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <button onclick="openPdfModal('https://drive.google.com/file/d/1ad8JpmPoknaYs404_tnWAdKEq3_30Dho/preview', '第59回江村杯混合ダブルス団体戦 要項')" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm focus:outline-none"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項を見る</button>
+                        <button onclick="openPdfModal('youkou59.pdf', '第59回江村杯混合ダブルス団体戦 要項')" class="flex-1 text-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm focus:outline-none"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</button>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-blue-600 text-white px-4 py-3.5 rounded-xl font-bold hover:bg-blue-700 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
@@ -292,28 +292,28 @@
                 </button>
                 
                 <!-- 組み合わせ -->
-                <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
+                <button onclick="openPdfModal('draw.pdf', '組み合わせ (ドロー)')" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-accent transition-colors">組み合わせ (ドロー)</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
-                </a>
+                </button>
 
                 <!-- タイムテーブル -->
-                <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
+                <button onclick="openPdfModal('timetable.pdf', 'タイムテーブル')" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">タイムテーブル</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表です。集合時間の目安にご活用ください。</p>
-                </a>
+                </button>
 
                 <!-- 試合結果 -->
-                <a href="#" class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden">
+                <button onclick="openPdfModal('result.pdf', '試合結果')" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-primary transition-colors">試合結果</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
-                </a>
+                </button>
 
                 <!-- ガット張替 (HTMLモーダルを開くボタン) -->
                 <button onclick="openGutPriceModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
@@ -321,6 +321,14 @@
                     <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-purple-500 transition-colors">ガット張替</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">最短で当日渡し、張替本数3本以上であれば張替後お届け。価格（ガット込み）2,000円～2,400円。その他割引あり。</p>
+                </button>
+
+                <!-- 競技規則・注意事項 (PDF) -->
+                <button onclick="openPdfModal('rules.pdf', '競技規則・注意事項')" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-book"></i></div>
+                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-yellow-500 transition-colors">競技規則・注意事項</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">大会参加にあたってのルールやマナー、注意事項をPDFでご確認いただけます。</p>
                 </button>
             </div>
         </div>
