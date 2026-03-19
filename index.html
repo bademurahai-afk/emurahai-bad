@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ▼ 日本語サイトとしての設定をさらに強化 ▼ -->
+    <meta name="google" content="notranslate">
+    <meta property="og:locale" content="ja_JP">
+    <!-- ▲ ここまで ▲ -->
+
     <title>江村杯Badminton Portal</title>
     
     <!-- Google Fonts -->
@@ -169,7 +175,7 @@
                         <!-- 残り枠の表示 -->
                         <div class="mt-6 flex justify-between items-center bg-red-50 p-3 rounded-xl border border-red-100">
                             <span class="text-sm font-bold text-red-600 flex items-center gap-2"><i class="fas fa-fire animate-pulse"></i> エントリー受付中</span>
-                            <span class="bg-red-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り8チーム</span>
+                            <span class="bg-red-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り7チーム</span>
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
@@ -398,12 +404,26 @@
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-secondary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">2</div>
                     <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
-                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-desktop text-gray-400"></i> LINEからエントリー</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">LINEの友だち追加を行い、専用フォームから必要事項を入力して送信します。</p>
+                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fab fa-line text-green-500"></i> LINE友だち追加</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">まずはLINEの友だち追加を行います。画面右上のボタンや各大会のボタンから登録できます。</p>
                     </div>
                 </div>
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-accent text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">3</div>
+                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
+                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-paper-plane text-gray-400"></i> ＬＩＮＥでメッセージ送信</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">お友達登録したＬＩＮＥを開き、最下部左の四角いマークをタップし、メッセージ欄に<strong class="text-primary">お名前、フリガナ、エントリーランク、チーム名</strong>を入力後、送信します。</p>
+                    </div>
+                </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-purple-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">4</div>
+                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
+                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-reply text-gray-400"></i> 運営からの確認メッセージ</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">運営側が3の項目を確認後、折り返しエントリーの確定、参加費の振り込み日時を返信します。<br><span class="text-red-500 font-bold mt-2 inline-block">【この項目が届かない場合は、エントリーは確定しておりませんのでご注意ください。】</span></p>
+                    </div>
+                </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-green-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">5</div>
                     <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
                         <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-yen-sign text-gray-400"></i> 参加費のお支払い</h4>
                         <p class="text-gray-500 text-sm leading-relaxed">指定の口座へのお振込みでお願いします。</p>
@@ -704,26 +724,30 @@
                     <ol class="space-y-4">
                         <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                             <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">1</span>
-                            <div><strong class="text-primary block mb-1">ライン公式アカウントでお名前の登録</strong><span class="text-sm text-gray-600">まず最初にLINE公式アカウントをお友達登録（本サイト右上）してください。登録が完了しましたら、そのLINEのメッセージ欄にお名前（フルネーム）を入力し送信すればお名前の登録が完了します。</span></div>
+                            <div><strong class="text-primary block mb-1">要項の確認</strong><span class="text-sm text-gray-600">本サイトで公開される大会要項（PDF）をチェックし、参加資格や日程を確認します。</span></div>
                         </li>
                         <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                             <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">2</span>
-                            <div><strong class="text-primary block mb-1">要項の確認</strong><span class="text-sm text-gray-600">本サイトで公開される大会要項（PDF）をチェック。</span></div>
+                            <div><strong class="text-primary block mb-1">LINE友だち追加</strong><span class="text-sm text-gray-600">まずはLINE公式アカウントをお友達登録（本サイト右上など）してください。</span></div>
                         </li>
                         <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                             <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">3</span>
-                            <div><strong class="text-primary block mb-1">大会へのエントリー</strong><span class="text-sm text-gray-600">各大会のエントリー受付ページや専用フォームから申し込みます。</span></div>
+                            <div><strong class="text-primary block mb-1">ＬＩＮＥでメッセージ送信</strong><span class="text-sm text-gray-600">お友達登録したＬＩＮＥを開き、最下部左の四角いマークをタップし、メッセージ欄に<strong>お名前、フリガナ、エントリーランク、チーム名</strong>を入力後、送信します。</span></div>
                         </li>
                         <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                             <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">4</span>
-                            <div><strong class="text-primary block mb-1">参加費のお支払い</strong><span class="text-sm text-gray-600">要項に記載された指定口座へ、期限内にお振込みください。</span></div>
+                            <div><strong class="text-primary block mb-1">運営からの確認メッセージ</strong><span class="text-sm text-gray-600">運営側が3の項目を確認後、折り返しエントリーの確定、参加費の振り込み日時を返信します。<br><span class="text-red-500 font-bold mt-1 inline-block">【この項目が届かない場合は、エントリーは確定しておりませんのでご注意ください。】</span></span></div>
                         </li>
                         <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                             <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">5</span>
+                            <div><strong class="text-primary block mb-1">参加費のお支払い</strong><span class="text-sm text-gray-600">要項に記載された指定口座へ、期限内にお振込みください。</span></div>
+                        </li>
+                        <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-sm">6</span>
                             <div><strong class="text-primary block mb-1">ドロー・タイムテーブルの確認</strong><span class="text-sm text-gray-600">大会数日前に、本サイトの「大会管理」セクションに組み合わせ表（ドロー）と進行予定が公開されます。</span></div>
                         </li>
                         <li class="flex gap-4 items-start bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                            <span class="flex-shrink-0 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center font-bold shadow-sm">6</span>
+                            <span class="flex-shrink-0 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center font-bold shadow-sm">7</span>
                             <div><strong class="text-primary block mb-1">大会当日</strong><span class="text-sm text-gray-600">受付時間までに会場（豊中市立庄内体育館など）にお越しいただき、受付を済ませてください。</span></div>
                         </li>
                     </ol>
@@ -855,7 +879,6 @@
                             本大会の個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。
                         </p>
                         <div class="bg-white border border-gray-200 rounded-xl p-6 ml-11 shadow-sm">
-                            <!-- ▼ メールアドレスを追加 ▼ -->
                             <ul class="text-gray-700 space-y-3 font-medium">
                                 <li><i class="fas fa-building text-gray-400 w-6"></i> 大会事務局 / 連絡先: 公式Line</li>
                                 <li><i class="fas fa-envelope text-gray-400 w-6"></i> Email: <a href="mailto:bad.emurahai@gmail.com" class="text-secondary hover:underline">bad.emurahai@gmail.com</a></li>
@@ -996,14 +1019,14 @@
                     
                     <div class="bg-orange-50 border border-orange-100 rounded-2xl p-6 mb-8">
                         <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
-                            第58回江村杯３ミックス団体戦は<br class="md:hidden">現在で32チームがエントリーしています。<br>
-                            残り <span class="text-3xl text-red-500 mx-1 font-black">8</span> チームとなります。
+                            第58回江村杯３ミックス団体戦は<br class="md:hidden">現在で33チームがエントリーしています。<br>
+                            残り <span class="text-3xl text-red-500 mx-1 font-black">7</span> チームとなります。
                         </p>
                     </div>
                     
                     <!-- プログレスバー -->
                     <div class="w-full bg-gray-100 rounded-full h-4 mb-8 overflow-hidden shadow-inner">
-                        <div class="bg-gradient-to-r from-secondary to-orange-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 80%"></div>
+                        <div class="bg-gradient-to-r from-secondary to-orange-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 82.5%"></div>
                     </div>
                     
                     <p class="text-gray-500 text-sm leading-relaxed mb-8">
