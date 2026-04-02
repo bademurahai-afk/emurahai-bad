@@ -173,14 +173,14 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-auto">チームの総合力が試される３ミックス団体戦です。日頃の練習の成果を仲間と共にコートで発揮しましょう。</p>
                         
                         <!-- 残り枠の表示 -->
-                        <div class="mt-6 flex justify-between items-center bg-red-50 p-3 rounded-xl border border-red-100">
-                            <span class="text-sm font-bold text-red-600 flex items-center gap-2"><i class="fas fa-fire animate-pulse"></i> エントリー受付中</span>
-                            <span class="bg-red-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り1チーム</span>
+                        <div class="mt-6 flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200">
+                            <span class="text-sm font-bold text-gray-500 flex items-center gap-2"><i class="fas fa-lock"></i> エントリー受付終了</span>
+                            <span class="bg-gray-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">定員到達</span>
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
                         <a href="https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
-                        <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-secondary text-white px-4 py-3.5 rounded-xl font-bold hover:bg-orange-600 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
+                        <button disabled class="flex-1 flex justify-center items-center bg-gray-400 text-white px-4 py-3.5 rounded-xl font-bold cursor-not-allowed"><i class="fas fa-times-circle mr-1"></i> 受付終了</button>
                     </div>
                 </div>
 
@@ -215,7 +215,7 @@
                         <!-- 残り枠の表示 -->
                         <div class="mt-6 flex justify-between items-center bg-blue-50 p-3 rounded-xl border border-blue-100">
                             <span class="text-sm font-bold text-blue-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span>
-                            <span class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り40チーム</span>
+                            <span class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り39チーム</span>
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
@@ -262,10 +262,10 @@
                 </li>
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
                     <div class="flex items-center gap-4 sm:w-48 shrink-0">
-                        <span class="text-gray-500 text-sm font-bold font-mono">2026.02.01</span>
+                        <span class="text-gray-500 text-sm font-bold font-mono">2026.03.27</span>
                         <span class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-blue-200">大会情報</span>
                     </div>
-                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦の要項を公開し、エントリー受付中<span class="text-red-500 font-black">（残りわずか）</span></a>
+                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦のエントリー受付は終了しました。</a>
                 </li>
             </ul>
         </div>
@@ -454,17 +454,17 @@
             </p>
             
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2">
-                    <span class="bg-secondary text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span>
+                <!-- CTA 1 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
+                    <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">受付終了</span>
                     <h3 class="text-2xl font-bold text-white mb-2">第58回江村杯<br>３ミックス団体戦</h3>
                     <p class="text-sm text-gray-400 mb-8">締切: 2026年4月5日(日)</p>
-                    <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="block bg-secondary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-500 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:-translate-y-1">
-                        江村杯(3MIX)にエントリー
-                    </a>
+                    <button class="block w-full text-center bg-gray-600 text-gray-300 px-8 py-4 rounded-xl font-bold text-lg cursor-not-allowed border border-gray-500">
+                        エントリー受付終了
+                    </button>
                 </div>
-                <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2">
-                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span>
-                    <h3 class="text-2xl font-bold text-white mb-2">第59回江村杯<br>混合ダブルス団体戦</h3>
+                <!-- CTA 2 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
                     <p class="text-sm text-gray-400 mb-8">締切: 2026年6月7日(日)</p>
                     <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1">
                         江村杯(混合)にエントリー
@@ -1022,31 +1022,62 @@
                 </button>
             </div>
             <!-- Content -->
-            <div class="p-6 md:p-12 max-w-2xl mx-auto w-full">
-                <div class="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-soft text-center">
+            <div class="p-4 md:p-8 max-w-3xl mx-auto w-full">
+                <div class="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-soft text-center space-y-10">
                     
-                    <div class="bg-orange-50 border border-orange-100 rounded-2xl p-6 mb-8">
-                        <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
-                            第58回江村杯３ミックス団体戦は<br class="md:hidden">現在で39チームがエントリーしています。<br>
-                            残り <span class="text-3xl text-red-500 mx-1 font-black">1</span> チームとなります。
+                    <!-- 第58回 -->
+                    <div class="border-b border-gray-100 pb-10">
+                        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-6">
+                            <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
+                                第58回江村杯３ミックス団体戦は<br class="md:hidden">定員に達しました。<br>
+                                <span class="text-xl text-gray-500 mx-1 font-black mt-2 inline-block">エントリー受付を締め切りました。</span>
+                            </p>
+                        </div>
+                        
+                        <!-- プログレスバー -->
+                        <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner">
+                            <div class="bg-gray-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 100%"></div>
+                        </div>
+                        
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            たくさんのお申し込みありがとうございました。<br>
+                            大会当日にお会いできることを楽しみにしております。
                         </p>
+                        
+                        <div>
+                            <button disabled class="inline-flex items-center justify-center gap-2 bg-gray-300 text-white px-8 py-3 rounded-xl font-bold text-lg cursor-not-allowed w-full sm:w-auto">
+                                <i class="fas fa-lock"></i> 受付終了
+                            </button>
+                        </div>
                     </div>
-                    
-                    <!-- プログレスバー -->
-                    <div class="w-full bg-gray-100 rounded-full h-4 mb-8 overflow-hidden shadow-inner">
-                        <div class="bg-gradient-to-r from-secondary to-orange-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 97.5%"></div>
-                    </div>
-                    
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8">
-                        定員に達し次第、エントリーの受付を締め切らせていただきます。<br>
-                        参加をご検討中の方はお早めにお申し込みください。
-                    </p>
-                    
+
+                    <!-- 第59回 -->
                     <div>
-                        <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto">
-                            <i class="fab fa-line text-2xl"></i> LINEでエントリーする
-                        </a>
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6">
+                            <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
+                                第59回江村杯混合ダブルス団体戦<br class="md:hidden">
+                                現在エントリー受付中です。<br>
+                                残り <span class="text-3xl text-blue-600 mx-1 font-black">39</span> チームとなります。
+                            </p>
+                        </div>
+                        
+                        <!-- プログレスバー -->
+                        <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner">
+                            <div class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 5%"></div>
+                        </div>
+                        
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            定員に達し次第、エントリーの受付を締め切らせていただきます。<br>
+                            参加をご検討中の方はお早めにお申し込みください。
+                        </p>
+                        
+                        <div>
+                            <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto">
+                                <i class="fab fa-line text-2xl"></i> LINEでエントリーする
+                            </a>
+                        </div>
                     </div>
+
                 </div>
 
                 <div class="text-center pt-8">
