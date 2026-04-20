@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ▼ 日本語サイトとしての設定 ▼ -->
     <meta name="google" content="notranslate">
     <meta property="og:locale" content="ja_JP">
 
     <title>江村杯Badminton Portal</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,13 +46,9 @@
 </head>
 <body class="bg-slate-50 text-gray-800 antialiased selection:bg-secondary selection:text-white relative">
 
-    <!-- ==========================================
-         Header Section
-    =========================================== -->
     <header class="glass-header shadow-sm fixed w-full top-0 z-50 border-b border-gray-100 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- ロゴ -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="group flex items-center gap-3 focus:outline-none">
                         <img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-12 h-12 rounded-full object-cover shadow-sm group-hover:shadow-md transition-all duration-300" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'">
@@ -65,23 +58,19 @@
                         </div>
                     </a>
                 </div>
-                <!-- PC向けナビゲーション -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#news" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">お知らせ</a>
                     <a href="#entry-list" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">大会情報</a>
                     <a href="#management" class="text-sm font-bold text-primary hover:text-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary">大会管理・結果</a>
                     <a href="#gallery" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">ギャラリー</a>
                     <a href="#flow" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">参加の流れ</a>
-                    <!-- ▼ お問い合わせリンクをLINEに変更 ▼ -->
                     <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">お問い合わせ</a>
                 </nav>
-                <!-- LINE友だち追加ボタン -->
                 <div class="hidden md:flex items-center">
                     <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity duration-300">
                         <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0" class="h-9">
                     </a>
                 </div>
-                <!-- スマホ向けハンバーガー -->
                 <div class="md:hidden flex items-center">
                     <button class="text-gray-600 hover:text-primary p-2 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -91,23 +80,16 @@
         </div>
     </header>
 
-    <!-- ==========================================
-         Hero Section
-    =========================================== -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
-        <!-- ベースのダークグラデーション -->
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary to-slate-800 z-0"></div>
         
-        <!-- ▼▼ ラケットとシャトル「だけ」を白く浮かび上がらせる特殊効果 ▼▼ -->
         <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
-            <!-- invert(反転) と mix-blend-screen(スクリーン合成) で白背景を透明化し、シルエットのみを抽出 -->
             <img src="hero_bg.jpg" 
                  onerror="this.src='Gemini_Generated_Image_dwjz1adwjz1adwjz.jpg'" 
                  alt="背景" 
                  class="w-full h-full object-cover object-center invert brightness-200 contrast-125 mix-blend-screen opacity-40 md:opacity-60 scale-105">
         </div>
         
-        <!-- ドットパターン（一番上にうっすら重ねる） -->
         <div class="absolute inset-0 opacity-20 z-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -133,9 +115,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         Active Tournaments Section
-    =========================================== -->
     <section id="entry-list" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -144,7 +123,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <!-- 大会1 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-secondary to-orange-400 px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-users absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -172,7 +150,6 @@
                         </ul>
                         <p class="text-gray-600 text-sm leading-relaxed mb-auto">チームの総合力が試される３ミックス団体戦です。日頃の練習の成果を仲間と共にコートで発揮しましょう。</p>
                         
-                        <!-- 残り枠の表示 -->
                         <div class="mt-6 flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200">
                             <span class="text-sm font-bold text-gray-500 flex items-center gap-2"><i class="fas fa-lock"></i> エントリー受付終了</span>
                             <span class="bg-gray-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">定員到達</span>
@@ -184,7 +161,6 @@
                     </div>
                 </div>
 
-                <!-- 大会2 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-blue-600 to-accent px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-user-friends absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -212,10 +188,9 @@
                         </ul>
                         <p class="text-gray-600 text-sm leading-relaxed mb-auto">男女ペアによる混合ダブルス団体戦です。チームで団結して、日頃の練習の成果を発揮しましょう。</p>
                         
-                        <!-- 残り枠の表示 -->
                         <div class="mt-6 flex justify-between items-center bg-blue-50 p-3 rounded-xl border border-blue-100">
                             <span class="text-sm font-bold text-blue-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span>
-                            <span class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り30チーム</span>
+                            <span class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り27チーム</span>
                         </div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
@@ -227,9 +202,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         News Section
-    =========================================== -->
     <section id="news" class="py-20 bg-white border-y border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b-2 border-gray-100 pb-4">
@@ -271,9 +243,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         Tournament Management Section
-    =========================================== -->
     <section id="management" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -283,7 +252,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- エントリー状況 -->
                 <button onclick="openEntryStatusModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none">
                     <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-orange-50 text-secondary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clipboard-list"></i></div>
@@ -291,7 +259,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
                 </button>
                 
-                <!-- 組み合わせ -->
                 <a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div>
@@ -299,7 +266,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
                 </a>
 
-                <!-- 注意事項・タイムテーブル -->
                 <a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div>
@@ -307,7 +273,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表と、大会当日の注意事項です。集合時間の目安にご活用ください。</p>
                 </a>
 
-                <!-- 試合結果 -->
                 <a href="result.pdf" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div>
@@ -315,7 +280,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
                 </a>
 
-                <!-- ガット張替 (HTMLモーダルを開くボタン) -->
                 <button onclick="openGutPriceModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div>
@@ -323,7 +287,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">最短で当日渡し、張替本数3本以上であれば張替後お届け。価格（ガット込み）2,000円～2,400円。その他割引あり。</p>
                 </button>
 
-                <!-- 競技規則・注意事項 (PDF) -->
                 <a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-book"></i></div>
@@ -334,9 +297,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         Gallery Section
-    =========================================== -->
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -346,14 +306,12 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-                <!-- 差し替えた画像（1枚目） -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100">
                     <img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" 
                          onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'"
                          alt="バドミントンのシャトルとラケット" 
                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-                <!-- 2枚目の画像 -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="バドミントンの試合風景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
@@ -367,17 +325,14 @@
                     <img src="https://images.unsplash.com/photo-1628271536750-71328eb9265f?auto=format&fit=crop&q=80&w=800" alt="大会の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <!-- 新しい画像を追加 -->
                     <img src="february mozaiku.jpg" 
                          onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=運営役員'"
                          alt="大会運営役員の様子" 
                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <!-- キャプション -->
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4 flex items-end justify-start">
                         <span class="text-white font-bold text-sm md:text-base">運営役員</span>
                     </div>
                 </div>
-                <!-- もっと見る -->
                 <a href="#" class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer bg-slate-50 border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors md:col-span-3 lg:col-span-1">
                     <div class="text-center">
                         <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 text-primary shadow-sm group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">
@@ -390,9 +345,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         Application Flow Section
-    =========================================== -->
     <section id="flow" class="py-20 bg-slate-50 border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -441,9 +393,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         CTA Section
-    =========================================== -->
     <section class="py-20 relative overflow-hidden bg-primary">
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
         
@@ -454,7 +403,6 @@
             </p>
             
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <!-- 第58回 受付終了 -->
                 <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
                     <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">受付終了</span>
                     <h3 class="text-2xl font-bold text-white mb-2">第58回江村杯<br>３ミックス団体戦</h3>
@@ -463,7 +411,6 @@
                         エントリー受付終了
                     </button>
                 </div>
-                <!-- 第59回 -->
                 <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
                     <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span>
                     <h3 class="text-2xl font-bold text-white mb-2">第59回江村杯<br>混合ダブルス団体戦</h3>
@@ -474,20 +421,15 @@
                 </div>
             </div>
 
-            <!-- ▼ お問い合わせボタンを変更 ▼ -->
             <div class="mt-16 text-center">
                 <p class="text-gray-400 text-sm mb-3">ご不明な点などがございましたら、お気軽に公式LINEからお問い合わせください。</p>
                 <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white border border-[#06C755] bg-[#06C755]/10 px-8 py-3 rounded-full font-medium hover:bg-[#06C755] hover:border-[#06C755] transition-all shadow-sm">
                     <i class="fab fa-line text-2xl"></i> 公式LINEでお問い合わせ
                 </a>
             </div>
-            <!-- ▲ ここまで ▲ -->
-        </div>
+            </div>
     </section>
 
-    <!-- ==========================================
-         Footer Section
-    =========================================== -->
     <footer class="bg-slate-900 text-gray-400 py-16 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
             <div class="md:col-span-1">
@@ -521,7 +463,6 @@
                 <ul class="space-y-3">
                     <li><button onclick="openGuideModal()" class="hover:text-secondary transition-colors focus:outline-none">初めての方へ</button></li>
                     <li><button onclick="openPrivacyModal()" class="hover:text-secondary transition-colors focus:outline-none">プライバシーポリシー</button></li>
-                    <!-- ▼ フッターのお問い合わせもLINEに変更 ▼ -->
                     <li><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors"><i class="fab fa-line mr-1 text-gray-500"></i> お問い合わせ</a></li>
                 </ul>
             </div>
@@ -531,24 +472,16 @@
         </div>
     </footer>
 
-    <!-- ==========================================
-         モーダル群 (ポップアップ画面)
-    =========================================== -->
-
-    <!-- 🏸 ガット張替え料金表 モーダル -->
     <div id="gut-price-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGutPriceModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="gut-price-modal-content">
-            <!-- Header -->
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
                 <h2 class="text-xl md:text-2xl font-black text-primary">ガット張替え通常料金一覧</h2>
                 <button onclick="closeGutPriceModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none">
                     <i class="fas fa-times text-lg"></i>
                 </button>
             </div>
-            <!-- Content -->
             <div class="p-6 md:p-12 max-w-5xl mx-auto w-full">
-                <!-- 基本情報 -->
                 <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-xl mb-10 shadow-sm">
                     <ul class="text-purple-800 text-sm leading-relaxed space-y-2 font-medium">
                         <li><i class="fas fa-check-circle mr-2"></i> YONEX製ガット全種対応。その他のメーカー製については応相談。</li>
@@ -557,7 +490,6 @@
                     </ul>
                 </div>
 
-                <!-- 料金表 -->
                 <h3 class="text-xl font-bold text-primary mb-4 border-b-2 border-gray-200 pb-2">基本料金表 (税込)</h3>
                 
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden mb-10 w-full">
@@ -618,7 +550,6 @@
                     </table>
                 </div>
 
-                <!-- オプション -->
                 <h3 class="text-xl font-bold text-primary mb-4 border-b-2 border-gray-200 pb-2">ガット張替えオプション</h3>
                 <p class="text-xs text-gray-500 mb-4">※上記価格表金額にプラス、事前連絡必要 (税込)</p>
 
@@ -653,7 +584,6 @@
                     </div>
                 </div>
 
-                <!-- 用品販売 -->
                 <div class="bg-slate-100 p-6 rounded-2xl text-center border border-slate-200">
                     <h4 class="font-bold text-primary mb-2"><i class="fas fa-shopping-cart text-gray-400"></i> バドミントン用品販売 (割引あり)</h4>
                     <p class="text-sm text-gray-600">ラケット・シューズ・シャツ・バッグ・アクセサリー・シャトルコック等</p>
@@ -668,7 +598,6 @@
         </div>
     </div>
 
-    <!-- 📊 管理者用アクセスカウンター モーダル -->
     <div id="counter-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeCounterModal()"></div>
         <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-all animate-fade-in-up z-10">
@@ -679,8 +608,7 @@
             <p class="text-gray-500 mb-4 text-sm">現在の総アクセス数</p>
             
             <div id="counter-number" class="flex justify-center mb-6 min-h-[40px] w-full">
-                <!-- 初期ローディングアイコン -->
-            </div>
+                </div>
             
             <p class="text-sm text-gray-500 mb-6 font-medium">これからも大会運営頑張ってください！</p>
             <button onclick="closeCounterModal()" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors w-full focus:outline-none shadow-sm">
@@ -689,20 +617,16 @@
         </div>
     </div>
 
-    <!-- 🔰 初めての方へ モーダル -->
     <div id="guide-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGuideModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="guide-modal-content">
-            <!-- Header -->
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
                 <h2 class="text-xl md:text-2xl font-black text-primary">初めての方へ：江村杯参加ガイド</h2>
                 <button onclick="closeGuideModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none">
                     <i class="fas fa-times text-lg"></i>
                 </button>
             </div>
-            <!-- Content -->
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full space-y-12">
-                <!-- 1. 江村杯とは？ -->
                 <section>
                     <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-shuttlecock text-secondary"></i> 1. 江村杯とは？</h3>
                     <p class="text-gray-600 mb-4">江村杯は、小学生から大人まで、幅広い世代のバドミントン愛好家が交流し、日頃の練習の成果を発揮できる大会です。</p>
@@ -712,7 +636,6 @@
                     </ul>
                 </section>
 
-                <!-- 2. 参加資格とクラス分け -->
                 <section>
                     <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-layer-group text-secondary"></i> 2. 参加資格とクラス分け（レベルの目安）</h3>
                     <p class="text-gray-600 mb-4">ご自身のレベルに合わせてエントリーできるよう、複数のクラス（部）をご用意しています。（※大会により異なります）</p>
@@ -727,7 +650,6 @@
                     <p class="mt-4 text-sm text-gray-500 bg-gray-100 p-3 rounded-lg"><i class="fas fa-info-circle"></i> <strong>年齢別:</strong> 一般の部、シニアの部、小学生の部など。</p>
                 </section>
 
-                <!-- 3. 大会参加までの流れ -->
                 <section>
                     <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-route text-secondary"></i> 3. 大会参加までの流れ</h3>
                     <p class="text-gray-600 mb-4">エントリーから当日までの基本的なステップです。</p>
@@ -763,7 +685,6 @@
                     </ol>
                 </section>
 
-                <!-- 4. 当日の持ち物・服装について -->
                 <section>
                     <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-tshirt text-secondary"></i> 4. 当日の持ち物・服装について</h3>
                     <ul class="space-y-3">
@@ -773,7 +694,6 @@
                     </ul>
                 </section>
 
-                <!-- 5. よくある質問（Q&A） -->
                 <section>
                     <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 border-b-2 border-gray-200 pb-2"><i class="fas fa-question-circle text-secondary"></i> 5. よくある質問（Q&A）</h3>
                     <div class="space-y-4">
@@ -805,18 +725,15 @@
         </div>
     </div>
 
-    <!-- 🔒 プライバシーポリシー モーダル -->
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePrivacyModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="privacy-modal-content">
-            <!-- Header -->
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
                 <h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー・個人情報保護方針</h2>
                 <button onclick="closePrivacyModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none">
                     <i class="fas fa-times text-lg"></i>
                 </button>
             </div>
-            <!-- Content -->
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full">
                 <p class="text-gray-700 leading-relaxed mb-10">
                     江村杯バドミントン大会/江村杯大会運営委員会（以下「当運営委員会」といいます）は、江村杯バドミントン大会（以下「本大会」といいます）の運営において、参加者等の個人情報の重要性を認識し、個人情報保護法に基づき、以下の通りプライバシーポリシーを定めます。
@@ -880,7 +797,6 @@
                         </p>
                     </section>
 
-                    <!-- ▼ お問い合わせ窓口をLINEに変更 ▼ -->
                     <section>
                         <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-slate-200 text-primary flex items-center justify-center text-sm font-black">6</span>
@@ -911,22 +827,18 @@
         </div>
     </div>
 
-    <!-- 📋 エントリー状況 モーダル -->
     <div id="entry-status-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeEntryStatusModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="entry-status-modal-content">
-            <!-- Header -->
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
                 <h2 class="text-xl md:text-2xl font-black text-primary">エントリー状況</h2>
                 <button onclick="closeEntryStatusModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none">
                     <i class="fas fa-times text-lg"></i>
                 </button>
             </div>
-            <!-- Content -->
             <div class="p-4 md:p-8 max-w-3xl mx-auto w-full">
                 <div class="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-soft text-center space-y-10">
                     
-                    <!-- 第58回 -->
                     <div class="border-b border-gray-100 pb-10">
                         <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-6">
                             <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
@@ -935,7 +847,6 @@
                             </p>
                         </div>
                         
-                        <!-- プログレスバー -->
                         <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner">
                             <div class="bg-gray-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 100%"></div>
                         </div>
@@ -952,19 +863,17 @@
                         </div>
                     </div>
 
-                    <!-- 第59回 -->
                     <div>
                         <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6">
                             <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
                                 第59回江村杯混合ダブルス団体戦<br class="md:hidden">
                                 現在エントリー受付中です。<br>
-                                残り <span class="text-3xl text-blue-600 mx-1 font-black">30</span> チームとなります。
+                                残り <span class="text-3xl text-blue-600 mx-1 font-black">27</span> チームとなります。
                             </p>
                         </div>
                         
-                        <!-- プログレスバー -->
                         <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner">
-                            <div class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 25%"></div>
+                            <div class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 32.5%"></div>
                         </div>
                         
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">
@@ -990,7 +899,6 @@
         </div>
     </div>
 
-    <!-- アクセスカウンター用隠しピクセル -->
     <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
     <img src="https://komarev.com/ghpvc/?username=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
 
