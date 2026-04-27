@@ -3,49 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="google" content="notranslate">
     <meta property="og:locale" content="ja_JP">
-
     <title>江村杯Badminton Portal</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Noto Sans JP"', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#1e293b',   // slate-800
-                        secondary: '#f97316', // orange-500
-                        accent: '#0ea5e9',    // sky-500
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }, colors: { primary: '#1e293b', secondary: '#f97316', accent: '#0ea5e9' }, boxShadow: { 'soft': '0 10px 40px -10px rgba(0,0,0,0.08)' } } } }
     </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Noto Sans JP', sans-serif; }
-        .glass-header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-        }
-    </style>
+    <style>html { scroll-behavior: smooth; } body { font-family: 'Noto Sans JP', sans-serif; } .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }</style>
 </head>
 <body class="bg-slate-50 text-gray-800 antialiased selection:bg-secondary selection:text-white relative">
-
     <header class="glass-header shadow-sm fixed w-full top-0 z-50 border-b border-gray-100 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -72,9 +43,7 @@
                     </a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 hover:text-primary p-2 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                    <button class="text-gray-600 hover:text-primary p-2 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
@@ -82,46 +51,28 @@
 
     <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary to-slate-800 z-0"></div>
-        
         <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
-            <img src="hero_bg.jpg" 
-                 onerror="this.src='Gemini_Generated_Image_dwjz1adwjz1adwjz.jpg'" 
-                 alt="背景" 
-                 class="w-full h-full object-cover object-center invert brightness-200 contrast-125 mix-blend-screen opacity-40 md:opacity-60 scale-105">
+            <img src="hero_bg.jpg" onerror="this.src='Gemini_Generated_Image_dwjz1adwjz1adwjz.jpg'" alt="背景" class="w-full h-full object-cover object-center invert brightness-200 contrast-125 mix-blend-screen opacity-40 md:opacity-60 scale-105">
         </div>
-        
         <div class="absolute inset-0 opacity-20 z-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
-        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 backdrop-blur-sm shadow-lg animate-pulse">
-                <span class="w-2 h-2 rounded-full bg-green-400"></span>
-                現在、2つの大会で参加者募集中！
+                <span class="w-2 h-2 rounded-full bg-green-400"></span> 現在、2つの大会で参加者募集中！
             </span>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
-                本気のスマッシュも、<br class="hidden md:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">初めての挑戦も。</span>
+                本気のスマッシュも、<br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">初めての挑戦も。</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-                小学生から大人まで、誰もが主役になれるバドミントン大会。<br class="hidden md:block">日頃の練習の成果をこのコートで発揮しよう。
-            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">小学生から大人まで、誰もが主役になれるバドミントン大会。<br class="hidden md:block">日頃の練習の成果をこのコートで発揮しよう。</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#entry-list" class="bg-gradient-to-r from-secondary to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">
-                    募集中の大会を見る <i class="fas fa-arrow-down"></i>
-                </a>
-                <a href="#management" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all w-full sm:w-auto flex items-center justify-center gap-2">
-                    ドロー・結果を見る
-                </a>
+                <a href="#entry-list" class="bg-gradient-to-r from-secondary to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">募集中の大会を見る <i class="fas fa-arrow-down"></i></a>
+                <a href="#management" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all w-full sm:w-auto flex items-center justify-center gap-2">ドロー・結果を見る</a>
             </div>
         </div>
     </section>
 
     <section id="entry-list" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2>
-                <h3 class="text-3xl md:text-4xl font-black text-primary">現在募集中の大会</h3>
-            </div>
-            
+            <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2><h3 class="text-3xl md:text-4xl font-black text-primary">現在募集中の大会</h3></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-secondary to-orange-400 px-8 py-6 relative overflow-hidden">
@@ -131,36 +82,18 @@
                     </div>
                     <div class="p-8 flex-grow bg-white flex flex-col">
                         <ul class="space-y-4 mb-6 text-sm text-gray-600 font-medium">
-                            <li class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div>
-                                <div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="text-gray-800 text-base">2026年4月26日（日）</span></div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div>
-                                <div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="text-gray-800 text-base">豊中市立庄内体育館</span></div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div>
-                                <div class="pt-1">
-                                    <span class="block text-xs text-gray-400 mb-0.5">申込締切</span>
-                                    <span class="text-gray-800 text-base font-bold">2026年4月5日（日）</span>
-                                    <span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span>
-                                </div>
-                            </li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="text-gray-800 text-base">2026年4月26日（日）</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="text-gray-800 text-base">豊中市立庄内体育館</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="text-gray-800 text-base font-bold">2026年4月5日（日）</span><span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span></div></li>
                         </ul>
                         <p class="text-gray-600 text-sm leading-relaxed mb-auto">チームの総合力が試される３ミックス団体戦です。日頃の練習の成果を仲間と共にコートで発揮しましょう。</p>
-                        
-                        <div class="mt-6 flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200">
-                            <span class="text-sm font-bold text-gray-500 flex items-center gap-2"><i class="fas fa-lock"></i> エントリー受付終了</span>
-                            <span class="bg-gray-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">定員到達</span>
-                        </div>
+                        <div class="mt-6 flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200"><span class="text-sm font-bold text-gray-500 flex items-center gap-2"><i class="fas fa-lock"></i> エントリー受付終了</span><span class="bg-gray-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">定員到達</span></div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
                         <a href="https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
                         <button disabled class="flex-1 flex justify-center items-center bg-gray-400 text-white px-4 py-3.5 rounded-xl font-bold cursor-not-allowed"><i class="fas fa-times-circle mr-1"></i> 受付終了</button>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-blue-600 to-accent px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-user-friends absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -169,29 +102,12 @@
                     </div>
                     <div class="p-8 flex-grow bg-white flex flex-col">
                         <ul class="space-y-4 mb-6 text-sm text-gray-600 font-medium">
-                            <li class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div>
-                                <div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="text-gray-800 text-base">2026年6月21日（日）</span></div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div>
-                                <div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="text-gray-800 text-base">豊中市立庄内体育館</span></div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div>
-                                <div class="pt-1">
-                                    <span class="block text-xs text-gray-400 mb-0.5">申込締切</span>
-                                    <span class="text-gray-800 text-base font-bold">2026年6月7日（日）</span>
-                                    <span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span>
-                                </div>
-                            </li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="text-gray-800 text-base">2026年6月21日（日）</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="text-gray-800 text-base">豊中市立庄内体育館</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="text-gray-800 text-base font-bold">2026年6月7日（日）</span><span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span></div></li>
                         </ul>
                         <p class="text-gray-600 text-sm leading-relaxed mb-auto">男女ペアによる混合ダブルス団体戦です。チームで団結して、日頃の練習の成果を発揮しましょう。</p>
-                        
-                        <div class="mt-6 flex justify-between items-center bg-blue-50 p-3 rounded-xl border border-blue-100">
-                            <span class="text-sm font-bold text-blue-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span>
-                            <span id="t2_remain_badge_1" class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">残り22チーム</span>
-                        </div>
+                        <div class="mt-6 flex justify-between items-center bg-blue-50 p-3 rounded-xl border border-blue-100"><span class="text-sm font-bold text-blue-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span><span id="t2_remain_badge_1" class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">読込中...</span></div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
                         <a href="https://drive.google.com/file/d/1ad8JpmPoknaYs404_tnWAdKEq3_30Dho/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
@@ -205,39 +121,24 @@
     <section id="news" class="py-20 bg-white border-y border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b-2 border-gray-100 pb-4">
-                <div>
-                    <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-1">News & Topics</h2>
-                    <h3 class="text-3xl font-black text-primary">お知らせ・新着情報</h3>
-                </div>
-                <a href="#" class="text-primary hover:text-accent font-bold text-sm mt-4 md:mt-0 group flex items-center gap-1">
-                    一覧を見る <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                </a>
+                <div><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-1">News & Topics</h2><h3 class="text-3xl font-black text-primary">お知らせ・新着情報</h3></div>
+                <a href="#" class="text-primary hover:text-accent font-bold text-sm mt-4 md:mt-0 group flex items-center gap-1">一覧を見る <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
             </div>
-            
             <ul class="divide-y divide-gray-100">
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
-                    <div class="flex items-center gap-4 sm:w-48 shrink-0">
-                        <span class="text-gray-500 text-sm font-bold font-mono">2026.04.28</span>
-                        <span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-green-200">結果速報</span>
-                    </div>
-                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">第58回江村杯３ミックス団体戦の最終試合結果</a>
+                    <div class="flex items-center gap-4 sm:w-48 shrink-0"><span id="news1_date" class="text-gray-500 text-sm font-bold font-mono">読込中...</span><span id="news1_tag" class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-green-200">-</span></div>
+                    <a href="#" id="news1_text" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">データ読込中...</a>
                 </li>
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
-                    <div class="flex items-center gap-4 sm:w-48 shrink-0">
-                        <span class="text-gray-500 text-sm font-bold font-mono">2026.03.20</span>
-                        <span class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-blue-200">大会情報</span>
-                    </div>
+                    <div class="flex items-center gap-4 sm:w-48 shrink-0"><span id="news2_date" class="text-gray-500 text-sm font-bold font-mono">読込中...</span><span id="news2_tag" class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-blue-200">-</span></div>
                     <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
-                        <span>第59回江村杯混合ダブルス団体戦の要項を公開し、エントリー受付を開始しました。</span>
+                        <span id="news2_text">データ読込中...</span>
                         <span class="inline-flex items-center bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full animate-pulse shadow-sm">NEW</span>
                     </a>
                 </li>
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
-                    <div class="flex items-center gap-4 sm:w-48 shrink-0">
-                        <span class="text-gray-500 text-sm font-bold font-mono">2026.01.04</span>
-                        <span class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-gray-200">その他</span>
-                    </div>
-                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">体育館利用に関する注意事項について。</a>
+                    <div class="flex items-center gap-4 sm:w-48 shrink-0"><span id="news3_date" class="text-gray-500 text-sm font-bold font-mono">読込中...</span><span id="news3_tag" class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-gray-200">-</span></div>
+                    <a href="#" id="news3_text" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">データ読込中...</a>
                 </li>
             </ul>
         </div>
@@ -245,53 +146,25 @@
 
     <section id="management" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Management & Results</h2>
-                <h3 class="text-3xl md:text-4xl font-black text-primary">大会管理・関連情報</h3>
-                <p class="text-gray-500 mt-4">エントリー状況の確認、組み合わせ、試合結果などの重要情報はこちらから。</p>
-            </div>
-
+            <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Management & Results</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会管理・関連情報</h3><p class="text-gray-500 mt-4">エントリー状況の確認、組み合わせ、試合結果などの重要情報はこちらから。</p></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <button onclick="openEntryStatusModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-16 h-16 rounded-2xl bg-orange-50 text-secondary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clipboard-list"></i></div>
-                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-secondary transition-colors">エントリー状況</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-orange-50 text-secondary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clipboard-list"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-secondary transition-colors">エントリー状況</h4><p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
                 </button>
-                
-                <a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div>
-                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-accent transition-colors">組み合わせ (ドロー)</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
-                </a>
-
                 <a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div>
-                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">注意事項・タイムテーブル</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表と、大会当日の注意事項です。集合時間の目安にご活用ください。</p>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-accent transition-colors">組み合わせ (ドロー)</h4><p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
                 </a>
-
+                <a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">注意事項・タイムテーブル</h4><p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表と、大会当日の注意事項です。集合時間の目安にご活用ください。</p>
+                </a>
                 <a href="result.pdf" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div>
-                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-primary transition-colors">試合結果</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-primary transition-colors">試合結果</h4><p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
                 </a>
-
                 <button onclick="openGutPriceModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div>
-                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-purple-500 transition-colors">ガット張替</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">最短で当日渡し、張替本数3本以上であれば張替後お届け。価格（ガット込み）2,000円～2,400円。その他割引あり。</p>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-purple-500 transition-colors">ガット張替</h4><p class="text-gray-500 text-sm leading-relaxed">最短で当日渡し、張替本数3本以上であれば張替後お届け。価格（ガット込み）2,000円～2,400円。その他割引あり。</p>
                 </button>
-
                 <a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-book"></i></div>
-                    <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-yellow-500 transition-colors">競技規則・注意事項</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">大会参加にあたってのルールやマナー、注意事項をPDFでご確認いただけます。</p>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-book"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-yellow-500 transition-colors">競技規則・注意事項</h4><p class="text-gray-500 text-sm leading-relaxed">大会参加にあたってのルールやマナー、注意事項をPDFでご確認いただけます。</p>
                 </a>
             </div>
         </div>
@@ -299,149 +172,53 @@
 
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2>
-                <h3 class="text-3xl md:text-4xl font-black text-primary">大会風景・ギャラリー</h3>
-                <p class="text-gray-500 mt-4">白熱した試合の様子や、参加者の皆様の笑顔をお届けします。</p>
-            </div>
-
+            <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会風景・ギャラリー</h3><p class="text-gray-500 mt-4">白熱した試合の様子や、参加者の皆様の笑顔をお届けします。</p></div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=第58回+優勝'" alt="第58回 優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end">
-                        <span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span>
-                        <span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span>
-                    </div>
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第58回+準優勝'" alt="第58回 準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end">
-                        <span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span>
-                        <span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span>
-                    </div>
-                </div>
-                
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=第59回+優勝'" alt="第59回 優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end">
-                        <span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span>
-                        <span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span>
-                    </div>
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="59_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第59回+準優勝'" alt="第59回 準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end">
-                        <span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span>
-                        <span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span>
-                    </div>
-                </div>
-
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100">
-                    <img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="バドミントンのシャトルとラケット" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="バドミントンの試合風景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1591006634283-d831025217b2?auto=format&fit=crop&q=80&w=800" alt="バドミントンコート" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1611251127384-23fb88f01f05?auto=format&fit=crop&q=80&w=800" alt="試合中の選手" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1628271536750-71328eb9265f?auto=format&fit=crop&q=80&w=800" alt="大会の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm">
-                    <img src="february mozaiku.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=運営役員'" alt="大会運営役員の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4 flex items-end justify-start">
-                        <span class="text-white font-bold text-sm md:text-base">運営役員</span>
-                    </div>
-                </div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=第58回+優勝'" alt="第58回 優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第58回+準優勝'" alt="第58回 準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=第59回+優勝'" alt="第59回 優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第59回+準優勝'" alt="第59回 準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100"><img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="バドミントンのシャトルとラケット" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="バドミントンの試合風景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1591006634283-d831025217b2?auto=format&fit=crop&q=80&w=800" alt="バドミントンコート" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1611251127384-23fb88f01f05?auto=format&fit=crop&q=80&w=800" alt="試合中の選手" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1628271536750-71328eb9265f?auto=format&fit=crop&q=80&w=800" alt="大会の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="february mozaiku.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=運営役員'" alt="大会運営役員の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4 flex items-end justify-start"><span class="text-white font-bold text-sm md:text-base">運営役員</span></div></div>
             </div>
         </div>
     </section>
 
     <section id="flow" class="py-20 bg-slate-50 border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">How to Entry</h2>
-                <h3 class="text-3xl md:text-4xl font-black text-primary">大会参加までの流れ</h3>
-                <p class="mt-4"><button onclick="openGuideModal()" class="text-secondary font-bold hover:underline focus:outline-none">より詳しい「初めての方へ」ガイドはこちら <i class="fas fa-angle-right"></i></button></p>
-            </div>
-
+            <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">How to Entry</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会参加までの流れ</h3><p class="mt-4"><button onclick="openGuideModal()" class="text-secondary font-bold hover:underline focus:outline-none">より詳しい「初めての方へ」ガイドはこちら <i class="fas fa-angle-right"></i></button></p></div>
             <div class="relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gray-100 before:rounded-full space-y-12">
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">1</div>
-                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
-                        <h4 class="font-bold text-xl text-primary mb-3"><i class="far fa-file-alt text-gray-400"></i> 要項の確認</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">対象となるクラスや参加費、日程を大会要項ページで確認します。</p>
-                    </div>
-                </div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-secondary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">2</div>
-                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
-                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fab fa-line text-green-500"></i> LINE友だち追加</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">まずはLINEの友だち追加を行います。画面右上のボタンや各大会のボタンから登録できます。</p>
-                    </div>
-                </div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-accent text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">3</div>
-                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
-                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-paper-plane text-gray-400"></i> ＬＩＮＥでメッセージ送信</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">お友達登録したＬＩＮＥを開き、最下部左の四角いマークをタップし、メッセージ欄に<strong class="text-primary">お名前、フリガナ、エントリーランク、チーム名</strong>を入力後、送信します。</p>
-                    </div>
-                </div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-purple-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">4</div>
-                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
-                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-reply text-gray-400"></i> 運営からの確認メッセージ</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">運営側が3の項目を確認後、折り返しエントリーの確定、参加費の振り込み日時を返信します。<br><span class="text-red-500 font-bold mt-2 inline-block">【この項目が届かない場合は、エントリーは確定しておりませんのでご注意ください。】</span></p>
-                    </div>
-                </div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-green-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">5</div>
-                    <div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100">
-                        <h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-yen-sign text-gray-400"></i> 参加費のお支払い</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">指定の口座へのお振込みでお願いします。</p>
-                    </div>
-                </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">1</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="far fa-file-alt text-gray-400"></i> 要項の確認</h4><p class="text-gray-500 text-sm leading-relaxed">対象となるクラスや参加費、日程を大会要項ページで確認します。</p></div></div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-secondary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">2</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fab fa-line text-green-500"></i> LINE友だち追加</h4><p class="text-gray-500 text-sm leading-relaxed">まずはLINEの友だち追加を行います。画面右上のボタンや各大会のボタンから登録できます。</p></div></div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-accent text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">3</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-paper-plane text-gray-400"></i> ＬＩＮＥでメッセージ送信</h4><p class="text-gray-500 text-sm leading-relaxed">お友達登録したＬＩＮＥを開き、最下部左の四角いマークをタップし、メッセージ欄に<strong class="text-primary">お名前、フリガナ、エントリーランク、チーム名</strong>を入力後、送信します。</p></div></div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-purple-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">4</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-reply text-gray-400"></i> 運営からの確認メッセージ</h4><p class="text-gray-500 text-sm leading-relaxed">運営側が3の項目を確認後、折り返しエントリーの確定、参加費の振り込み日時を返信します。<br><span class="text-red-500 font-bold mt-2 inline-block">【この項目が届かない場合は、エントリーは確定しておりませんのでご注意ください。】</span></p></div></div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-green-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">5</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-yen-sign text-gray-400"></i> 参加費のお支払い</h4><p class="text-gray-500 text-sm leading-relaxed">指定の口座へのお振込みでお願いします。</p></div></div>
             </div>
         </div>
     </section>
 
     <section class="py-20 relative overflow-hidden bg-primary">
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
-        
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h2 class="text-3xl md:text-5xl font-black text-white mb-6">さあ、コートに立とう。</h2>
-            <p class="mb-12 text-gray-300 font-medium text-lg">
-                現在、以下の2大会でエントリーを受付中です。
-            </p>
-            
+            <p class="mb-12 text-gray-300 font-medium text-lg">現在、以下の2大会でエントリーを受付中です。</p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
-                    <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">受付終了</span>
-                    <h3 class="text-2xl font-bold text-white mb-2">第58回江村杯<br>３ミックス団体戦</h3>
-                    <p class="text-sm text-gray-400 mb-8">締切: 2026年4月5日(日)</p>
-                    <button class="block w-full text-center bg-gray-600 text-gray-300 px-8 py-4 rounded-xl font-bold text-lg cursor-not-allowed border border-gray-500">
-                        エントリー受付終了
-                    </button>
+                    <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">受付終了</span><h3 class="text-2xl font-bold text-white mb-2">第58回江村杯<br>３ミックス団体戦</h3><p class="text-sm text-gray-400 mb-8">締切: 2026年4月5日(日)</p>
+                    <button class="block w-full text-center bg-gray-600 text-gray-300 px-8 py-4 rounded-xl font-bold text-lg cursor-not-allowed border border-gray-500">エントリー受付終了</button>
                 </div>
                 <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
-                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span>
-                    <h3 class="text-2xl font-bold text-white mb-2">第59回江村杯<br>混合ダブルス団体戦</h3>
-                    <p class="text-sm text-gray-400 mb-8">締切: 2026年6月7日(日)</p>
-                    <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1">
-                        江村杯(混合)にエントリー
-                    </a>
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span><h3 class="text-2xl font-bold text-white mb-2">第59回江村杯<br>混合ダブルス団体戦</h3><p class="text-sm text-gray-400 mb-8">締切: 2026年6月7日(日)</p>
+                    <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1">江村杯(混合)にエントリー</a>
                 </div>
             </div>
-
             <div class="mt-16 text-center">
                 <p class="text-gray-400 text-sm mb-3">ご不明な点などがございましたら、お気軽に公式LINEからお問い合わせください。</p>
-                <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white border border-[#06C755] bg-[#06C755]/10 px-8 py-3 rounded-full font-medium hover:bg-[#06C755] hover:border-[#06C755] transition-all shadow-sm">
-                    <i class="fab fa-line text-2xl"></i> 公式LINEでお問い合わせ
-                </a>
+                <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white border border-[#06C755] bg-[#06C755]/10 px-8 py-3 rounded-full font-medium hover:bg-[#06C755] hover:border-[#06C755] transition-all shadow-sm"><i class="fab fa-line text-2xl"></i> 公式LINEでお問い合わせ</a>
             </div>
         </div>
     </section>
@@ -449,95 +226,50 @@
     <footer class="bg-slate-900 text-gray-400 py-16 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
             <div class="md:col-span-1">
-                <a href="#" class="text-xl font-black text-white flex items-center gap-3 mb-6 group">
-                    <img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-10 h-10 rounded-full object-cover bg-white/10 group-hover:scale-110 transition-transform" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'">
-                    <div class="flex flex-col">
-                        <span class="leading-none mb-1">江村杯</span>
-                        <span class="text-xs text-gray-400 leading-none">Badminton Portal</span>
-                    </div>
-                </a>
+                <a href="#" class="text-xl font-black text-white flex items-center gap-3 mb-6 group"><img src="Copilot_20260315_165854.jpg" alt="江村杯ロゴ" class="w-10 h-10 rounded-full object-cover bg-white/10 group-hover:scale-110 transition-transform" onerror="this.src='https://placehold.co/100x100/1e293b/white?text=LOGO'"><div class="flex flex-col"><span class="leading-none mb-1">江村杯</span><span class="text-xs text-gray-400 leading-none">Badminton Portal</span></div></a>
                 <p class="leading-relaxed">皆様のバドミントンライフを応援する、大会情報・エントリーの総合ポータルサイトです。</p>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">大会情報</h4>
-                <ul class="space-y-3">
-                    <li><a href="#entry-list" class="hover:text-secondary transition-colors">募集中大会一覧</a></li>
-                    <li><a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">競技規則・注意事項</a></li>
-                </ul>
+                <ul class="space-y-3"><li><a href="#entry-list" class="hover:text-secondary transition-colors">募集中大会一覧</a></li><li><a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">競技規則・注意事項</a></li></ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">大会管理</h4>
                 <ul class="space-y-3">
                     <li><button onclick="openEntryStatusModal()" class="hover:text-secondary transition-colors focus:outline-none">エントリー状況確認</button></li>
-                    <li><a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
-                    <li><a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
+                    <li><a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
                     <li><a href="result.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">試合結果</a></li>
                     <li><button onclick="openGutPriceModal()" class="hover:text-secondary transition-colors focus:outline-none">ガット張替</button></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">サポート</h4>
-                <ul class="space-y-3">
-                    <li><button onclick="openGuideModal()" class="hover:text-secondary transition-colors focus:outline-none">初めての方へ</button></li>
-                    <li><button onclick="openPrivacyModal()" class="hover:text-secondary transition-colors focus:outline-none">プライバシーポリシー</button></li>
-                    <li><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors"><i class="fab fa-line mr-1 text-gray-500"></i> お問い合わせ</a></li>
-                </ul>
+                <ul class="space-y-3"><li><button onclick="openGuideModal()" class="hover:text-secondary transition-colors focus:outline-none">初めての方へ</button></li><li><button onclick="openPrivacyModal()" class="hover:text-secondary transition-colors focus:outline-none">プライバシーポリシー</button></li><li><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors"><i class="fab fa-line mr-1 text-gray-500"></i> お問い合わせ</a></li></ul>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.0428-2</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.AUTO-SYNC</span></p>
         </div>
     </footer>
 
     <div id="gut-price-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGutPriceModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="gut-price-modal-content">
-            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
-                <h2 class="text-xl md:text-2xl font-black text-primary">ガット張替え通常料金一覧</h2>
-                <button onclick="closeGutPriceModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button>
-            </div>
+            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">ガット張替え通常料金一覧</h2><button onclick="closeGutPriceModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
             <div class="p-6 md:p-12 max-w-5xl mx-auto w-full">
                 <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-xl mb-10 shadow-sm">
-                    <ul class="text-purple-800 text-sm leading-relaxed space-y-2 font-medium">
-                        <li><i class="fas fa-check-circle mr-2"></i> YONEX製ガット全種対応。その他のメーカー製については応相談。</li>
-                        <li><i class="fas fa-check-circle mr-2"></i> 最短で1本あたり2時間以内仕上げ（本数、日時については事前連絡必要）。</li>
-                        <li><i class="fas fa-check-circle mr-2"></i> 3本以上であれば、ご自宅か練習会場まで引き取り又は、お届けいたします。</li>
-                    </ul>
+                    <ul class="text-purple-800 text-sm leading-relaxed space-y-2 font-medium"><li><i class="fas fa-check-circle mr-2"></i> YONEX製ガット全種対応。その他のメーカー製については応相談。</li><li><i class="fas fa-check-circle mr-2"></i> 最短で1本あたり2時間以内仕上げ（本数、日時については事前連絡必要）。</li><li><i class="fas fa-check-circle mr-2"></i> 3本以上であれば、ご自宅か練習会場まで引き取り又は、お届けいたします。</li></ul>
                 </div>
                 <h3 class="text-xl font-bold text-primary mb-4 border-b-2 border-gray-200 pb-2">基本料金表 (税込)</h3>
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden mb-10 w-full">
                     <table class="w-full text-left border-collapse text-xs sm:text-sm border-2 border-gray-200">
-                        <thead>
-                            <tr class="bg-slate-100 text-primary">
-                                <th class="p-3 sm:p-4 font-bold border border-gray-200 w-[28%]">種類</th>
-                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">①ガット代<br>＋工賃<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(中学生以下)</span></th>
-                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">②ガット持込<br>＋工賃<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(中学生以下)</span></th>
-                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">③まとめ<br>3本以上<br>(持込)</th>
-                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">④まとめ<br>3本以上<br>(引取かお届け)</th>
-                                <th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">引取・お届け<br>区域</th>
-                            </tr>
-                        </thead>
+                        <thead><tr class="bg-slate-100 text-primary"><th class="p-3 sm:p-4 font-bold border border-gray-200 w-[28%]">種類</th><th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">①ガット代<br>＋工賃<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(中学生以下)</span></th><th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">②ガット持込<br>＋工賃<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(中学生以下)</span></th><th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">③まとめ<br>3本以上<br>(持込)</th><th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">④まとめ<br>3本以上<br>(引取かお届け)</th><th class="p-2 sm:p-4 font-bold border border-gray-200 text-center leading-tight">引取・お届け<br>区域</th></tr></thead>
                         <tbody class="text-sm">
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">AEROSONIC / SKYARC<br>AEROBITE / AEROBITE BOOST</td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,400円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,300円)</span></td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200" rowspan="4">1,500円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(1,500円)</span></td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-gray-700 border border-gray-200 leading-relaxed" rowspan="4">左記①より<br><span class="text-red-500 text-base sm:text-lg">200円引</span></td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-gray-700 border border-gray-200 leading-relaxed" rowspan="4">左記①より<br><span class="text-red-500 text-base sm:text-lg">100円引</span></td>
-                                <td class="p-2 sm:p-4 text-center text-[10px] sm:text-xs text-gray-600 border border-gray-200 leading-relaxed" rowspan="4">淀川区<br>東淀川区<br>西淀川区<br>豊中市<br>吹田市<br>箕面市</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200"><span class="inline-flex items-center bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 shadow-sm animate-pulse"><i class="fas fa-star text-yellow-300 mr-1"></i>おすすめ</span><br>EXBOLT 68 / EXBOLT 65 / EXBOLT 63<br>BG66 FORCE / BG66 ULTIMAX</td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,300円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,200円)</span></td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">BG80 POWER / NANOGY 95<br>NANOGY 98 / BG80</td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,200円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,100円)</span></td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">強チタン<br>BG65</td>
-                                <td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,100円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,000円)</span></td>
-                            </tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">AEROSONIC / SKYARC<br>AEROBITE / AEROBITE BOOST</td><td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,400円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,300円)</span></td><td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200" rowspan="4">1,500円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(1,500円)</span></td><td class="p-2 sm:p-4 text-center font-bold text-gray-700 border border-gray-200 leading-relaxed" rowspan="4">左記①より<br><span class="text-red-500 text-base sm:text-lg">200円引</span></td><td class="p-2 sm:p-4 text-center font-bold text-gray-700 border border-gray-200 leading-relaxed" rowspan="4">左記①より<br><span class="text-red-500 text-base sm:text-lg">100円引</span></td><td class="p-2 sm:p-4 text-center text-[10px] sm:text-xs text-gray-600 border border-gray-200 leading-relaxed" rowspan="4">淀川区<br>東淀川区<br>西淀川区<br>豊中市<br>吹田市<br>箕面市</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200"><span class="inline-flex items-center bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 shadow-sm animate-pulse"><i class="fas fa-star text-yellow-300 mr-1"></i>おすすめ</span><br>EXBOLT 68 / EXBOLT 65 / EXBOLT 63<br>BG66 FORCE / BG66 ULTIMAX</td><td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,300円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,200円)</span></td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">BG80 POWER / NANOGY 95<br>NANOGY 98 / BG80</td><td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,200円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,100円)</span></td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 sm:p-4 font-medium text-gray-700 leading-relaxed break-words border border-gray-200">強チタン<br>BG65</td><td class="p-2 sm:p-4 text-center font-bold text-sm sm:text-base text-primary border border-gray-200">2,100円<br><span class="text-[10px] sm:text-xs font-normal text-gray-500">(2,000円)</span></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -549,91 +281,67 @@
     <div id="guide-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGuideModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="guide-modal-content">
-            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
-                <h2 class="text-xl md:text-2xl font-black text-primary">初めての方へ：江村杯参加ガイド</h2>
-                <button onclick="closeGuideModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button>
-            </div>
-            <div class="p-6 md:p-12 max-w-4xl mx-auto w-full space-y-12">
-                <p class="text-gray-600 text-center">※大会要項をご確認の上、ご参加ください。</p>
-                <div class="text-center pt-8"><button onclick="closeGuideModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button></div>
-            </div>
+            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">初めての方へ：江村杯参加ガイド</h2><button onclick="closeGuideModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
+            <div class="p-6 md:p-12 max-w-4xl mx-auto w-full space-y-12"><p class="text-gray-600 text-center">※大会要項をご確認の上、ご参加ください。</p><div class="text-center pt-8"><button onclick="closeGuideModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button></div></div>
         </div>
     </div>
 
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePrivacyModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="privacy-modal-content">
-            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
-                <h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー・個人情報保護方針</h2>
-                <button onclick="closePrivacyModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button>
-            </div>
-            <div class="p-6 md:p-12 max-w-4xl mx-auto w-full">
-                 <p class="text-gray-700 leading-relaxed mb-10">江村杯バドミントン大会の運営において、個人情報の重要性を認識し、適切に取り扱います。</p>
-                <div class="text-center pt-8"><button onclick="closePrivacyModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button></div>
-            </div>
+            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー・個人情報保護方針</h2><button onclick="closePrivacyModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
+            <div class="p-6 md:p-12 max-w-4xl mx-auto w-full"><p class="text-gray-700 leading-relaxed mb-10">江村杯バドミントン大会の運営において、個人情報の重要性を認識し、適切に取り扱います。</p><div class="text-center pt-8"><button onclick="closePrivacyModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button></div></div>
         </div>
     </div>
 
     <div id="entry-status-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeEntryStatusModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="entry-status-modal-content">
-            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
-                <h2 class="text-xl md:text-2xl font-black text-primary">エントリー状況</h2>
-                <button onclick="closeEntryStatusModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button>
-            </div>
+            <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">エントリー状況</h2><button onclick="closeEntryStatusModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
             <div class="p-4 md:p-8 max-w-3xl mx-auto w-full">
                 <div class="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-soft text-center space-y-10">
-                    
                     <div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6">
-                            <p class="text-lg md:text-xl font-bold text-primary leading-relaxed">
-                                第59回江村杯混合ダブルス団体戦<br class="md:hidden">
-                                現在エントリー受付中です。<br>
-                                残り <span id="t2_remain_text" class="text-3xl text-blue-600 mx-1 font-black">22</span> チームとなります。
-                            </p>
-                        </div>
-                        
-                        <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner">
-                            <div id="t2_progress_bar" class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 45%"></div>
-                        </div>
-                        
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6"><p class="text-lg md:text-xl font-bold text-primary leading-relaxed">第59回江村杯混合ダブルス団体戦<br class="md:hidden">現在エントリー受付中です。<br>残り <span id="t2_remain_text" class="text-3xl text-blue-600 mx-1 font-black">22</span> チームとなります。</p></div>
+                        <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner"><div id="t2_progress_bar" class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 45%"></div></div>
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">定員に達し次第、エントリーの受付を締め切らせていただきます。<br>参加をご検討中の方はお早めにお申し込みください。</p>
-                        <div>
-                            <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto">
-                                <i class="fab fa-line text-2xl"></i> LINEでエントリーする
-                            </a>
-                        </div>
+                        <div><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto"><i class="fab fa-line text-2xl"></i> LINEでエントリーする</a></div>
                     </div>
-
                 </div>
                 <div class="text-center pt-8"><button onclick="closeEntryStatusModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button></div>
             </div>
         </div>
     </div>
-
     <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
-
+    
     <script>
-        // --- モーダル制御用 ---
-        const guideModal = document.getElementById('guide-modal');
-        const guideModalContent = document.getElementById('guide-modal-content');
-        function openGuideModal() { guideModal.classList.remove('hidden'); setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; }
-        function closeGuideModal() { guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full'); setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-
-        const privacyModal = document.getElementById('privacy-modal');
-        const privacyModalContent = document.getElementById('privacy-modal-content');
-        function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; }
-        function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-
-        const entryStatusModal = document.getElementById('entry-status-modal');
-        const entryStatusModalContent = document.getElementById('entry-status-modal-content');
-        function openEntryStatusModal() { entryStatusModal.classList.remove('hidden'); setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; }
-        function closeEntryStatusModal() { entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full'); setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-
-        const gutPriceModal = document.getElementById('gut-price-modal');
-        const gutPriceModalContent = document.getElementById('gut-price-modal-content');
-        function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; }
-        function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+        const guideModal = document.getElementById('guide-modal'); const guideModalContent = document.getElementById('guide-modal-content'); function openGuideModal() { guideModal.classList.remove('hidden'); setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGuideModal() { guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full'); setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+        const privacyModal = document.getElementById('privacy-modal'); const privacyModalContent = document.getElementById('privacy-modal-content'); function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+        const entryStatusModal = document.getElementById('entry-status-modal'); const entryStatusModalContent = document.getElementById('entry-status-modal-content'); function openEntryStatusModal() { entryStatusModal.classList.remove('hidden'); setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeEntryStatusModal() { entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full'); setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+        const gutPriceModal = document.getElementById('gut-price-modal'); const gutPriceModalContent = document.getElementById('gut-price-modal-content'); function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+    </script>
+    <script>
+        const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSb6-0t5nB2p8NeKAmw_zHvpkfGCwKPRC2gdwfC2D2Kw-V9yYkRjVdkCOL_JBuR6oSzlA3aoJ-4MlCH/pub?output=csv';
+        fetch(SPREADSHEET_CSV_URL).then(response => response.text()).then(csvText => {
+            const rows = csvText.split('\n'); const data = {};
+            for(let i=1; i<rows.length; i++) { const row = rows[i].trim(); if(!row) continue; const cols = row.split(','); if(cols.length >= 2) { data[cols[0].trim()] = cols.slice(1).join(',').trim().replace(/^"|"$/g, ''); } }
+            
+            if(data['t2_remain']) {
+                const remainNum = parseInt(data['t2_remain']);
+                const badge = document.getElementById('t2_remain_badge_1'); if(badge) badge.innerText = '残り' + remainNum + 'チーム';
+                const textEl = document.getElementById('t2_remain_text'); if(textEl) textEl.innerText = remainNum;
+                const maxTeams = 40; const entryCount = maxTeams - remainNum; let progressPercent = (entryCount / maxTeams) * 100; if(progressPercent > 100) progressPercent = 100; if(progressPercent < 0) progressPercent = 0;
+                const bar = document.getElementById('t2_progress_bar'); if(bar) bar.style.width = progressPercent + '%';
+            }
+            if(data['news1_date']) { const el = document.getElementById('news1_date'); if(el) el.innerText = data['news1_date']; }
+            if(data['news1_tag']) { const el = document.getElementById('news1_tag'); if(el) el.innerText = data['news1_tag']; }
+            if(data['news1_text']) { const el = document.getElementById('news1_text'); if(el) el.innerText = data['news1_text']; }
+            if(data['news2_date']) { const el = document.getElementById('news2_date'); if(el) el.innerText = data['news2_date']; }
+            if(data['news2_tag']) { const el = document.getElementById('news2_tag'); if(el) el.innerText = data['news2_tag']; }
+            if(data['news2_text']) { const el = document.getElementById('news2_text'); if(el) el.innerText = data['news2_text']; }
+            if(data['news3_date']) { const el = document.getElementById('news3_date'); if(el) el.innerText = data['news3_date']; }
+            if(data['news3_tag']) { const el = document.getElementById('news3_tag'); if(el) el.innerText = data['news3_tag']; }
+            if(data['news3_text']) { const el = document.getElementById('news3_text'); if(el) el.innerText = data['news3_text']; }
+        }).catch(error => { console.error('スプレッドシートの読み込みに失敗しました:', error); });
     </script>
 </body>
 </html>
