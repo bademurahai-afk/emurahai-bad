@@ -52,7 +52,8 @@
     <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary to-slate-800 z-0"></div>
         <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
-            <img src="hero_bg.jpg" onerror="this.src='Gemini_Generated_Image_dwjz1adwjz1adwjz.jpg'" alt="背景" class="w-full h-full object-cover object-center invert brightness-200 contrast-125 mix-blend-screen opacity-40 md:opacity-60 scale-105">
+            <!-- 背景画像に hero_img クラスを追加 -->
+            <img src="hero_bg.jpg" onerror="this.src='Gemini_Generated_Image_dwjz1adwjz1adwjz.jpg'" alt="背景" class="hero_img w-full h-full object-cover object-center invert brightness-200 contrast-125 mix-blend-screen opacity-40 md:opacity-60 scale-105">
         </div>
         <div class="absolute inset-0 opacity-20 z-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -74,43 +75,45 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2><h3 class="text-3xl md:text-4xl font-black text-primary">現在募集中の大会</h3></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- 大会1 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-secondary to-orange-400 px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-users absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
                         <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block border border-white/30">12歳～一般</span>
-                        <h4 class="text-2xl font-bold text-white leading-tight">第58回江村杯３ミックス団体戦</h4>
+                        <h4 class="t1_title text-2xl font-bold text-white leading-tight">第58回江村杯３ミックス団体戦</h4>
                     </div>
                     <div class="p-8 flex-grow bg-white flex flex-col">
                         <ul class="space-y-4 mb-6 text-sm text-gray-600 font-medium">
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="text-gray-800 text-base">2026年4月26日（日）</span></div></li>
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="text-gray-800 text-base">豊中市立庄内体育館</span></div></li>
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="text-gray-800 text-base font-bold">2026年4月5日（日）</span><span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="t1_date text-gray-800 text-base">2026年4月26日（日）</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-orange-50 text-secondary flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="t1_venue text-gray-800 text-base">豊中市立庄内体育館</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="t1_deadline text-gray-800 text-base font-bold">2026年4月5日（日）</span><span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span></div></li>
                         </ul>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-auto">チームの総合力が試される３ミックス団体戦です。日頃の練習の成果を仲間と共にコートで発揮しましょう。</p>
+                        <p class="t1_desc text-gray-600 text-sm leading-relaxed mb-auto">チームの総合力が試される３ミックス団体戦です。日頃の練習の成果を仲間と共にコートで発揮しましょう。</p>
                         <div class="mt-6 flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200"><span class="text-sm font-bold text-gray-500 flex items-center gap-2"><i class="fas fa-lock"></i> エントリー受付終了</span><span class="bg-gray-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">定員到達</span></div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <a href="https://drive.google.com/file/d/1Tt5_LrPsfzrEE2qg2zy6ZGK9zR2kr9ke/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="t1_pdf flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
                         <button disabled class="flex-1 flex justify-center items-center bg-gray-400 text-white px-4 py-3.5 rounded-xl font-bold cursor-not-allowed"><i class="fas fa-times-circle mr-1"></i> 受付終了</button>
                     </div>
                 </div>
+                <!-- 大会2 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-blue-600 to-accent px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-user-friends absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
                         <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block border border-white/30">12歳～一般</span>
-                        <h4 class="text-2xl font-bold text-white leading-tight">第59回江村杯混合ダブルス団体戦</h4>
+                        <h4 class="t2_title text-2xl font-bold text-white leading-tight">第59回江村杯混合ダブルス団体戦</h4>
                     </div>
                     <div class="p-8 flex-grow bg-white flex flex-col">
                         <ul class="space-y-4 mb-6 text-sm text-gray-600 font-medium">
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="text-gray-800 text-base">2026年6月21日（日）</span></div></li>
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="text-gray-800 text-base">豊中市立庄内体育館</span></div></li>
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="text-gray-800 text-base font-bold">2026年6月7日（日）</span><span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="t2_date text-gray-800 text-base">2026年6月21日（日）</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="t2_venue text-gray-800 text-base">豊中市立庄内体育館</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="t2_deadline text-gray-800 text-base font-bold">2026年6月7日（日）</span><span class="block text-red-500 text-xs mt-1">※定員になり次第締め切ります。</span></div></li>
                         </ul>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-auto">男女ペアによる混合ダブルス団体戦です。チームで団結して、日頃の練習の成果を発揮しましょう。</p>
+                        <p class="t2_desc text-gray-600 text-sm leading-relaxed mb-auto">男女ペアによる混合ダブルス団体戦です。チームで団結して、日頃の練習の成果を発揮しましょう。</p>
                         <div class="mt-6 flex justify-between items-center bg-blue-50 p-3 rounded-xl border border-blue-100"><span class="text-sm font-bold text-blue-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span><span id="t2_remain_badge_1" class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">読込中...</span></div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="https://drive.google.com/file/d/1ad8JpmPoknaYs404_tnWAdKEq3_30Dho/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <a href="https://drive.google.com/file/d/1ad8JpmPoknaYs404_tnWAdKEq3_30Dho/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="t2_pdf flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-blue-600 text-white px-4 py-3.5 rounded-xl font-bold hover:bg-blue-700 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
@@ -151,10 +154,10 @@
                 <button onclick="openEntryStatusModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none">
                     <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-orange-50 text-secondary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clipboard-list"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-secondary transition-colors">エントリー状況</h4><p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
                 </button>
-                <a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
+                <a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link_draw w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-accent transition-colors">組み合わせ (ドロー)</h4><p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
                 </a>
-                <a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
+                <a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link_timetable w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">注意事項・タイムテーブル</h4><p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表と、大会当日の注意事項です。集合時間の目安にご活用ください。</p>
                 </a>
                 <a href="result.pdf" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
@@ -163,7 +166,7 @@
                 <button onclick="openGutPriceModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-wrench"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-purple-500 transition-colors">ガット張替</h4><p class="text-gray-500 text-sm leading-relaxed">最短で当日渡し、張替本数3本以上であれば張替後お届け。価格（ガット込み）2,000円～2,400円。その他割引あり。</p>
                 </button>
-                <a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
+                <a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link_rule w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-book"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-yellow-500 transition-colors">競技規則・注意事項</h4><p class="text-gray-500 text-sm leading-relaxed">大会参加にあたってのルールやマナー、注意事項をPDFでご確認いただけます。</p>
                 </a>
             </div>
@@ -174,16 +177,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会風景・ギャラリー</h3><p class="text-gray-500 mt-4">白熱した試合の様子や、参加者の皆様の笑顔をお届けします。</p></div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=第58回+優勝'" alt="第58回 優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span></div></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第58回+準優勝'" alt="第58回 準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span></div></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=第59回+優勝'" alt="第59回 優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span></div></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第59回+準優勝'" alt="第59回 準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span></div></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100"><img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="バドミントンのシャトルとラケット" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="バドミントンの試合風景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1591006634283-d831025217b2?auto=format&fit=crop&q=80&w=800" alt="バドミントンコート" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1611251127384-23fb88f01f05?auto=format&fit=crop&q=80&w=800" alt="試合中の選手" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1628271536750-71328eb9265f?auto=format&fit=crop&q=80&w=800" alt="大会の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="february mozaiku.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=運営役員'" alt="大会運営役員の様子" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4 flex items-end justify-start"><span class="text-white font-bold text-sm md:text-base">運営役員</span></div></div>
+                <!-- 写真に gallery_img1 などのクラスを追加 -->
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=第58回+優勝'" alt="第58回 優勝" class="gallery_img1 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第58回+準優勝'" alt="第58回 準優勝" class="gallery_img2 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-secondary text-xs font-bold mb-1">第58回 ３ミックス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=第59回+優勝'" alt="第59回 優勝" class="gallery_img3 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-trophy text-yellow-400"></i> 優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=第59回+準優勝'" alt="第59回 準優勝" class="gallery_img4 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 pt-12 flex flex-col justify-end"><span class="text-accent text-xs font-bold mb-1">第59回 混合ダブルス</span><span class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-medal text-gray-300"></i> 準優勝</span></div></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100"><img src="february mozaiku.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="運営役員" class="gallery_img5 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="バドミントンの試合風景" class="gallery_img6 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1591006634283-d831025217b2?auto=format&fit=crop&q=80&w=800" alt="バドミントンコート" class="gallery_img7 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1611251127384-23fb88f01f05?auto=format&fit=crop&q=80&w=800" alt="試合中の選手" class="gallery_img8 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1628271536750-71328eb9265f?auto=format&fit=crop&q=80&w=800" alt="大会の様子" class="gallery_img9 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="Gemini_Generated_Image_xwp3fgxwp3fgxwp3.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=運営役員'" alt="大会運営役員の様子" class="gallery_img10 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4 flex items-end justify-start"><span class="text-white font-bold text-sm md:text-base">運営役員</span></div></div>
             </div>
         </div>
     </section>
@@ -208,11 +212,15 @@
             <p class="mb-12 text-gray-300 font-medium text-lg">現在、以下の2大会でエントリーを受付中です。</p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
-                    <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">受付終了</span><h3 class="text-2xl font-bold text-white mb-2">第58回江村杯<br>３ミックス団体戦</h3><p class="text-sm text-gray-400 mb-8">締切: 2026年4月5日(日)</p>
+                    <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">受付終了</span>
+                    <h3 class="t1_title text-2xl font-bold text-white mb-2">第58回江村杯３ミックス団体戦</h3>
+                    <p class="t1_deadline_cta text-sm text-gray-400 mb-8">締切: 2026年4月5日(日)</p>
                     <button class="block w-full text-center bg-gray-600 text-gray-300 px-8 py-4 rounded-xl font-bold text-lg cursor-not-allowed border border-gray-500">エントリー受付終了</button>
                 </div>
                 <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 w-full md:w-1/2 hover:bg-white/10 transition-colors">
-                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span><h3 class="text-2xl font-bold text-white mb-2">第59回江村杯<br>混合ダブルス団体戦</h3><p class="text-sm text-gray-400 mb-8">締切: 2026年6月7日(日)</p>
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">募集中</span>
+                    <h3 class="t2_title text-2xl font-bold text-white mb-2">第59回江村杯混合ダブルス団体戦</h3>
+                    <p class="t2_deadline_cta text-sm text-gray-400 mb-8">締切: 2026年6月7日(日)</p>
                     <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1">江村杯(混合)にエントリー</a>
                 </div>
             </div>
@@ -231,14 +239,14 @@
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">大会情報</h4>
-                <ul class="space-y-3"><li><a href="#entry-list" class="hover:text-secondary transition-colors">募集中大会一覧</a></li><li><a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">競技規則・注意事項</a></li></ul>
+                <ul class="space-y-3"><li><a href="#entry-list" class="hover:text-secondary transition-colors">募集中大会一覧</a></li><li><a href="https://drive.google.com/file/d/1UL9Ml53RzjetVC_SSJtrKcbpaARmSebB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link_rule hover:text-secondary transition-colors">競技規則・注意事項</a></li></ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">大会管理</h4>
                 <ul class="space-y-3">
                     <li><button onclick="openEntryStatusModal()" class="hover:text-secondary transition-colors focus:outline-none">エントリー状況確認</button></li>
-                    <li><a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
-                    <li><a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
+                    <li><a href="https://drive.google.com/file/d/1oLC4n1Cn94gn9Y4F7-OUpZpCtDgRWYfW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link_draw hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ojKUUB_DVx8HmUrP6oToPu_fx56bRSGy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link_timetable hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
                     <li><a href="result.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">試合結果</a></li>
                     <li><button onclick="openGutPriceModal()" class="hover:text-secondary transition-colors focus:outline-none">ガット張替</button></li>
                 </ul>
@@ -249,7 +257,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.AUTO-SYNC</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.FULL-SYNC</span></p>
         </div>
     </footer>
 
@@ -301,7 +309,7 @@
             <div class="p-4 md:p-8 max-w-3xl mx-auto w-full">
                 <div class="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-soft text-center space-y-10">
                     <div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6"><p class="text-lg md:text-xl font-bold text-primary leading-relaxed">第59回江村杯混合ダブルス団体戦<br class="md:hidden">現在エントリー受付中です。<br>残り <span id="t2_remain_text" class="text-3xl text-blue-600 mx-1 font-black">22</span> チームとなります。</p></div>
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6"><p class="text-lg md:text-xl font-bold text-primary leading-relaxed"><span class="t2_title">第59回江村杯混合ダブルス団体戦</span><br class="md:hidden">現在エントリー受付中です。<br>残り <span id="t2_remain_text" class="text-3xl text-blue-600 mx-1 font-black">22</span> チームとなります。</p></div>
                         <div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner"><div id="t2_progress_bar" class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 45%"></div></div>
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">定員に達し次第、エントリーの受付を締め切らせていただきます。<br>参加をご検討中の方はお早めにお申し込みください。</p>
                         <div><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto"><i class="fab fa-line text-2xl"></i> LINEでエントリーする</a></div>
@@ -320,11 +328,29 @@
         const gutPriceModal = document.getElementById('gut-price-modal'); const gutPriceModalContent = document.getElementById('gut-price-modal-content'); function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
     </script>
     <script>
+        // お客様がお使いのスプレッドシートURLをそのまま残してあります
         const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSb6-0t5nB2p8NeKAmw_zHvpkfGCwKPRC2gdwfC2D2Kw-V9yYkRjVdkCOL_JBuR6oSzlA3aoJ-4MlCH/pub?output=csv';
         fetch(SPREADSHEET_CSV_URL).then(response => response.text()).then(csvText => {
             const rows = csvText.split('\n'); const data = {};
             for(let i=1; i<rows.length; i++) { const row = rows[i].trim(); if(!row) continue; const cols = row.split(','); if(cols.length >= 2) { data[cols[0].trim()] = cols.slice(1).join(',').trim().replace(/^"|"$/g, ''); } }
             
+            // テキストの一括変更（大会名や日付など）
+            const textKeys = ['t1_title', 't1_date', 't1_venue', 't1_deadline', 't1_desc', 't2_title', 't2_date', 't2_venue', 't2_deadline', 't2_desc'];
+            textKeys.forEach(key => { if(data[key]) document.querySelectorAll('.' + key).forEach(el => el.innerText = data[key]); });
+            
+            // 締切表記の変更
+            if(data['t1_deadline']) document.querySelectorAll('.t1_deadline_cta').forEach(el => el.innerText = '締切: ' + data['t1_deadline']);
+            if(data['t2_deadline']) document.querySelectorAll('.t2_deadline_cta').forEach(el => el.innerText = '締切: ' + data['t2_deadline']);
+
+            // リンクの変更（PDFやGoogleドライブ）
+            const linkKeys = ['t1_pdf', 't2_pdf', 'link_draw', 'link_timetable', 'link_rule'];
+            linkKeys.forEach(key => { if(data[key]) document.querySelectorAll('.' + key).forEach(el => el.href = data[key]); });
+
+            // 写真の変更
+            const imgKeys = ['hero_img', 'gallery_img1', 'gallery_img2', 'gallery_img3', 'gallery_img4', 'gallery_img5', 'gallery_img6', 'gallery_img7', 'gallery_img8', 'gallery_img9', 'gallery_img10'];
+            imgKeys.forEach(key => { if(data[key]) document.querySelectorAll('.' + key).forEach(el => el.src = data[key]); });
+
+            // 既存の「残りチーム数」処理
             if(data['t2_remain']) {
                 const remainNum = parseInt(data['t2_remain']);
                 const badge = document.getElementById('t2_remain_badge_1'); if(badge) badge.innerText = '残り' + remainNum + 'チーム';
@@ -332,6 +358,8 @@
                 const maxTeams = 40; const entryCount = maxTeams - remainNum; let progressPercent = (entryCount / maxTeams) * 100; if(progressPercent > 100) progressPercent = 100; if(progressPercent < 0) progressPercent = 0;
                 const bar = document.getElementById('t2_progress_bar'); if(bar) bar.style.width = progressPercent + '%';
             }
+
+            // 既存の「お知らせ」処理
             if(data['news1_date']) { const el = document.getElementById('news1_date'); if(el) el.innerText = data['news1_date']; }
             if(data['news1_tag']) { const el = document.getElementById('news1_tag'); if(el) el.innerText = data['news1_tag']; }
             if(data['news1_text']) { const el = document.getElementById('news1_text'); if(el) el.innerText = data['news1_text']; }
