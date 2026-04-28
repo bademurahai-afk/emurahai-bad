@@ -169,7 +169,6 @@
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">注意事項・タイムテーブル</h4><p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表と、大会当日の注意事項です。集合時間の目安にご活用ください。</p>
                 </a>
                 
-                <!-- ▼▼ 試合結果ボタンを変更 ▼▼ -->
                 <button onclick="openResultModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div><h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-primary transition-colors">試合結果</h4><p class="text-gray-500 text-sm leading-relaxed">過去の大会記録や、進行中大会の結果速報を掲載しています。</p>
                 </button>
@@ -270,7 +269,6 @@
                     <li><button onclick="openEntryStatusModal()" class="hover:text-secondary transition-colors focus:outline-none">エントリー状況確認</button></li>
                     <li><a href="#" class="link_draw hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
                     <li><a href="#" class="link_timetable hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
-                    <!-- ▼▼ ここもポップアップが開くように変更 ▼▼ -->
                     <li><button onclick="openResultModal()" class="hover:text-secondary transition-colors focus:outline-none">試合結果</button></li>
                     <li><button onclick="openGutPriceModal()" class="hover:text-secondary transition-colors focus:outline-none">ガット張替</button></li>
                 </ul>
@@ -281,7 +279,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.SAFE-SYNC-RESULT</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.SAFE-SYNC-IMG-FIX</span></p>
         </div>
     </footer>
 
@@ -344,19 +342,16 @@
         </div>
     </div>
 
-    <!-- ▼▼ 新しく追加した「試合結果ポップアップ」 ▼▼ -->
     <div id="result-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeResultModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="result-modal-content">
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">試合結果</h2><button onclick="closeResultModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- 試合結果リンク 1 -->
                     <a href="#" target="_blank" rel="noopener noreferrer" class="result1_pdf bg-white p-6 rounded-2xl shadow-soft border border-gray-100 hover:shadow-lg transition-all group flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors"><i class="far fa-file-pdf text-xl"></i></div>
                         <div><h4 class="result1_title font-bold text-gray-800 text-lg group-hover:text-primary transition-colors">準備中</h4><span class="text-sm text-gray-500">PDFを開く</span></div>
                     </a>
-                    <!-- 試合結果リンク 2 -->
                     <a href="#" target="_blank" rel="noopener noreferrer" class="result2_pdf bg-white p-6 rounded-2xl shadow-soft border border-gray-100 hover:shadow-lg transition-all group flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors"><i class="far fa-file-pdf text-xl"></i></div>
                         <div><h4 class="result2_title font-bold text-gray-800 text-lg group-hover:text-primary transition-colors">準備中</h4><span class="text-sm text-gray-500">PDFを開く</span></div>
@@ -374,8 +369,6 @@
         const privacyModal = document.getElementById('privacy-modal'); const privacyModalContent = document.getElementById('privacy-modal-content'); function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const entryStatusModal = document.getElementById('entry-status-modal'); const entryStatusModalContent = document.getElementById('entry-status-modal-content'); function openEntryStatusModal() { entryStatusModal.classList.remove('hidden'); setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeEntryStatusModal() { entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full'); setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const gutPriceModal = document.getElementById('gut-price-modal'); const gutPriceModalContent = document.getElementById('gut-price-modal-content'); function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-        
-        // ▼▼ 試合結果モーダル用のプログラム ▼▼
         const resultModal = document.getElementById('result-modal'); const resultModalContent = document.getElementById('result-modal-content'); function openResultModal() { resultModal.classList.remove('hidden'); setTimeout(() => { resultModalContent.classList.remove('translate-y-full'); resultModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeResultModal() { resultModalContent.classList.remove('translate-y-0'); resultModalContent.classList.add('translate-y-full'); setTimeout(() => { resultModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
     </script>
     <script>
@@ -385,7 +378,6 @@
             fetch(SPREADSHEET_CSV_URL)
                 .then(response => response.text())
                 .then(csvText => {
-                    // もしHTMLが返ってきてしまったら（公開設定ミスの疑い）処理を中止する安全策
                     if (csvText.trim().toLowerCase().startsWith('<!doctype html>') || csvText.includes('<html')) {
                         console.warn('スプレッドシートのURLからHTMLが返されました。公開設定が「ウェブページ」になっているか、正しく公開されていません。');
                         return;
@@ -408,7 +400,6 @@
                         }
                     }
 
-                    // ▼▼ 追加: result1_title などの項目もここで書き換わります ▼▼
                     Object.keys(data).forEach(key => {
                         if (!key || key.trim() === '') return;
                         if (!/^[a-zA-Z0-9_-]+$/.test(key)) return;
@@ -452,8 +443,14 @@
                 if (value !== '#' && value.trim() !== '') el.href = value;
             } else if (el.tagName === 'IMG') {
                 if (value.trim() !== '') {
-                    el.src = value;
-                    // 画像URLが設定された場合、親要素が非表示（hidden）なら表示させる
+                    // ▼▼ Googleドライブの共有リンクを画像表示用リンクに自動変換する魔法 ▼▼
+                    let imgUrl = value;
+                    const driveMatch = imgUrl.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
+                    if (driveMatch && driveMatch[1]) {
+                        imgUrl = `https://drive.google.com/uc?export=view&id=${driveMatch[1]}`;
+                    }
+                    el.src = imgUrl;
+                    
                     if (el.parentElement && el.parentElement.classList.contains('hidden')) {
                         el.parentElement.classList.remove('hidden');
                     }
