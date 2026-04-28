@@ -261,7 +261,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.FULL-SYNC-FIXED</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.SAFE-SYNC</span></p>
         </div>
     </footer>
 
@@ -333,13 +333,19 @@
     </script>
     <script>
         // ▼▼▼ ここにステップ1で作成したCSVのURLを貼り付けます（''の間に貼り付けてください） ▼▼▼
-        const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtFv4hztQPK5kelECRuDp3kCMaam756x7vODObYakBNRQT5cOrjC_uBLqo3_p-E9LS7lNZ9g3CstTW/pub?output=csv';
+        const SPREADSHEET_CSV_URL = '';
         // ▲▲▲ 例: 'https://docs.google.com/spreadsheets/d/e/2PACX.../pub?output=csv' ▲▲▲
 
         if (SPREADSHEET_CSV_URL && SPREADSHEET_CSV_URL.trim() !== '') {
             fetch(SPREADSHEET_CSV_URL)
                 .then(response => response.text())
                 .then(csvText => {
+                    // もしHTMLが返ってきてしまったら（公開設定ミスの疑い）処理を中止する安全策
+                    if (csvText.trim().toLowerCase().startsWith('<!doctype html>') || csvText.includes('<html')) {
+                        console.warn('スプレッドシートのURLからHTMLが返されました。公開設定が「ウェブページ」になっているか、正しく公開されていません。');
+                        return;
+                    }
+
                     const rows = csvText.split('\n');
                     const data = {};
                     
@@ -361,6 +367,10 @@
                     // 抽出したデータを各要素に安全に反映
                     Object.keys(data).forEach(key => {
                         if (!key || key.trim() === '') return;
+                        
+                        // keyが英数字やアンダースコア、ハイフンのみで構成されているかチェック（HTMLの破片などが入るのを防ぐ）
+                        if (!/^[a-zA-Z0-9_-]+$/.test(key)) return;
+                        
                         const value = data[key];
 
                         const elById = document.getElementById(key);
