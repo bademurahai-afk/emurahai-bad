@@ -187,7 +187,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会風景・ギャラリー</h3><p class="text-gray-500 mt-4">白熱した試合の様子や、参加者の皆様の笑顔をお届けします。</p></div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-                <!-- 写真 1〜6 (常に表示) -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img1 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img2 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img3 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
@@ -195,7 +194,6 @@
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100"><img src="february mozaiku.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="運営役員" class="gallery_img5 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="試合風景" class="gallery_img6 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 
-                <!-- 写真 7〜20 (初期は非表示。スプレッドシートにデータがあれば魔法のように表示されます) -->
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img7 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img8 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img9 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
@@ -279,7 +277,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.SAFE-SYNC-IMG-FIX</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.SAFE-SYNC-COUNTER</span></p>
         </div>
     </footer>
 
@@ -362,14 +360,46 @@
         </div>
     </div>
 
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
-    
+    <!-- ▼▼ 管理者専用の隠しカウンター画面 ▼▼ -->
+    <div id="secret-counter-box" class="fixed bottom-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-2xl z-[100] border border-gray-200 transform transition-all duration-300 translate-y-20 opacity-0 pointer-events-none">
+        <p class="text-xs text-primary font-bold mb-2 flex justify-between items-center gap-4">
+            <span><i class="fas fa-eye text-accent"></i> 管理者カウンター</span>
+            <button onclick="hideSecretCounter()" class="text-gray-400 hover:text-red-500 text-lg focus:outline-none"><i class="fas fa-times"></i></button>
+        </p>
+        <!-- ここで実際にカウントを行っています -->
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" alt="アクセス数" class="rounded shadow-sm">
+    </div>
+
     <script>
         const guideModal = document.getElementById('guide-modal'); const guideModalContent = document.getElementById('guide-modal-content'); function openGuideModal() { guideModal.classList.remove('hidden'); setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGuideModal() { guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full'); setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const privacyModal = document.getElementById('privacy-modal'); const privacyModalContent = document.getElementById('privacy-modal-content'); function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const entryStatusModal = document.getElementById('entry-status-modal'); const entryStatusModalContent = document.getElementById('entry-status-modal-content'); function openEntryStatusModal() { entryStatusModal.classList.remove('hidden'); setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeEntryStatusModal() { entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full'); setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const gutPriceModal = document.getElementById('gut-price-modal'); const gutPriceModalContent = document.getElementById('gut-price-modal-content'); function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const resultModal = document.getElementById('result-modal'); const resultModalContent = document.getElementById('result-modal-content'); function openResultModal() { resultModal.classList.remove('hidden'); setTimeout(() => { resultModalContent.classList.remove('translate-y-full'); resultModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeResultModal() { resultModalContent.classList.remove('translate-y-0'); resultModalContent.classList.add('translate-y-full'); setTimeout(() => { resultModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+
+        // ▼▼ 隠しカウンターを呼び出すプログラム ▼▼
+        let secretClicks = 0;
+        let secretTimer = null;
+        function handleSecretClick() {
+            secretClicks++;
+            if(secretClicks >= 5) {
+                const box = document.getElementById('secret-counter-box');
+                box.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                secretClicks = 0;
+            }
+            clearTimeout(secretTimer);
+            // 2秒以内に5回クリックしないとリセットされる仕組み
+            secretTimer = setTimeout(() => { secretClicks = 0; }, 2000);
+        }
+        function hideSecretCounter() {
+            const box = document.getElementById('secret-counter-box');
+            box.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }
+        // フッターのコピーライト部分にクリック判定をセット
+        const copyrightEl = document.getElementById('copyright-text');
+        if (copyrightEl) {
+            copyrightEl.addEventListener('click', handleSecretClick);
+        }
     </script>
     <script>
         const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtFv4hztQPK5kelECRuDp3kCMaam756x7vODObYakBNRQT5cOrjC_uBLqo3_p-E9LS7lNZ9g3CstTW/pub?output=csv';
@@ -443,7 +473,6 @@
                 if (value !== '#' && value.trim() !== '') el.href = value;
             } else if (el.tagName === 'IMG') {
                 if (value.trim() !== '') {
-                    // ▼▼ Googleドライブの共有リンクを画像表示用リンクに自動変換する強力な魔法 ▼▼
                     let imgUrl = value;
                     const driveMatch = imgUrl.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
                     const idMatch = imgUrl.match(/id=([a-zA-Z0-9_-]+)/);
@@ -456,7 +485,6 @@
                     }
 
                     if (fileId) {
-                        // ドライブの画像を安定して表示できるサムネイル形式に変換（サイズw1000で高画質に）
                         imgUrl = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
                     }
                     
