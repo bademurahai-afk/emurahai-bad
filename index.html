@@ -133,7 +133,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b-2 border-gray-100 pb-4">
                 <div><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-1">News & Topics</h2><h3 class="text-3xl font-black text-primary">お知らせ・新着情報</h3></div>
-                <a href="#" class="text-primary hover:text-accent font-bold text-sm mt-4 md:mt-0 group flex items-center gap-1">一覧を見る <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                <a href="javascript:void(0)" class="text-primary hover:text-accent font-bold text-sm mt-4 md:mt-0 group flex items-center gap-1">一覧を見る <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
             </div>
             <ul class="divide-y divide-gray-100">
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
@@ -141,14 +141,16 @@
                         <span id="news1_date" class="text-gray-500 text-sm font-bold font-mono">読込中...</span>
                         <span id="news1_tag" class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-green-200">-</span>
                     </div>
-                    <a href="#" id="news1_text" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">データ読込中...</a>
+                    <a href="javascript:void(0)" id="news1_link" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors block">
+                        <span id="news1_text">データ読込中...</span>
+                    </a>
                 </li>
                 <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 group hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-colors">
                     <div class="flex items-center gap-4 sm:w-48 shrink-0">
                         <span id="news2_date" class="text-gray-500 text-sm font-bold font-mono">読込中...</span>
                         <span id="news2_tag" class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-blue-200">-</span>
                     </div>
-                    <a href="#" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
+                    <a href="javascript:void(0)" id="news2_link" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
                         <span id="news2_text">データ読込中...</span>
                         <span class="inline-flex items-center bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full animate-pulse shadow-sm">NEW</span>
                     </a>
@@ -158,7 +160,9 @@
                         <span id="news3_date" class="text-gray-500 text-sm font-bold font-mono">読込中...</span>
                         <span id="news3_tag" class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-gray-200">-</span>
                     </div>
-                    <a href="#" id="news3_text" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors">データ読込中...</a>
+                    <a href="javascript:void(0)" id="news3_link" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors block">
+                        <span id="news3_text">データ読込中...</span>
+                    </a>
                 </li>
             </ul>
         </div>
