@@ -85,6 +85,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2><h3 class="text-3xl md:text-4xl font-black text-primary">現在募集中の大会</h3></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- 大会1 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-blue-600 to-accent px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-user-friends absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -100,17 +101,18 @@
                         <p class="t1_desc text-gray-600 text-sm leading-relaxed mb-4">読込中...</p>
                         
                         <div class="t1_division_box hidden bg-red-50 border border-red-100 p-3 rounded-xl mb-4">
-                            <p class="text-xs font-black text-red-600 flex items-start gap-2"><i class="fas fa-info-circle mt-0.5"></i> <span class="t1_division">1部：締切</span></p>
+                            <p class="text-xs font-black text-red-600 flex items-start gap-2"><i class="fas fa-info-circle mt-0.5"></i> <span class="t1_division"></span></p>
                         </div>
                         
                         <div class="mt-auto flex justify-between items-center bg-blue-50 p-3 rounded-xl border border-blue-100"><span class="text-sm font-bold text-blue-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span><span id="t1_remain_badge" class="bg-blue-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">読込中...</span></div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="t1_pdf flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <a href="javascript:void(0)" class="t1_pdf flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-blue-600 text-white px-4 py-3.5 rounded-xl font-bold hover:bg-blue-700 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
                 
+                <!-- 大会2 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-emerald-600 to-teal-400 px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-users absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -132,7 +134,7 @@
                         <div class="mt-auto flex justify-between items-center bg-emerald-50 p-3 rounded-xl border border-emerald-100"><span class="text-sm font-bold text-emerald-600 flex items-center gap-2"><i class="fas fa-info-circle"></i> エントリー受付中</span><span id="t2_remain_badge" class="bg-emerald-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">読込中...</span></div>
                     </div>
                     <div class="p-6 bg-gray-50 flex flex-col sm:flex-row gap-3 border-t border-gray-100">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="t2_pdf flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
+                        <a href="javascript:void(0)" class="t2_pdf flex-1 flex justify-center items-center bg-white text-gray-700 border border-gray-200 px-4 py-3.5 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"><i class="far fa-file-pdf text-red-500 mr-1"></i> 要項(PDF)</a>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-emerald-600 text-white px-4 py-3.5 rounded-xl font-bold hover:bg-emerald-700 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
@@ -152,7 +154,7 @@
                         <span id="news1_date" class="text-gray-500 text-sm font-bold font-mono"></span>
                         <span id="news1_tag" class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-green-200"></span>
                     </div>
-                    <a href="javascript:void(0)" id="news1_link" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
+                    <a href="javascript:void(0)" id="news1_link" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
                         <span id="news1_text"></span>
                         <span id="news1_new" class="hidden inline-flex items-center bg-gradient-to-r from-red-500 to-pink-500 text-white text-[11px] font-black px-2.5 py-0.5 rounded-full animate-pulse-glow shadow-md border border-red-200/50"></span>
                     </a>
@@ -162,7 +164,7 @@
                         <span id="news2_date" class="text-gray-500 text-sm font-bold font-mono"></span>
                         <span id="news2_tag" class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-blue-200"></span>
                     </div>
-                    <a href="javascript:void(0)" id="news2_link" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
+                    <a href="javascript:void(0)" id="news2_link" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
                         <span id="news2_text"></span>
                         <span id="news2_new" class="hidden inline-flex items-center bg-gradient-to-r from-red-500 to-pink-500 text-white text-[11px] font-black px-2.5 py-0.5 rounded-full animate-pulse-glow shadow-md border border-red-200/50"></span>
                     </a>
@@ -172,7 +174,7 @@
                         <span id="news3_date" class="text-gray-500 text-sm font-bold font-mono"></span>
                         <span id="news3_tag" class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-md font-bold w-max border border-gray-200"></span>
                     </div>
-                    <a href="javascript:void(0)" id="news3_link" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
+                    <a href="javascript:void(0)" id="news3_link" class="text-gray-800 hover:text-accent font-bold flex-1 transition-colors flex items-center flex-wrap gap-2">
                         <span id="news3_text"></span>
                         <span id="news3_new" class="hidden inline-flex items-center bg-gradient-to-r from-red-500 to-pink-500 text-white text-[11px] font-black px-2.5 py-0.5 rounded-full animate-pulse-glow shadow-md border border-red-200/50"></span>
                     </a>
@@ -181,6 +183,7 @@
         </div>
     </section>
 
+    <!-- ▼▼ 大会管理・関連情報（リンク修正済み） ▼▼ -->
     <section id="management" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Management & Results</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会管理・関連情報</h3><p class="text-gray-500 mt-4">エントリー状況の確認、組み合わせ、試合結果などの重要情報はこちらから。</p></div>
@@ -191,13 +194,13 @@
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-secondary transition-colors">エントリー状況</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
                 </button>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="link_draw w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
+                <a href="javascript:void(0)" class="link_draw w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-accent transition-colors">組み合わせ (ドロー)</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="link_timetable w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
+                <a href="javascript:void(0)" class="link_timetable w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">注意事項・タイムテーブル</h4>
@@ -217,13 +220,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会風景・ギャラリー</h3><p class="text-gray-500 mt-4">白熱した試合の様子や、参加者の皆様の笑顔をお届けします。</p></div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+                <!-- 初期表示用 6枚 -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img1 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img2 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img3 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img4 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100"><img src="february mozaiku.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="運営役員" class="gallery_img5 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="試合風景" class="gallery_img6 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                
+                <!-- 動的表示用 7〜20枚目 (初期は hidden) -->
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img7 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img8 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img9 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
@@ -289,14 +293,14 @@
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">大会情報</h4>
-                <ul class="space-y-3"><li><a href="#entry-list" class="hover:text-secondary transition-colors">募集中大会一覧</a></li><li><a href="#" class="link_rule hover:text-secondary transition-colors">競技規則・注意事項</a></li></ul>
+                <ul class="space-y-3"><li><a href="#entry-list" class="hover:text-secondary transition-colors">募集中大会一覧</a></li><li><a href="javascript:void(0)" class="link_rule hover:text-secondary transition-colors">競技規則・注意事項</a></li></ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6 text-base">大会管理</h4>
                 <ul class="space-y-3">
                     <li><button onclick="openEntryStatusModal()" class="hover:text-secondary transition-colors focus:outline-none">エントリー状況確認</button></li>
-                    <li><a href="#" class="link_draw hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
-                    <li><a href="#" class="link_timetable hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
+                    <li><a href="javascript:void(0)" class="link_draw hover:text-secondary transition-colors">組み合わせ（ドロー）</a></li>
+                    <li><a href="javascript:void(0)" class="link_timetable hover:text-secondary transition-colors">注意事項・タイムテーブル</a></li>
                     <li><button onclick="openResultModal()" class="hover:text-secondary transition-colors focus:outline-none">試合結果</button></li>
                     <li><button onclick="openGutPriceModal()" class="hover:text-secondary transition-colors focus:outline-none">ガット張替</button></li>
                 </ul>
@@ -307,7 +311,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.DOUBLE-ENTRY-OPEN</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.FULL-SPREADSHEET-FIX</span></p>
         </div>
     </footer>
 
@@ -359,11 +363,11 @@
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">試合結果</h2><button onclick="closeResultModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="result1_pdf bg-white p-6 rounded-2xl shadow-soft border border-gray-100 hover:shadow-lg transition-all group flex items-center gap-4">
+                    <a href="javascript:void(0)" class="result1_pdf bg-white p-6 rounded-2xl shadow-soft border border-gray-100 hover:shadow-lg transition-all group flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors"><i class="far fa-file-pdf text-xl"></i></div>
                         <div><h4 class="result1_title font-bold text-gray-800 text-lg group-hover:text-primary transition-colors">準備中</h4><span class="text-sm text-gray-500">PDFを開く</span></div>
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="result2_pdf bg-white p-6 rounded-2xl shadow-soft border border-gray-100 hover:shadow-lg transition-all group flex items-center gap-4">
+                    <a href="javascript:void(0)" class="result2_pdf bg-white p-6 rounded-2xl shadow-soft border border-gray-100 hover:shadow-lg transition-all group flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors"><i class="far fa-file-pdf text-xl"></i></div>
                         <div><h4 class="result2_title font-bold text-gray-800 text-lg group-hover:text-primary transition-colors">準備中</h4><span class="text-sm text-gray-500">PDFを開く</span></div>
                     </a>
@@ -452,8 +456,14 @@
                         const els = document.querySelectorAll('.' + key + ', #' + key);
                         const val = data[key];
                         els.forEach(el => {
+                            // リンク（PDFや外部サイト）の書き換え処理
                             if (el.tagName === 'A' && (key.includes('pdf') || key.includes('link'))) {
-                                if (val !== '#') el.href = val;
+                                // URLが設定されている場合のみ別タブで開くようにする
+                                if (val !== '#' && val.trim() !== '') {
+                                    el.href = val;
+                                    el.target = '_blank';
+                                    el.rel = 'noopener noreferrer';
+                                }
                             } else if (el.tagName === 'IMG') {
                                 let url = val;
                                 const m = url.match(/id=([a-zA-Z0-9_-]+)/) || url.match(/\/d\/([a-zA-Z0-9_-]+)/);
