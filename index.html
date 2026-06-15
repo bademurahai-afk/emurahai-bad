@@ -308,7 +308,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center relative">
-            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.FULL-SPREADSHEET-FIX</span></p>
+            <p id="copyright-text" class="cursor-pointer select-none inline-block px-4 py-2 touch-manipulation">&copy; 2026 江村杯Badminton Portal. All rights reserved. <span class="text-gray-600 font-mono ml-2">v.CACHE-CLEAR-FIX</span></p>
         </div>
     </footer>
 
@@ -423,38 +423,13 @@
     </div>
 
     <script>
-        const entryStatusModal = document.getElementById('entry-status-modal'); const entryStatusModalContent = document.getElementById('entry-status-modal-content'); function openEntryStatusModal() { entryStatusModal.classList.remove('hidden'); setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeEntryStatusModal() { entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full'); setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-        const gutPriceModal = document.getElementById('gut-price-modal'); const gutPriceModalContent = document.getElementById('gut-price-modal-content'); function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-        const resultModal = document.getElementById('result-modal'); const resultModalContent = document.getElementById('result-modal-content'); function openResultModal() { resultModal.classList.remove('hidden'); setTimeout(() => { resultModalContent.classList.remove('translate-y-full'); resultModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeResultModal() { resultModalContent.classList.remove('translate-y-0'); resultModalContent.classList.add('translate-y-full'); setTimeout(() => { resultModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-        const guideModal = document.getElementById('guide-modal'); const guideModalContent = document.getElementById('guide-modal-content'); function openGuideModal() { guideModal.classList.remove('hidden'); setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGuideModal() { guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full'); setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-        const privacyModal = document.getElementById('privacy-modal'); const privacyModalContent = document.getElementById('privacy-modal-content'); function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-
-        // 隠しカウンターのクリック（タップ）連打判定
-        let secretClicks = 0;
-        let secretTimer = null;
-        function handleSecretClick() {
-            secretClicks++;
-            if(secretClicks >= 5) {
-                const box = document.getElementById('secret-counter-box');
-                box.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
-                secretClicks = 0;
-            }
-            clearTimeout(secretTimer);
-            secretTimer = setTimeout(() => { secretClicks = 0; }, 2000);
-        }
-        function hideSecretCounter() {
-            const box = document.getElementById('secret-counter-box');
-            box.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
-        }
-        const copyrightEl = document.getElementById('copyright-text');
-        if (copyrightEl) { copyrightEl.addEventListener('click', handleSecretClick); }
-    </script>
-
-    <script>
+        // ▼ スプレッドシート連携とデータ反映のメイン処理 ▼
         const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtFv4hztQPK5kelECRuDp3kCMaam756x7vODObYakBNRQT5cOrjC_uBLqo3_p-E9LS7lNZ9g3CstTW/pub?output=csv';
 
         if (SPREADSHEET_CSV_URL) {
-            fetch(SPREADSHEET_CSV_URL).then(res => res.text()).then(csvText => {
+            // ブラウザのキャッシュ（古い記憶）を無視して常に最新を読み込む処理
+            const fetchUrl = SPREADSHEET_CSV_URL + '&_t=' + new Date().getTime();
+            fetch(fetchUrl, { cache: 'no-store' }).then(res => res.text()).then(csvText => {
                 const rows = csvText.split('\n');
                 const data = {};
                 for(let i=1; i<rows.length; i++) {
