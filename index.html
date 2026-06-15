@@ -18,6 +18,7 @@
         html { scroll-behavior: smooth; } 
         body { font-family: 'Noto Sans JP', sans-serif; } 
         .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        /* NEWバッジ用のゆっくり光る点滅アニメーション */
         @keyframes pulse-glow {
             0% { opacity: 0.8; transform: scale(0.98); box-shadow: 0 0 5px rgba(239, 68, 68, 0.4); }
             100% { opacity: 1; transform: scale(1.05); box-shadow: 0 0 15px rgba(239, 68, 68, 0.9); }
@@ -85,7 +86,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2><h3 class="text-3xl md:text-4xl font-black text-primary">現在募集中の大会</h3></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <!-- 大会1 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-blue-600 to-accent px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-user-friends absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -94,9 +94,9 @@
                     </div>
                     <div class="p-8 flex-grow bg-white flex flex-col">
                         <ul class="space-y-4 mb-6 text-sm text-gray-600 font-medium">
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="t1_date text-gray-800 text-base">読込中...</span></div></li>
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="t1_venue text-gray-800 text-base">読込中...</span></div></li>
-                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="t1_deadline text-gray-800 text-base font-bold">読込中...</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="far fa-calendar-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">開催日</span><span class="t1_date text-gray-880 text-base">読込中...</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">会場</span><span class="t1_venue text-gray-880 text-base">読込中...</span></div></li>
+                            <li class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0"><i class="fas fa-exclamation-circle"></i></div><div class="pt-1"><span class="block text-xs text-gray-400 mb-0.5">申込締切</span><span class="t1_deadline text-gray-880 text-base font-bold">読込中...</span></div></li>
                         </ul>
                         <p class="t1_desc text-gray-600 text-sm leading-relaxed mb-4">読込中...</p>
                         
@@ -112,7 +112,6 @@
                     </div>
                 </div>
                 
-                <!-- 大会2 -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-emerald-600 to-teal-400 px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-users absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -183,7 +182,6 @@
         </div>
     </section>
 
-    <!-- ▼▼ 大会管理・関連情報（リンク修正済み） ▼▼ -->
     <section id="management" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Management & Results</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会管理・関連情報</h3><p class="text-gray-500 mt-4">エントリー状況の確認、組み合わせ、試合結果などの重要情報はこちらから。</p></div>
@@ -220,14 +218,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会風景・ギャラリー</h3><p class="text-gray-500 mt-4">白熱した試合の様子や、参加者の皆様の笑顔をお届けします。</p></div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-                <!-- 初期表示用 6枚 -->
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_winner.jpg" onerror="this.src='https://placehold.co/800x450/f97316/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img1 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="58_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img2 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_winner.jpg" onerror="this.src='https://placehold.co/800x450/0ea5e9/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img3 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="59_runner_up.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=江村杯'" alt="ギャラリー画像" class="gallery_img4 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-100"><img src="february mozaiku.jpg" onerror="this.src='https://images.unsplash.com/photo-1622279457486-69d73ce36b41?auto=format&fit=crop&q=80&w=800'" alt="運営役員" class="gallery_img5 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?auto=format&fit=crop&q=80&w=800" alt="試合風景" class="gallery_img6 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <!-- 動的表示用 7〜20枚目 (初期は hidden) -->
+                
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img7 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img8 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-video overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img9 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
@@ -351,7 +348,6 @@
                         <div><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto"><i class="fab fa-line text-2xl"></i> LINEでエントリーする</a></div>
                     </div>
                 </div>
-                
                 <div class="text-center pt-8"><button onclick="closeEntryStatusModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm focus:outline-none">閉じる</button></div>
             </div>
         </div>
@@ -383,7 +379,7 @@
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">ガット張替え通常料金一覧</h2><button onclick="closeGutPriceModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors focus:outline-none"><i class="fas fa-times text-lg"></i></button></div>
             <div class="p-6 md:p-12 max-w-5xl mx-auto w-full">
                 <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-xl mb-10 shadow-sm">
-                    <ul class="text-purple-800 text-sm leading-relaxed space-y-2 font-medium"><li><i class="fas fa-check-circle mr-2"></i> YONEX製ガット全種対応。その他のメーカー製については応相談。</li><li><i class="fas fa-check-circle mr-2"></i> 最短で1本あたり2時間以内仕上げ（本数、日時については事前連絡必要）。</li><li><i class="fas fa-check-circle mr-2"></i> 3本以上であれば、ご自宅か練習会場まで引き取り又は、お届けいたします。</li></ul>
+                    <ul class="text-purple-800 text-sm leading-relaxed space-y-2 font-medium"><li><i class="fas fa-check-circle mr-2"></i> YONEX製ガット全種対応。その他のメーカー製については応相談。</li><li><i class="fas fa-check-circle mr-2"></i> 最最短で1本あたり2時間以内仕上げ（本数、日時については事前連絡必要）。</li><li><i class="fas fa-check-circle mr-2"></i> 3本以上であれば、ご自宅か練習会場まで引き取り又は、お届けいたします。</li></ul>
                 </div>
                 <h3 class="text-xl font-bold text-primary mb-4 border-b-2 border-gray-200 pb-2">基本料金表 (税込)</h3>
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden mb-10 w-full">
@@ -418,19 +414,43 @@
         </div>
     </div>
 
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" style="opacity:0; position:absolute; pointer-events:none;" alt="">
-    
+    <div id="secret-counter-box" class="fixed bottom-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-2xl z-[100] border border-gray-200 transform transition-all duration-300 translate-y-20 opacity-0 pointer-events-none">
+        <p class="text-xs text-primary font-bold mb-2 flex justify-between items-center gap-4">
+            <span><i class="fas fa-eye text-accent"></i> 管理者カウンター</span>
+            <button onclick="hideSecretCounter()" class="text-gray-400 hover:text-red-500 text-lg focus:outline-none"><i class="fas fa-times"></i></button>
+        </p>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=emuracup_2026_main_site" alt="アクセス数" class="rounded shadow-sm">
+    </div>
+
     <script>
-        // モーダル開閉用の共通スクリプト
-        const guideModal = document.getElementById('guide-modal'); const guideModalContent = document.getElementById('guide-modal-content'); function openGuideModal() { guideModal.classList.remove('hidden'); setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGuideModal() { guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full'); setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
-        const privacyModal = document.getElementById('privacy-modal'); const privacyModalContent = document.getElementById('privacy-modal-content'); function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const entryStatusModal = document.getElementById('entry-status-modal'); const entryStatusModalContent = document.getElementById('entry-status-modal-content'); function openEntryStatusModal() { entryStatusModal.classList.remove('hidden'); setTimeout(() => { entryStatusModalContent.classList.remove('translate-y-full'); entryStatusModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeEntryStatusModal() { entryStatusModalContent.classList.remove('translate-y-0'); entryStatusModalContent.classList.add('translate-y-full'); setTimeout(() => { entryStatusModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const gutPriceModal = document.getElementById('gut-price-modal'); const gutPriceModalContent = document.getElementById('gut-price-modal-content'); function openGutPriceModal() { gutPriceModal.classList.remove('hidden'); setTimeout(() => { gutPriceModalContent.classList.remove('translate-y-full'); gutPriceModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGutPriceModal() { gutPriceModalContent.classList.remove('translate-y-0'); gutPriceModalContent.classList.add('translate-y-full'); setTimeout(() => { gutPriceModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
         const resultModal = document.getElementById('result-modal'); const resultModalContent = document.getElementById('result-modal-content'); function openResultModal() { resultModal.classList.remove('hidden'); setTimeout(() => { resultModalContent.classList.remove('translate-y-full'); resultModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeResultModal() { resultModalContent.classList.remove('translate-y-0'); resultModalContent.classList.add('translate-y-full'); setTimeout(() => { resultModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+        const guideModal = document.getElementById('guide-modal'); const guideModalContent = document.getElementById('guide-modal-content'); function openGuideModal() { guideModal.classList.remove('hidden'); setTimeout(() => { guideModalContent.classList.remove('translate-y-full'); guideModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closeGuideModal() { guideModalContent.classList.remove('translate-y-0'); guideModalContent.classList.add('translate-y-full'); setTimeout(() => { guideModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+        const privacyModal = document.getElementById('privacy-modal'); const privacyModalContent = document.getElementById('privacy-modal-content'); function openPrivacyModal() { privacyModal.classList.remove('hidden'); setTimeout(() => { privacyModalContent.classList.remove('translate-y-full'); privacyModalContent.classList.add('translate-y-0'); }, 10); document.body.style.overflow = 'hidden'; } function closePrivacyModal() { privacyModalContent.classList.remove('translate-y-0'); privacyModalContent.classList.add('translate-y-full'); setTimeout(() => { privacyModal.classList.add('hidden'); document.body.style.overflow = ''; }, 300); }
+
+        // 隠しカウンターのクリック（タップ）連打判定
+        let secretClicks = 0;
+        let secretTimer = null;
+        function handleSecretClick() {
+            secretClicks++;
+            if(secretClicks >= 5) {
+                const box = document.getElementById('secret-counter-box');
+                box.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                secretClicks = 0;
+            }
+            clearTimeout(secretTimer);
+            secretTimer = setTimeout(() => { secretClicks = 0; }, 2000);
+        }
+        function hideSecretCounter() {
+            const box = document.getElementById('secret-counter-box');
+            box.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }
+        const copyrightEl = document.getElementById('copyright-text');
+        if (copyrightEl) { copyrightEl.addEventListener('click', handleSecretClick); }
     </script>
 
     <script>
-        // ▼ スプレッドシート連携とデータ反映のメイン処理 ▼
         const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtFv4hztQPK5kelECRuDp3kCMaam756x7vODObYakBNRQT5cOrjC_uBLqo3_p-E9LS7lNZ9g3CstTW/pub?output=csv';
 
         if (SPREADSHEET_CSV_URL) {
@@ -448,7 +468,6 @@
                     }
                 }
 
-                // 全要素への反映
                 Object.keys(data).forEach(key => {
                     if (!key || key.trim() === '' || !/^[a-zA-Z0-9_-]+$/.test(key)) return;
 
@@ -456,13 +475,17 @@
                         const els = document.querySelectorAll('.' + key + ', #' + key);
                         const val = data[key];
                         els.forEach(el => {
-                            // リンク（PDFや外部サイト）の書き換え処理
+                            // リンク(PDF等のURL)関連の同期・空リンク無効化処理
                             if (el.tagName === 'A' && (key.includes('pdf') || key.includes('link'))) {
-                                // URLが設定されている場合のみ別タブで開くようにする
-                                if (val !== '#' && val.trim() !== '') {
+                                if (val && val !== '#' && val.trim() !== '' && val.toLowerCase() !== 'javascript:void(0)') {
                                     el.href = val;
                                     el.target = '_blank';
                                     el.rel = 'noopener noreferrer';
+                                    // 初期表示で非表示にしてあるものを、データがある場合のみ解放する処理
+                                    el.classList.remove('cursor-not-allowed', 'pointer-events-none', 'opacity-50');
+                                } else {
+                                    el.href = 'javascript:void(0)';
+                                    el.removeAttribute('target');
                                 }
                             } else if (el.tagName === 'IMG') {
                                 let url = val;
@@ -491,29 +514,29 @@
                             }
                         });
                     } catch(e) {
-                        console.warn("エラーが発生したためスキップしました:", key);
+                        console.warn("データ同期中にスキップが発生しました:", key);
                     }
                 });
 
-                // 残りチーム・進捗バー計算（大会1用）
+                // 大会1 残り枠・バーの計算
                 if(data['t1_remain']) {
                     const num = parseInt(data['t1_remain']);
                     const elText = document.getElementById('t1_remain_text');
                     if(elText) elText.innerText = num;
                     const elBadge = document.getElementById('t1_remain_badge');
-                    if(elBadge) elBadge.innerText = '残り' + num + 'チーム';
+                    if(elBadge) elBadge.innerText = (num === 0) ? '満員御礼' : '残り' + num + 'チーム';
                     const percent = Math.max(0, Math.min(100, ((40 - num) / 40) * 100));
                     const elBar = document.getElementById('t1_progress_bar');
                     if(elBar) elBar.style.width = percent + '%';
                 }
                 
-                // 残りチーム・進捗バー計算（大会2用）
+                // 大会2 残り枠・バーの計算
                 if(data['t2_remain']) {
                     const num2 = parseInt(data['t2_remain']);
                     const elText2 = document.getElementById('t2_remain_text');
                     if(elText2) elText2.innerText = num2;
                     const elBadge2 = document.getElementById('t2_remain_badge');
-                    if(elBadge2) elBadge2.innerText = '残り' + num2 + 'チーム';
+                    if(elBadge2) elBadge2.innerText = (num2 === 0) ? '満員御礼' : '残り' + num2 + 'チーム';
                     const percent2 = Math.max(0, Math.min(100, ((40 - num2) / 40) * 100));
                     const elBar2 = document.getElementById('t2_progress_bar');
                     if(elBar2) elBar2.style.width = percent2 + '%';
