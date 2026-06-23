@@ -286,7 +286,22 @@
     <div id="gut-price-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGutPriceModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="gut-price-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">ガット張替え</h2><button onclick="closeGutPriceModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>ガット料金表をここに配置します</p><div class="pt-10"><button onclick="closeGutPriceModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
     <div id="guide-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGuideModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="guide-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">初めての方へ</h2><button onclick="closeGuideModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>※大会要項をご確認の上、ご参加ください。</p><div class="pt-10"><button onclick="closeGuideModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePrivacyModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="privacy-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー</h2><button onclick="closePrivacyModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>個人情報の取り扱いに関する記述</p><div class="pt-10"><button onclick="closePrivacyModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
+　　<!-- (ここが元々のprivacy-modalの閉じタグの後です) -->
+    </div> 
 
+    <!-- ★ここにPDFプレビュー用モーダルを挿入します -->
+    <div id="pdf-preview-modal" class="fixed inset-0 z-[110] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="closePdfPreview()"></div>
+        <div class="absolute inset-x-2 bottom-2 top-20 md:inset-10 md:rounded-3xl bg-white overflow-hidden shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="pdf-preview-modal-content">
+            <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-white/90 backdrop-blur-md">
+                <h2 class="text-lg font-black text-primary">ドキュメントの確認</h2>
+                <button onclick="closePdfPreview()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="flex-grow w-full h-full bg-gray-200">
+                <iframe id="pdf-iframe" src="" class="w-full h-full border-none"></iframe>
+            </div>
+        </div>
+    </div>
     <script>
         // モーダル処理
         function openEntryStatusModal() { document.getElementById('entry-status-modal').classList.remove('hidden'); setTimeout(()=>document.getElementById('entry-status-modal-content').classList.remove('translate-y-full'),10); }
