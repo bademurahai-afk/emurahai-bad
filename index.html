@@ -52,7 +52,7 @@
         </div>
     </header>
 
-    <!-- ヒーローセクション（一番上） -->
+    <!-- ヒーローセクション -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary to-slate-800 z-0"></div>
         <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
@@ -79,8 +79,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2><h3 class="text-3xl md:text-4xl font-black text-primary">現在募集中の大会</h3></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                
-                <!-- 大会1 (第61回) -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-blue-600 to-accent px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-user-friends absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -105,7 +103,6 @@
                     </div>
                 </div>
                 
-                <!-- 大会2 (第60回など) -->
                 <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
                     <div class="bg-gradient-to-r from-emerald-600 to-teal-400 px-8 py-6 relative overflow-hidden">
                         <i class="fas fa-users absolute -right-4 -bottom-4 text-7xl text-white opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform"></i>
@@ -129,7 +126,6 @@
                         <a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center bg-emerald-600 text-white px-4 py-3.5 rounded-xl font-bold hover:bg-emerald-700 hover:shadow-lg transition-all"><i class="fas fa-check-circle mr-1"></i> エントリー</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -180,29 +176,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Management & Results</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会管理・関連情報</h3><p class="text-gray-500 mt-4">エントリー状況の確認、組み合わせ、試合結果などの重要情報はこちらから。</p></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
                 <button onclick="openEntryStatusModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-orange-50 text-secondary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clipboard-list"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-secondary transition-colors">エントリー状況</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">現在の申し込み状況や、受付完了者のリストをご確認いただけます。</p>
                 </button>
-                
-                <!-- 直接リンクを埋め込んだドロー・タイムテーブル -->
                 <a href="https://drive.google.com/file/d/1ioK-Fbh7MDPiFq7Uzvx19-ozeTEdeRc6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-sky-50 text-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-sitemap"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-accent transition-colors">組み合わせ (ドロー)</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">大会のトーナメント表・リーグ表はこちら。試合順も確認できます。</p>
                 </a>
-                
                 <a href="https://drive.google.com/file/d/1xG9ug52msj9FlwPsSVgJ7rdAAxD5xnFG/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-clock"></i></div>
                     <h4 class="text-xl font-black text-gray-800 mb-3 group-hover:text-green-500 transition-colors">注意事項・タイムテーブル</h4>
                     <p class="text-gray-500 text-sm leading-relaxed">各コートの試合進行予定表と、大会当日の注意事項です。集合時間の目安にご活用ください。</p>
                 </a>
-                
                 <button onclick="openResultModal()" class="w-full bg-white rounded-2xl p-8 shadow-soft hover:shadow-lg transition-all border border-gray-100 group flex flex-col items-center text-center relative overflow-hidden focus:outline-none block">
                     <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-16 h-16 rounded-2xl bg-slate-100 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"><i class="fas fa-trophy"></i></div>
@@ -230,20 +221,6 @@
                 <div class="hidden group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://github.com/bademurahai-afk/emurahai-bad/blob/main/beginner_winner.jpg?raw=true" class="gallery_img8 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="https://github.com/bademurahai-afk/emurahai-bad/blob/main/beginner_runnerup.jpg?raw=true" class="gallery_img9 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="hidden group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-sm"><img src="" alt="ギャラリー画像" class="gallery_img10 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 参加の流れ -->
-    <section id="flow" class="py-20 bg-slate-50 border-t border-gray-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16"><h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">How to Entry</h2><h3 class="text-3xl md:text-4xl font-black text-primary">大会参加までの流れ</h3><p class="mt-4"><button onclick="openGuideModal()" class="text-secondary font-bold hover:underline focus:outline-none">より詳しい「初めての方へ」ガイドはこちら <i class="fas fa-angle-right"></i></button></p></div>
-            <div class="relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gray-100 before:rounded-full space-y-12">
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">1</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="far fa-file-alt text-gray-400"></i> 要項の確認</h4><p class="text-gray-500 text-sm leading-relaxed">対象となるクラスや参加費、日程を大会要項ページで確認します。</p></div></div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-secondary text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">2</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fab fa-line text-green-500"></i> LINE友だち追加</h4><p class="text-gray-500 text-sm leading-relaxed">まずはLINEの友だち追加を行います。画面右上のボタンや各大会のボタンから登録できます。</p></div></div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-accent text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">3</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-paper-plane text-gray-400"></i> ＬＩＮＥでメッセージ送信</h4><p class="text-gray-500 text-sm leading-relaxed">お友達登録したＬＩＮＥを開き、最下部左の四角いマークをタップし、メッセージ欄に<strong class="text-primary">お名前、フリガナ、エントリーランク、チーム名</strong>を入力後、送信します。</p></div></div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-purple-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">4</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-reply text-gray-400"></i> 運営からの確認メッセージ</h4><p class="text-gray-500 text-sm leading-relaxed">運営側が3の項目を確認後、折り返しエントリーの確定、参加費の振り込み日時を返信します。<br><span class="text-red-500 font-bold mt-2 inline-block">【この項目が届かない場合は、エントリーは確定しておりませんのでご注意ください。】</span></p></div></div>
-                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"><div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-green-500 text-white font-black text-lg shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative">5</div><div class="w-[calc(100%-4.5rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-soft border border-gray-100"><h4 class="font-bold text-xl text-primary mb-3"><i class="fas fa-yen-sign text-gray-400"></i> 参加費のお支払い</h4><p class="text-gray-500 text-sm leading-relaxed">指定の口座へのお振込みでお願いします。</p></div></div>
             </div>
         </div>
     </section>
@@ -279,29 +256,14 @@
         </div>
     </footer>
 
-    <!-- モーダル群 -->
+    <!-- モーダル -->
     <div id="entry-status-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeEntryStatusModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="entry-status-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">エントリー状況</h2><button onclick="closeEntryStatusModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-4 md:p-8 max-w-3xl mx-auto w-full"><div class="space-y-8"><div class="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-soft text-center"><div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-6"><p class="text-lg md:text-xl font-bold text-primary leading-relaxed"><span class="t1_title">第61回江村杯混合ダブルス団体戦</span><br>現在エントリー受付中です。<br>残り <span id="t1_remain_text" class="text-3xl text-blue-600 mx-1 font-black">--</span> チーム</p></div><div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner"><div id="t1_progress_bar" class="bg-gradient-to-r from-blue-600 to-accent h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div></div><div><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all w-full sm:w-auto"><i class="fab fa-line text-2xl"></i> LINEでエントリーする</a></div></div><div class="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-soft text-center"><div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 mb-6"><p class="text-lg md:text-xl font-bold text-primary leading-relaxed"><span class="t2_title">第60回江村杯</span><br>現在エントリー受付中です。<br>残り <span id="t2_remain_text" class="text-3xl text-emerald-600 mx-1 font-black">--</span> チーム</p></div><div class="w-full bg-gray-100 rounded-full h-4 mb-6 overflow-hidden shadow-inner"><div id="t2_progress_bar" class="bg-gradient-to-r from-emerald-600 to-teal-400 h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div></div><div><a href="https://lin.ee/hf6O8sn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#05b34c] hover:shadow-lg transition-all w-full sm:w-auto"><i class="fab fa-line text-2xl"></i> LINEでエントリーする</a></div></div></div><div class="text-center pt-8"><button onclick="closeEntryStatusModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 focus:outline-none">閉じる</button></div></div></div></div>
-    <!-- 試合結果、ガット、ガイド等のモーダル -->
+    
     <div id="result-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeResultModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="result-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">試合結果</h2><button onclick="closeResultModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>試合結果PDFリンクをここに配置します</p><div class="pt-10"><button onclick="closeResultModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
     <div id="gut-price-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGutPriceModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="gut-price-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">ガット張替え</h2><button onclick="closeGutPriceModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>ガット料金表をここに配置します</p><div class="pt-10"><button onclick="closeGutPriceModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
     <div id="guide-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeGuideModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="guide-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">初めての方へ</h2><button onclick="closeGuideModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>※大会要項をご確認の上、ご参加ください。</p><div class="pt-10"><button onclick="closeGuideModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closePrivacyModal()"></div><div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="privacy-modal-content"><div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20"><h2 class="text-xl md:text-2xl font-black text-primary">プライバシーポリシー</h2><button onclick="closePrivacyModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button></div><div class="p-6 md:p-12 text-center"><p>個人情報の取り扱いに関する記述</p><div class="pt-10"><button onclick="closePrivacyModal()" class="bg-primary text-white px-8 py-3 rounded-full font-bold focus:outline-none">閉じる</button></div></div></div></div>
-　　<!-- (ここが元々のprivacy-modalの閉じタグの後です) -->
-    </div> 
-
-    <!-- ★ここにPDFプレビュー用モーダルを挿入します -->
-    <div id="pdf-preview-modal" class="fixed inset-0 z-[110] hidden">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="closePdfPreview()"></div>
-        <div class="absolute inset-x-2 bottom-2 top-20 md:inset-10 md:rounded-3xl bg-white overflow-hidden shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="pdf-preview-modal-content">
-            <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-white/90 backdrop-blur-md">
-                <h2 class="text-lg font-black text-primary">ドキュメントの確認</h2>
-                <button onclick="closePdfPreview()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="flex-grow w-full h-full bg-gray-200">
-                <iframe id="pdf-iframe" src="" class="w-full h-full border-none"></iframe>
-            </div>
-        </div>
-    </div>
+    
     <script>
         // モーダル処理
         function openEntryStatusModal() { document.getElementById('entry-status-modal').classList.remove('hidden'); setTimeout(()=>document.getElementById('entry-status-modal-content').classList.remove('translate-y-full'),10); }
@@ -356,7 +318,6 @@
                     });
                 });
 
-                // 第61回（t1）残り枠の計算
                 if(data['t1_remain']) {
                     const num = parseInt(data['t1_remain']);
                     const elText = document.getElementById('t1_remain_text');
@@ -368,7 +329,6 @@
                     if(elBar) elBar.style.width = percent + '%';
                 }
                 
-                // 第60回（t2）残り枠の計算
                 if(data['t2_remain']) {
                     const num2 = parseInt(data['t2_remain']);
                     const elText2 = document.getElementById('t2_remain_text');
