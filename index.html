@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
-    <meta property="og:locale" content="ja_JP">
     <title>江村杯webページ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,10 +44,10 @@
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="#news" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">お知らせ</a>
-                    <a href="#entry-list" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">大会情報</a>
-                    <a href="#management" class="text-sm font-bold text-primary hover:text-accent transition-colors">大会管理・結果</a>
+                    <a href="#results" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">試合結果</a>
+                    <a href="#schedule" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">スケジュール</a>
+                    <a href="#entry-list" class="text-sm font-bold text-primary hover:text-accent transition-colors">大会情報・管理</a>
                     <a href="#gallery" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">ギャラリー</a>
-                    <a href="guide.html" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">初めての方へ</a>
                 </nav>
             </div>
         </div>
@@ -61,7 +60,7 @@
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
                 本気のスマッシュも、<br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">初めての挑戦も。</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">小学生から大人まで、誰もが主役になれるバドミントン大会。</p>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">江村杯バドミントン大会 ポータルサイト</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#entry-list" class="bg-gradient-to-r from-secondary to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">募集中の大会を見る <i class="fas fa-arrow-down"></i></a>
             </div>
@@ -78,15 +77,22 @@
             <div class="space-y-4">
                 <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div class="flex items-center gap-4">
+                        <span class="text-sm font-mono text-gray-500 font-bold">2026.08.03</span>
+                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold">大会結果</span>
+                        <h4 class="font-bold text-gray-800">タイペイオープン2026 男子ダブルス山下・岡村ペアがベスト4</h4>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
                         <span class="text-sm font-mono text-gray-500 font-bold">2026.06.23</span>
-                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold">大会情報</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">大会情報</span>
                         <h4 class="font-bold text-gray-800">第61回江村杯混合ダブルス団体戦</h4>
                     </div>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div class="flex items-center gap-4">
                         <span class="text-sm font-mono text-gray-500 font-bold">2026.01.04</span>
-                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">その他</span>
+                        <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-xs font-bold">その他</span>
                         <h4 class="font-bold text-gray-800">体育館利用に関する注意事項について</h4>
                     </div>
                 </div>
@@ -94,7 +100,97 @@
         </div>
     </section>
 
-    <!-- 大会情報セクション -->
+    <!-- 試合結果セクション -->
+    <section id="results" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Match Results</h2>
+                <h3 class="text-3xl md:text-4xl font-black text-primary">試合結果</h3>
+                <p class="text-gray-500 mt-4">クリックすると詳細結果やチーム写真をポップアップで確認できます。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100">
+                    <span class="text-xs font-bold text-secondary">7月28日～8月2日 台湾 台北市</span>
+                    <h4 class="text-xl font-black text-primary mt-1 mb-3">タイペイオープン2026［Super 300］</h4>
+                    <p class="text-sm text-gray-600 space-y-1">
+                        ・男子シングルス1回戦敗退: 武井 凛生<br>
+                        ・男子ダブルスベスト4: 山下 恭平・岡村 洋輝<br>
+                        ・2回戦敗退: 緑川 大輝・中静 悠斗
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100">
+                    <span class="text-xs font-bold text-secondary">2026年7月27日</span>
+                    <h4 class="text-xl font-black text-primary mt-1 mb-3">サイパンインターナショナル2026</h4>
+                    <p class="text-sm text-gray-600 space-y-1">
+                        ・WD 上杉・古根川ペア 優勝<br>
+                        ・XD 中静・山北ペア 準優勝<br>
+                        ・MD 武井・中静ペア ベスト4
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100">
+                    <span class="text-xs font-bold text-secondary">2026年7月21日</span>
+                    <h4 class="text-xl font-black text-primary mt-1 mb-3">ダイハツジャパンオープン2026</h4>
+                    <p class="text-sm text-gray-600 space-y-1">
+                        ・MS 奈良岡選手・田中選手 ベスト4<br>
+                        ・WD 鈴木・山北ペア ベスト8
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div onclick="openResultModal('https://drive.google.com/file/d/1j1bIuy19csL1y-W0Y246ulWJZpz9iUVL/preview', '第58回 試合結果')" class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 cursor-pointer hover:border-secondary transition-all group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors"><i class="fas fa-trophy"></i></div>
+                        <div>
+                            <span class="text-xs text-gray-400 font-bold">クリックして表示</span>
+                            <h4 class="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors">第58回 試合結果</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openResultModal('https://drive.google.com/file/d/1H8qRZG9r8gbo4zfgEck_K4QM6ntOkaON/preview', '第59回 試合結果')" class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 cursor-pointer hover:border-secondary transition-all group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors"><i class="fas fa-trophy"></i></div>
+                        <div>
+                            <span class="text-xs text-gray-400 font-bold">クリックして表示</span>
+                            <h4 class="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors">第59回・第60回 試合結果</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- スケジュールセクション -->
+    <section id="schedule" class="py-20 bg-white border-t border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Schedule</h2>
+                <h3 class="text-3xl md:text-4xl font-black text-primary">直近のスケジュール</h3>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-bold">8月4日(火)～8月9日(日)</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">韓国マスターズ2026［Super 300］</h4>
+                        <p class="text-sm text-gray-500">韓国 牙山市</p>
+                    </div>
+                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full font-medium">出場選手多数</span>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-bold">8月17日(月)～8月23日(日)</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">第30回世界バドミントン選手権大会［Grade1］</h4>
+                        <p class="text-sm text-gray-500">インド ニューデリー市</p>
+                    </div>
+                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full font-medium">奈良岡 功大、田中 湧士 他</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 大会情報・エントリーセクション -->
     <section id="entry-list" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -102,7 +198,6 @@
                 <h3 class="text-3xl md:text-4xl font-black text-primary">大会情報・エントリー</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- 第61回大会 -->
                 <div class="bg-white rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
                     <div class="p-8 bg-gradient-to-r from-blue-900 to-primary text-white">
                         <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold">12歳～一般</span>
@@ -120,7 +215,6 @@
                     </div>
                 </div>
 
-                <!-- 第62回大会 -->
                 <div class="bg-white rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
                     <div class="p-8 bg-gradient-to-r from-secondary to-orange-500 text-white">
                         <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold">12歳〜一般</span>
@@ -141,43 +235,8 @@
         </div>
     </section>
 
-    <!-- 大会管理・試合結果セクション（モーダル対応版） -->
-    <section id="management" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Management & Results</h2>
-                <h3 class="text-3xl md:text-4xl font-black text-primary">大会管理・試合結果</h3>
-                <p class="text-gray-500 mt-4">文字をクリックすると、各大会の結果や優勝チーム写真をポップアップで確認できます。</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- 第58回結果ボタン -->
-                <div onclick="openResultModal('https://drive.google.com/file/d/1j1bIuy19csL1y-W0Y246ulWJZpz9iUVL/preview', '第58回 試合結果')" class="bg-slate-50 p-8 rounded-2xl shadow-soft border border-gray-100 cursor-pointer hover:border-secondary transition-all group">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors"><i class="fas fa-trophy"></i></div>
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold">クリックして表示</span>
-                            <h4 class="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors">第58回 試合結果</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 第59回結果ボタン -->
-                <div onclick="openResultModal('https://drive.google.com/file/d/1H8qRZG9r8gbo4zfgEck_K4QM6ntOkaON/preview', '第59回 試合結果')" class="bg-slate-50 p-8 rounded-2xl shadow-soft border border-gray-100 cursor-pointer hover:border-secondary transition-all group">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors"><i class="fas fa-trophy"></i></div>
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold">クリックして表示</span>
-                            <h4 class="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors">第59回 試合結果</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ギャラリーセクション -->
-    <section id="gallery" class="py-20 bg-slate-50">
+    <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Gallery</h2>
@@ -216,20 +275,16 @@
                     <img src="https://github.com/bademurahai-afk/emurahai-bad/blob/main/beginner_winner.jpg?raw=true" alt="初心者優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><span class="text-white text-xs font-bold">初心者優勝</span></div>
                 </div>
-                <div class="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-sm bg-gray-200">
-                    <img src="https://github.com/bademurahai-afk/emurahai-bad/blob/main/beginner_runnerup.jpg?raw=true" alt="初心者準優勝" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.style.display='none'">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><span class="text-white text-xs font-bold">初心者準優勝</span></div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 試合結果プレビューモーダル -->
+    <!-- モーダルポップアップ -->
     <div id="result-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeResultModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="result-modal-content">
             <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 md:p-6 flex justify-between items-center z-20">
-                <h2 id="modal-title" class="text-xl md:text-2xl font-black text-primary">試合結果</h2>
+                <h2 id="modal-title" class="text-xl md:text-2xl font-black text-primary">詳細情報</h2>
                 <button onclick="closeResultModal()" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 focus:outline-none"><i class="fas fa-times text-lg"></i></button>
             </div>
             <div class="p-6 md:p-12 max-w-4xl mx-auto w-full space-y-6 flex-grow flex flex-col">
@@ -248,40 +303,7 @@
         </div>
     </footer>
 
-    <!-- AIバドミントンコーチ UI -->
-    <div id="ai-chat-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        <div id="ai-chat-window" class="hidden w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 mb-4 overflow-hidden flex flex-col h-[28rem] transition-all transform origin-bottom-right">
-            <div class="bg-gradient-to-r from-secondary to-orange-400 p-4 text-white flex justify-between items-center shadow-sm">
-                <div class="font-bold flex items-center gap-2">
-                    <i class="fas fa-robot text-xl"></i>
-                    <span>✨ AIサポートコーチ</span>
-                </div>
-                <button id="ai-chat-close" class="text-white hover:text-gray-200 focus:outline-none">
-                    <i class="fas fa-times text-lg"></i>
-                </button>
-            </div>
-            <div id="ai-chat-messages" class="flex-grow p-4 overflow-y-auto bg-slate-50 space-y-4 scroll-smooth">
-                <div class="flex items-start gap-2">
-                    <div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center shrink-0 shadow-sm text-sm"><i class="fas fa-robot"></i></div>
-                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-gray-700 border border-gray-100">
-                        こんにちは！江村杯のAIアシスタントです。バドミントンのコツやルールのことなど、何でも聞いてくださいね！✨
-                    </div>
-                </div>
-            </div>
-            <div class="p-3 bg-white border-t border-gray-100 flex gap-2">
-                <input type="text" id="ai-chat-input" class="flex-grow bg-gray-50 border border-gray-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all" placeholder="質問を入力...">
-                <button id="ai-chat-submit" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center shrink-0 hover:bg-orange-600 focus:outline-none transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                    <i class="fas fa-paper-plane text-sm"></i>
-                </button>
-            </div>
-        </div>
-        <button id="ai-chat-toggle" class="w-14 h-14 rounded-full bg-gradient-to-r from-secondary to-orange-400 text-white flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 focus:outline-none">
-            <i class="fas fa-comment-dots text-2xl"></i>
-        </button>
-    </div>
-
     <script>
-        // モーダル制御スクリプト
         function openResultModal(url, title) {
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-iframe').src = url;
@@ -295,97 +317,6 @@
                 document.getElementById('modal-iframe').src = '';
             }, 300);
         }
-
-        // AIコーチ機能
-        const aiChatToggle = document.getElementById('ai-chat-toggle');
-        const aiChatWindow = document.getElementById('ai-chat-window');
-        const aiChatClose = document.getElementById('ai-chat-close');
-        const aiChatInput = document.getElementById('ai-chat-input');
-        const aiChatSubmit = document.getElementById('ai-chat-submit');
-        const aiChatMessages = document.getElementById('ai-chat-messages');
-
-        aiChatToggle.addEventListener('click', () => aiChatWindow.classList.toggle('hidden'));
-        aiChatClose.addEventListener('click', () => aiChatWindow.classList.add('hidden'));
-
-        const apiKey = ""; 
-        let chatHistory = [];
-
-        async function fetchGeminiWithRetry(prompt, retries = 5) {
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-            const payload = {
-                systemInstruction: { parts: [{ text: "あなたは江村杯バドミントン大会の専属AIコーチです。参加者からのバドミントンのルール、コツ、大会の質問に明るく熱血に答えてください。" }] },
-                contents: [...chatHistory, { role: "user", parts: [{ text: prompt }] }]
-            };
-            const options = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) };
-            const delays = [1000, 2000, 4000, 8000, 16000];
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(endpoint, options);
-                    if (!response.ok) throw new Error(`API Error: ${response.status}`);
-                    return await response.json();
-                } catch (e) {
-                    if (i === retries - 1) throw e;
-                    await new Promise(resolve => setTimeout(resolve, delays[i]));
-                }
-            }
-        }
-
-        function appendMessage(text, isUser) {
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `flex items-start gap-2 ${isUser ? 'flex-row-reverse' : ''}`;
-            const iconHTML = isUser 
-                ? `<div class="w-8 h-8 rounded-full bg-slate-700 text-white flex items-center justify-center shrink-0 shadow-sm text-sm"><i class="fas fa-user"></i></div>`
-                : `<div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center shrink-0 shadow-sm text-sm"><i class="fas fa-robot"></i></div>`;
-            const safeText = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-            const bubbleHTML = `<div class="${isUser ? 'bg-primary text-white rounded-tr-none' : 'bg-white text-gray-700 rounded-tl-none border border-gray-100'} p-3 rounded-2xl shadow-sm text-sm max-w-[80%] whitespace-pre-wrap leading-relaxed">${safeText}</div>`;
-            msgDiv.innerHTML = iconHTML + bubbleHTML;
-            aiChatMessages.appendChild(msgDiv);
-            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-        }
-
-        async function handleSend() {
-            const text = aiChatInput.value.trim();
-            if (!text) return;
-            appendMessage(text, true);
-            aiChatInput.value = '';
-            aiChatSubmit.disabled = true;
-
-            const loadingId = 'loading-' + Date.now();
-            const loadingDiv = document.createElement('div');
-            loadingDiv.id = loadingId;
-            loadingDiv.className = `flex items-start gap-2`;
-            loadingDiv.innerHTML = `
-                <div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center shrink-0 shadow-sm text-sm"><i class="fas fa-robot"></i></div>
-                <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-gray-100 flex gap-1 items-center h-[2.75rem]">
-                    <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
-                    <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
-                    <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
-                </div>
-            `;
-            aiChatMessages.appendChild(loadingDiv);
-            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-
-            try {
-                const result = await fetchGeminiWithRetry(text);
-                const aiText = result.candidates?.[0]?.content?.parts?.[0]?.text || "すみません、うまく聞き取れませんでした。もう一度お願いします！";
-                chatHistory.push({ role: "user", parts: [{ text: text }] });
-                chatHistory.push({ role: "model", parts: [{ text: aiText }] });
-                document.getElementById(loadingId).remove();
-                appendMessage(aiText, false);
-            } catch (error) {
-                console.error("Gemini API Error:", error);
-                document.getElementById(loadingId).remove();
-                appendMessage("通信エラーが発生しました。時間を置いて再度お試しください🙏", false);
-            } finally {
-                aiChatSubmit.disabled = false;
-                aiChatInput.focus();
-            }
-        }
-
-        aiChatSubmit.addEventListener('click', handleSend);
-        aiChatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSend();
-        });
     </script>
 </body>
 </html>
