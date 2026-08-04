@@ -29,7 +29,6 @@
 </head>
 <body class="bg-slate-50 text-gray-800 antialiased selection:bg-secondary selection:text-white relative">
     
-    <!-- ヘッダー -->
     <header class="glass-header shadow-sm fixed w-full top-0 z-50 border-b border-gray-100 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -45,7 +44,6 @@
                 <nav class="hidden md:flex space-x-8">
                     <a href="#news" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">お知らせ</a>
                     <a href="#results" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">試合結果</a>
-                    <a href="#schedule" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">スケジュール</a>
                     <a href="#entry-list" class="text-sm font-bold text-primary hover:text-accent transition-colors">大会情報・管理</a>
                     <a href="#gallery" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors">ギャラリー</a>
                 </nav>
@@ -53,7 +51,6 @@
         </div>
     </header>
 
-    <!-- ヒーローセクション -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-28 relative overflow-hidden bg-slate-900">
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary to-slate-800 z-0"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -67,7 +64,6 @@
         </div>
     </section>
 
-    <!-- お知らせセクション -->
     <section id="news" class="py-16 bg-white border-b border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -76,31 +72,23 @@
             </div>
             <div class="space-y-4">
                 <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-4">
-                        <span class="text-sm font-mono text-gray-500 font-bold">2026.08.03</span>
-                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold">大会結果</span>
-                        <h4 class="font-bold text-gray-800">タイペイオープン2026 男子ダブルス山下・岡村ペアがベスト4</h4>
-                    </div>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4 flex-wrap">
                         <span class="text-sm font-mono text-gray-500 font-bold">2026.06.23</span>
-                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">大会情報</span>
+                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold">大会情報</span>
                         <h4 class="font-bold text-gray-800">第61回江村杯混合ダブルス団体戦</h4>
                     </div>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4 flex-wrap">
                         <span class="text-sm font-mono text-gray-500 font-bold">2026.01.04</span>
                         <span class="bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-xs font-bold">その他</span>
-                        <h4 class="font-bold text-gray-800">体育館利用に関する注意事項について</h4>
+                        <h4 class="font-bold text-gray-800">体育館利用に関する注意事項について。</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 試合結果セクション -->
     <section id="results" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -110,38 +98,44 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100">
-                    <span class="text-xs font-bold text-secondary">7月28日～8月2日 台湾 台北市</span>
-                    <h4 class="text-xl font-black text-primary mt-1 mb-3">タイペイオープン2026［Super 300］</h4>
-                    <p class="text-sm text-gray-600 space-y-1">
-                        ・男子シングルス1回戦敗退: 武井 凛生<br>
-                        ・男子ダブルスベスト4: 山下 恭平・岡村 洋輝<br>
-                        ・2回戦敗退: 緑川 大輝・中静 悠斗
-                    </p>
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-secondary">7月28日～8月2日 台湾 台北市</span>
+                        <h4 class="text-xl font-black text-primary mt-1 mb-3">タイペイオープン2026［Super 300］</h4>
+                        <div class="text-sm text-gray-600 space-y-1.5">
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">男子シングルス 1回戦敗退</span><span class="text-gray-500 font-bold">武井 凛生</span></p>
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">男子ダブルス ベスト4</span><span class="text-secondary font-bold">山下・岡村</span></p>
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">2回戦敗退</span><span class="text-gray-500 font-bold">緑川・中静</span></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100">
-                    <span class="text-xs font-bold text-secondary">2026年7月27日</span>
-                    <h4 class="text-xl font-black text-primary mt-1 mb-3">サイパンインターナショナル2026</h4>
-                    <p class="text-sm text-gray-600 space-y-1">
-                        ・WD 上杉・古根川ペア 優勝<br>
-                        ・XD 中静・山北ペア 準優勝<br>
-                        ・MD 武井・中静ペア ベスト4
-                    </p>
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-secondary">2026年7月27日</span>
+                        <h4 class="text-xl font-black text-primary mt-1 mb-3">サイパンインターナショナル2026</h4>
+                        <div class="text-sm text-gray-600 space-y-1.5">
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">WD 優勝</span><span class="text-secondary font-bold">上杉・古根川</span></p>
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">XD 準優勝</span><span class="text-secondary font-bold">中静・山北</span></p>
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">MD ベスト4</span><span class="text-gray-500 font-bold">武井・中静</span></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100">
-                    <span class="text-xs font-bold text-secondary">2026年7月21日</span>
-                    <h4 class="text-xl font-black text-primary mt-1 mb-3">ダイハツジャパンオープン2026</h4>
-                    <p class="text-sm text-gray-600 space-y-1">
-                        ・MS 奈良岡選手・田中選手 ベスト4<br>
-                        ・WD 鈴木・山北ペア ベスト8
-                    </p>
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-secondary">2026年7月21日</span>
+                        <h4 class="text-xl font-black text-primary mt-1 mb-3">ダイハツジャパンオープン2026</h4>
+                        <div class="text-sm text-gray-600 space-y-1.5">
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">MS ベスト4</span><span class="text-secondary font-bold">奈良岡・田中</span></p>
+                            <p class="flex justify-between items-center bg-slate-50 px-3 py-1.5 rounded-lg"><span class="font-medium text-gray-700">WD ベスト8</span><span class="text-gray-500 font-bold">鈴木・山北</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div onclick="openResultModal('https://drive.google.com/file/d/1j1bIuy19csL1y-W0Y246ulWJZpz9iUVL/preview', '第58回 試合結果')" class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 cursor-pointer hover:border-secondary transition-all group">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors"><i class="fas fa-trophy"></i></div>
+                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors shrink-0"><i class="fas fa-trophy"></i></div>
                         <div>
                             <span class="text-xs text-gray-400 font-bold">クリックして表示</span>
                             <h4 class="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors">第58回 試合結果</h4>
@@ -151,7 +145,7 @@
 
                 <div onclick="openResultModal('https://drive.google.com/file/d/1H8qRZG9r8gbo4zfgEck_K4QM6ntOkaON/preview', '第59回 試合結果')" class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 cursor-pointer hover:border-secondary transition-all group">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors"><i class="fas fa-trophy"></i></div>
+                        <div class="w-14 h-14 rounded-xl bg-orange-50 text-secondary flex items-center justify-center text-2xl group-hover:bg-secondary group-hover:text-white transition-colors shrink-0"><i class="fas fa-trophy"></i></div>
                         <div>
                             <span class="text-xs text-gray-400 font-bold">クリックして表示</span>
                             <h4 class="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors">第59回・第60回 試合結果</h4>
@@ -162,43 +156,14 @@
         </div>
     </section>
 
-    <!-- スケジュールセクション -->
-    <section id="schedule" class="py-20 bg-white border-t border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Schedule</h2>
-                <h3 class="text-3xl md:text-4xl font-black text-primary">直近のスケジュール</h3>
-            </div>
-            <div class="space-y-4">
-                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div>
-                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-bold">8月4日(火)～8月9日(日)</span>
-                        <h4 class="font-bold text-lg text-primary mt-2">韓国マスターズ2026［Super 300］</h4>
-                        <p class="text-sm text-gray-500">韓国 牙山市</p>
-                    </div>
-                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full font-medium">出場選手多数</span>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div>
-                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-bold">8月17日(月)～8月23日(日)</span>
-                        <h4 class="font-bold text-lg text-primary mt-2">第30回世界バドミントン選手権大会［Grade1］</h4>
-                        <p class="text-sm text-gray-500">インド ニューデリー市</p>
-                    </div>
-                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full font-medium">奈良岡 功大、田中 湧士 他</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 大会情報・エントリーセクション -->
-    <section id="entry-list" class="py-20 bg-slate-50">
+    <section id="entry-list" class="py-20 bg-white border-t border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tournaments</h2>
                 <h3 class="text-3xl md:text-4xl font-black text-primary">大会情報・エントリー</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
+                <div class="bg-slate-50 rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
                     <div class="p-8 bg-gradient-to-r from-blue-900 to-primary text-white">
                         <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold">12歳～一般</span>
                         <h4 class="text-2xl font-black mt-3">第61回江村杯混合ダブルス団体戦</h4>
@@ -210,12 +175,12 @@
                         <p class="text-sm text-gray-500 pt-2 border-t border-gray-100">男子複、女子複、混合複による混合ダブルス団体戦です。</p>
                     </div>
                     <div class="p-8 pt-0 flex gap-4">
-                        <button onclick="openResultModal('https://drive.google.com/file/d/1wZXfMCkpuHK5ErwuuK67_26DbjI88UKN/preview', '第61回大会要項')" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-xl font-bold text-sm text-center transition">要項(PDF)</button>
+                        <button onclick="openResultModal('https://drive.google.com/file/d/1wZXfMCkpuHK5ErwuuK67_26DbjI88UKN/preview', '第61回大会要項')" class="flex-1 bg-white hover:bg-gray-100 text-gray-700 py-3 rounded-xl font-bold text-sm text-center border border-gray-200 transition">要項(PDF)</button>
                         <span class="flex-1 bg-gray-200 text-gray-500 py-3 rounded-xl font-bold text-sm text-center cursor-not-allowed">受付終了</span>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
+                <div class="bg-slate-50 rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
                     <div class="p-8 bg-gradient-to-r from-secondary to-orange-500 text-white">
                         <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold">12歳〜一般</span>
                         <h4 class="text-2xl font-black mt-3">第62回江村杯 未定</h4>
@@ -227,7 +192,7 @@
                         <p class="text-sm text-gray-500 pt-2 border-t border-gray-100">種目未定</p>
                     </div>
                     <div class="p-8 pt-0 flex gap-4">
-                        <button onclick="openResultModal('https://drive.google.com/file/d/1xQLRygHMq_4lLQDlkv2P9M2jfjgnk8np/preview', '第62回大会要項')" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-xl font-bold text-sm text-center transition">要項(PDF)</button>
+                        <button onclick="openResultModal('https://drive.google.com/file/d/1xQLRygHMq_4lLQDlkv2P9M2jfjgnk8np/preview', '第62回大会要項')" class="flex-1 bg-white hover:bg-gray-100 text-gray-700 py-3 rounded-xl font-bold text-sm text-center border border-gray-200 transition">要項(PDF)</button>
                         <a href="https://lin.ee/hf6O8sn" target="_blank" class="flex-1 bg-secondary hover:bg-orange-600 text-white py-3 rounded-xl font-bold text-sm text-center transition shadow-sm">受付中(LINE)</a>
                     </div>
                 </div>
@@ -235,7 +200,6 @@
         </div>
     </section>
 
-    <!-- ギャラリーセクション -->
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -279,7 +243,6 @@
         </div>
     </section>
 
-    <!-- モーダルポップアップ -->
     <div id="result-modal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeResultModal()"></div>
         <div class="absolute inset-x-0 bottom-0 top-16 md:inset-10 md:rounded-3xl bg-slate-50 overflow-y-auto shadow-2xl z-10 flex flex-col transition-transform transform translate-y-full duration-300 ease-out" id="result-modal-content">
@@ -296,7 +259,6 @@
         </div>
     </div>
 
-    <!-- フッター -->
     <footer class="bg-slate-900 text-gray-400 py-10 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p>&copy; 2026 江村杯Badminton Portal. All rights reserved.</p>
