@@ -156,14 +156,14 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="bg-slate-50 rounded-3xl shadow-soft border border-gray-100 overflow-hidden flex flex-col justify-between">
-                    <div class="p-8 bg-gradient-to-r from-slate-700 to-primary text-white">
+                    <div class="p-8 bg-gradient-to-r from-blue-900 to-primary text-white">
                         <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold">12歳～一般</span>
                         <h4 class="text-2xl font-black mt-3">第61回江村杯混合ダブルス団体戦</h4>
                     </div>
                     <div class="p-8 space-y-4 flex-grow">
                         <div class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-calendar-alt text-secondary w-5"></i><span>2026年9月21日（月曜日・祝日）</span></div>
                         <div class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-map-marker-alt text-secondary w-5"></i><span>豊中市立庄内体育館</span></div>
-                        <div class="flex items-center gap-3 text-sm text-gray-500 font-bold"><i class="fas fa-check-circle w-5 text-green-600"></i><span>大会終了</span></div>
+                        <div class="flex items-center gap-3 text-sm text-red-600 font-bold"><i class="fas fa-clock w-5"></i><span>申込締切: 2026年9月6日（日）</span></div>
                         <div class="flex items-center gap-3 text-sm text-secondary font-bold"><i class="fas fa-users w-5"></i><span>残りエントリー数: 0チーム</span></div>
                         <p class="text-sm text-gray-500 pt-2 border-t border-gray-100">男子複、女子複、混合複による混合ダブルス団体戦です。</p>
                     </div>
@@ -179,9 +179,9 @@
                         <h4 class="text-2xl font-black mt-3">第62回江村杯 未定</h4>
                     </div>
                     <div class="p-8 space-y-4 flex-grow">
-                        <div class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-calendar-alt text-secondary w-5"></i><span>2027年1月以降予定</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-calendar-alt text-secondary w-5"></i><span>2026年12月以降予定</span></div>
                         <div class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-map-marker-alt text-secondary w-5"></i><span>豊中市立庄内体育館予定</span></div>
-                        <div class="flex items-center gap-3 text-sm text-red-600 font-bold"><i class="fas fa-clock w-5"></i><span>申込締切: 2027年</span></div>
+                        <div class="flex items-center gap-3 text-sm text-red-600 font-bold"><i class="fas fa-clock w-5"></i><span>申込締切: 2026年</span></div>
                         <div class="flex items-center gap-3 text-sm text-gray-400 font-bold"><i class="fas fa-users w-5"></i><span>残りエントリー数: -</span></div>
                         <p class="text-sm text-gray-500 pt-2 border-t border-gray-100">種目未定</p>
                     </div>
@@ -639,17 +639,14 @@
             });
         }
 
-        // 画像エラー時のフォールバック処理 ("画像無し" 表示)
         function handleImageError(img) {
             const parent = img.parentElement;
-            const altText = img.alt || "画像";
             const noImgDiv = document.createElement('div');
             noImgDiv.className = "no-image-box absolute inset-0";
             noImgDiv.innerHTML = `<div class="text-center p-2"><i class="fas fa-image-slash text-xl mb-1 block"></i><span>画像無し</span></div>`;
             parent.replaceChild(noImgDiv, img);
         }
 
-        // AIコーチ機能スクリプト
         const aiChatToggle = document.getElementById('ai-chat-toggle');
         const aiChatWindow = document.getElementById('ai-chat-window');
         const aiChatClose = document.getElementById('ai-chat-close');
